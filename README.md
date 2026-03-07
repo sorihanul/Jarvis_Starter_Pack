@@ -1,0 +1,40 @@
+# Jarvis Starter Pack (Prebuilt Edition)
+
+이 폴더는 **이미 구성된 스타터 팩**입니다.  
+사용자는 설치를 새로 만들 필요 없이, 폴더를 열고 에이전트에게 읽히면 바로 시작할 수 있습니다.
+
+## 빠른 시작 (1분)
+1. `START_HERE.md`를 먼저 읽으세요.
+2. 환경별 호환이 필요하면 `PATCH_GUIDE_ANTIGRAVITY_CODEX_v1.0.md`를 적용하세요.
+3. 작업은 `TASKS/`, `CAPSULES/`, `LOGS/` 레이어에서만 진행하세요.
+
+## 이 팩의 성격
+- 목적: 범용 자비스 워크스페이스의 즉시 사용
+- 상태: 프리빌트(Prebuilt) / 실행 가능
+- 원칙: 코어는 유지하고, 환경 패치는 레이어로 추가
+
+## 폴더 개요
+- `00_Core`: 정체성/코어 스펙
+- `01_Modules`: 모듈 명세
+  - 선택 모듈: `01_Modules/Persona_Agent_Starter/` (글쓰기 페르소나 구성)
+- `02_Protocols`: 운영 프로토콜
+- `03_Memory`: 메모리 구현
+- `04_Knowledge`: 지식/검색
+- `05_Scripts`: 보조 스크립트
+- `AGENTS`, `SKILLS`, `TASKS`, `CAPSULES`, `LOGS`: 작업 레이어
+
+## 환경 호환
+- Antigravity: `.agent` 레이어 패치 권장
+- Codex: `AGENTS.md` 레이어 패치 권장
+- 둘 다 사용 가능 (코어 공통, 패치 레이어만 추가)
+
+## 핵심 규칙
+1. 코어(`00_Core~05_Scripts`)를 작업 중 임의 수정하지 마세요.
+2. 임시 산출물은 작업 레이어에만 남기세요.
+3. 문제가 생기면 코어 수정보다 패치 레이어부터 점검하세요.
+
+## 시작 파일
+- `START_HERE.md`
+- `MAP.md`
+- `POLICY.md`
+- `PATCH_GUIDE_ANTIGRAVITY_CODEX_v1.0.md`

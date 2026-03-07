@@ -1,0 +1,20 @@
+﻿# START HERE: Jarvis Agent Workspace
+
+환영합니다. 이 워크스페이스는 `JARVIS_FOLDER_RECIPE_v1.0.md` 기준을 따르는 독립적인 자비스 시스템(AILO-H)입니다.
+
+## 🧭 시작하기
+어떤 작업을 수행하든, 에이전트(자비스)는 아래의 흐름을 따릅니다.
+
+1. **MAP.md 참조**: 시스템 전체의 폴더 구조와 파일 역할을 파악합니다.
+2. **Identity Layer 숙지**: 본인이 어떻게 판단하고 행동해야 하는지 결정하기 위해 `MAIN_IDENTITY.md`(본 폴더에서는 `00_Core` 내의 스펙 문서들)와 `POLICY.md`를 읽습니다.
+3. **AGENT_INDEX.md 확인**: 본인에게 부여된 특정 역할(페르소나)과 사용 가능한 스킬(`SKILL_INDEX.md`)을 로드하여 세션 목적에 맞게 세팅합니다.
+4. **Task 실행**: 현재 할당된 `TASKS/` 폴더 안의 이슈를 바탕으로 작업을 수행합니다. 작업 기록과 산출물은 `CAPSULES/`나 `LOGS/`에 보관됩니다.
+
+> [!IMPORTANT]
+> 자비스 운영의 대원칙: **"정체성(Identity)과 작업(Task)은 완전히 분리된다."** 
+> 
+> 작업의 내용이나 논의, 단순 스니펫 코드는 절대 `00_Core`나 `01_Modules` 계층에 누적하지 않으며, 오직 `TASKS/`, `CAPSULES/`, `LOGS/`의 변동 레이어에만 일시적/영구적으로 기록하십시오.
+
+## 🔧 환경 패치 안내
+- Antigravity/Codex 호환 레이어는 아래 문서를 따른다.
+- `PATCH_GUIDE_ANTIGRAVITY_CODEX_v1.0.md`
