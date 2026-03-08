@@ -1,7 +1,7 @@
 # Jarvis Starter Pack (Prebuilt Edition)
 
 이 폴더는 **이미 구성된 스타터 팩**입니다.  
-사용자는 설치를 새로 만들 필요 없이, 폴더를 열고 에이전트에게 읽히면 바로 시작할 수 있습니다.
+폴더를 열고 에이전트에게 읽히면 바로 작업을 시작할 수 있으며, 스크립트 기능을 쓰려면 로컬에 Python 3 실행 환경이 필요합니다.
 
 ## 빠른 시작 (1분)
 1. `START_HERE.md`를 먼저 읽으세요.
@@ -10,7 +10,7 @@
 
 ## 이 팩의 성격
 - 목적: 범용 자비스 워크스페이스의 즉시 사용
-- 상태: 프리빌트(Prebuilt) / 실행 가능
+- 상태: 프리빌트(Prebuilt) / 문서 즉시 사용 가능 / 스크립트는 Python 3 필요
 - 원칙: 코어는 유지하고, 환경 패치는 레이어로 추가
 
 ## 폴더 개요
@@ -27,6 +27,14 @@
 - Antigravity: `.agent` 레이어 패치 권장
 - Codex: `AGENTS.md` 레이어 패치 권장
 - 둘 다 사용 가능 (코어 공통, 패치 레이어만 추가)
+
+## 실행 전제
+- 문서/프로토콜 기반 사용: 추가 설치 없이 가능
+- Python 스크립트 사용: `python` 또는 `py -3` 실행 가능 환경 필요
+- 대표 스크립트:
+  - `03_Memory/Jarvis_Memory.py`
+  - `04_Knowledge/IVK2_Improved/run_ivk2.bat`
+  - `05_Scripts/AGENDA_Flow_Template.ps1`
 
 ## 핵심 규칙
 1. 코어(`00_Core~05_Scripts`)를 작업 중 임의 수정하지 마세요.

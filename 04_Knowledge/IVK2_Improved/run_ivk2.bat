@@ -5,8 +5,21 @@ set "SCRIPT_DIR=%~dp0"
 set "PY_SCRIPT=%SCRIPT_DIR%ivk2_improved.py"
 set "DATA_DIR=%SCRIPT_DIR%data"
 set "DEFAULT_DB=%DATA_DIR%\index.sqlite"
+set "PY_CMD="
 
 if not exist "%DATA_DIR%" mkdir "%DATA_DIR%"
+
+where python >nul 2>nul
+if not errorlevel 1 set "PY_CMD=python"
+if not defined PY_CMD (
+  py -3 -c "import sys" >nul 2>nul
+  if not errorlevel 1 set "PY_CMD=py -3"
+)
+
+if not defined PY_CMD (
+  echo Python 3 is required. Install Python or enable the py launcher.
+  exit /b 1
+)
 
 if "%~1"=="" (
   echo Usage:
@@ -25,7 +38,7 @@ if /I "%~1"=="build" (
     echo build requires ROOT_PATH
     exit /b 1
   )
-  python "%PY_SCRIPT%" build "%~2" --db "%DEFAULT_DB%"
+  %PY_CMD% "%PY_SCRIPT%" build "%~2" --db "%DEFAULT_DB%"
   exit /b %ERRORLEVEL%
 )
 
@@ -34,19 +47,19 @@ if /I "%~1"=="query" (
     echo query requires a search string
     exit /b 1
   )
-  python "%PY_SCRIPT%" query "%~2" --db "%DEFAULT_DB%" -k 10
+  %PY_CMD% "%PY_SCRIPT%" query "%~2" --db "%DEFAULT_DB%" -k 10
   exit /b %ERRORLEVEL%
 )
 
 if /I "%~1"=="stats" (
-  python "%PY_SCRIPT%" stats --db "%DEFAULT_DB%"
+  %PY_CMD% "%PY_SCRIPT%" stats --db "%DEFAULT_DB%"
   exit /b %ERRORLEVEL%
 )
 
 if /I "%~1"=="vacuum" (
-  python "%PY_SCRIPT%" vacuum --db "%DEFAULT_DB%"
+  %PY_CMD% "%PY_SCRIPT%" vacuum --db "%DEFAULT_DB%"
   exit /b %ERRORLEVEL%
 )
 
-python "%PY_SCRIPT%" %*
+%PY_CMD% "%PY_SCRIPT%" %*
 endlocal

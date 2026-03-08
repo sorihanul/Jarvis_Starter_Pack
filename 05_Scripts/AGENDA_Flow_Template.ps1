@@ -14,13 +14,17 @@ param(
 $ErrorActionPreference = "Stop"
 
 $root = Resolve-Path $Workspace
-$agendaDir = Join-Path $root "AGENTS\Agenda"
-$archiveDir = Join-Path $agendaDir "archive"
-$logPath = Join-Path $agendaDir "AGENDA_LOG.md"
+$logDir = Join-Path $root "LOGS\Agenda"
+$capsuleDir = Join-Path $root "CAPSULES\Agenda"
+$archiveDir = Join-Path $logDir "archive"
+$logPath = Join-Path $logDir "AGENDA_LOG.md"
 
 function Ensure-Agenda {
-  if (-not (Test-Path $agendaDir)) {
-    New-Item -ItemType Directory -Path $agendaDir -Force | Out-Null
+  if (-not (Test-Path $logDir)) {
+    New-Item -ItemType Directory -Path $logDir -Force | Out-Null
+  }
+  if (-not (Test-Path $capsuleDir)) {
+    New-Item -ItemType Directory -Path $capsuleDir -Force | Out-Null
   }
   if (-not (Test-Path $archiveDir)) {
     New-Item -ItemType Directory -Path $archiveDir -Force | Out-Null
@@ -55,7 +59,7 @@ function Finalize-Board {
   Ensure-Agenda
   $stamp = Get-Date -Format "yyyyMMdd_HHmmss"
   $ts = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-  $agreement = Join-Path $agendaDir "AGREEMENT_$stamp.md"
+  $agreement = Join-Path $capsuleDir "AGREEMENT_$stamp.md"
   $backup = Join-Path $archiveDir "AGENDA_LOG_BACKUP_$stamp.md"
   $logBody = Get-Content -Path $logPath -Raw -Encoding UTF8
 
@@ -88,13 +92,16 @@ function Finalize-Board {
 
 function Show-Status {
   Ensure-Agenda
-  Write-Output "[agenda_dir] $agendaDir"
-  Get-ChildItem -Path $agendaDir -Force | Select-Object Name,Length,LastWriteTime | Format-Table -Auto
+  Write-Output "[log_dir] $logDir"
+  Write-Output "[capsule_dir] $capsuleDir"
+  Get-ChildItem -Path $logDir -Force | Select-Object Name,Length,LastWriteTime | Format-Table -Auto
 }
 
 function Reset-Board {
   Ensure-Agenda
-  Get-ChildItem -Path $agendaDir -File -ErrorAction SilentlyContinue |
+  Get-ChildItem -Path $capsuleDir -File -ErrorAction SilentlyContinue |
+    Remove-Item -Force
+  Get-ChildItem -Path $logDir -File -ErrorAction SilentlyContinue |
     Where-Object { $_.Name -ne "AGENDA_LOG.md" } |
     Remove-Item -Force
   Set-Content -Path $logPath -Value "# Agenda Log`r`n" -Encoding UTF8

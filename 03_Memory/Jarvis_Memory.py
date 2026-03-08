@@ -663,7 +663,7 @@ class MemoryOrchestrator:
     def _tokenize(self, text: str) -> List[str]:
         t = text.lower()
         # Keep words/numbers; drop punctuation
-        raw = re.findall(r"[a-z0-9]+", t)
+        raw = re.findall(r"[a-z0-9_\-\u3131-\u318E\uAC00-\uD7A3]+", t)
         toks = [w for w in raw if len(w) >= self.cfg.min_token_len]
         # Remove ultra-common stop-ish tokens without importing a stopword list
         common = {"the", "and", "for", "with", "that", "this", "from", "are", "was", "were", "you", "your", "but"}
@@ -745,3 +745,4 @@ class MemoryOrchestrator:
         if dt.tzinfo is None:
             return dt.replace(tzinfo=timezone.utc)
         return dt.astimezone(timezone.utc)
+

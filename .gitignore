@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 Jarvis_Starter_Pack/
+AGENTS/Agenda/
+LOGS/Agenda/
+CAPSULES/Agenda/

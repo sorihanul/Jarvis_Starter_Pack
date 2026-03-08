@@ -31,40 +31,40 @@ Read `START_HERE_IVK2.md` first.
 
 Shortest path:
 ```powershell
-<YOUR_WORKSPACE_PATH>\IVK2_Improved\run_ivk2.bat build <YOUR_DOCUMENT_FOLDER>
-<YOUR_WORKSPACE_PATH>\IVK2_Improved\run_ivk2.bat query "프롬프트 설계 원칙"
+04_Knowledge\IVK2_Improved\run_ivk2.bat build <YOUR_DOCUMENT_FOLDER>
+04_Knowledge\IVK2_Improved\run_ivk2.bat query "프롬프트 설계 원칙"
 ```
 
 By default, the batch file stores the DB here:
-- `<YOUR_WORKSPACE_PATH>\IVK2_Improved\data\index.sqlite`
+- `04_Knowledge\IVK2_Improved\data\index.sqlite`
 
 ## Commands
 
 ### Build index
 ```powershell
-<YOUR_WORKSPACE_PATH>\IVK2_Improved\run_ivk2.bat build <YOUR_DOCUMENT_FOLDER>
+04_Knowledge\IVK2_Improved\run_ivk2.bat build <YOUR_DOCUMENT_FOLDER>
 ```
 
 ### Query
 ```powershell
-<YOUR_WORKSPACE_PATH>\IVK2_Improved\run_ivk2.bat query "프롬프트 설계 원칙"
+04_Knowledge\IVK2_Improved\run_ivk2.bat query "프롬프트 설계 원칙"
 ```
 
 ### Stats
 ```powershell
-<YOUR_WORKSPACE_PATH>\IVK2_Improved\run_ivk2.bat stats
+04_Knowledge\IVK2_Improved\run_ivk2.bat stats
 ```
 
 ### Compact DB
 ```powershell
-<YOUR_WORKSPACE_PATH>\IVK2_Improved\run_ivk2.bat vacuum
+04_Knowledge\IVK2_Improved\run_ivk2.bat vacuum
 ```
 
 ### Direct engine call (optional)
 If you want a custom DB path:
 ```powershell
-python <YOUR_WORKSPACE_PATH>\IVK2_Improved\ivk2_improved.py build <YOUR_DOCUMENT_FOLDER> --db <YOUR_OUTPUT_PATH>\ivk2\index.sqlite
-python <YOUR_WORKSPACE_PATH>\IVK2_Improved\ivk2_improved.py query "프롬프트 설계 원칙" --db <YOUR_OUTPUT_PATH>\ivk2\index.sqlite -k 10
+python 04_Knowledge\IVK2_Improved\ivk2_improved.py build <YOUR_DOCUMENT_FOLDER> --db <YOUR_OUTPUT_PATH>\ivk2\index.sqlite
+python 04_Knowledge\IVK2_Improved\ivk2_improved.py query "프롬프트 설계 원칙" --db <YOUR_OUTPUT_PATH>\ivk2\index.sqlite -k 10
 ```
 
 ## Dual profile (for large vaults)
@@ -74,7 +74,7 @@ Use this only when one vault becomes large enough that one DB feels slow.
 - build script: `run_ivk2_dual_profile.bat`
 - merged query command:
 ```powershell
-python <YOUR_WORKSPACE_PATH>\IVK2_Improved\ivk2_improved.py query-dual "질문" --hot-db <YOUR_WORKSPACE_PATH>\IVK2_Improved\data\hot.sqlite --cold-db <YOUR_WORKSPACE_PATH>\IVK2_Improved\data\cold.sqlite -k 10
+python 04_Knowledge\IVK2_Improved\ivk2_improved.py query-dual "질문" --hot-db 04_Knowledge\IVK2_Improved\data\hot.sqlite --cold-db 04_Knowledge\IVK2_Improved\data\cold.sqlite -k 10
 ```
 
 ## External search note
@@ -89,3 +89,4 @@ If you later want hybrid search:
 - Intended for internal/local corpus search.
 - Good for "find where I already thought about this".
 - For latest web facts, use web search separately.
+- `run_ivk2.bat`는 먼저 `python`을, 없으면 `py -3`를 사용합니다.
