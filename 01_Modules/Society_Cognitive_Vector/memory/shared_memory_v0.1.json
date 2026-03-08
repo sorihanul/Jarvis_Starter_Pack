@@ -1,0 +1,15 @@
+﻿{
+  "version": "0.1",
+  "scope": "society_shared",
+  "stable_rules": [
+    "Use 1-2 personas per agenda for clarity",
+    "Promote only validated decisions",
+    "Label uncertain claims as unverified"
+  ],
+  "accepted_decisions": [],
+  "constraints": [
+    "No high-risk diagnosis behavior",
+    "No harmful execution guidance"
+  ],
+  "last_updated": "2026-02-28"
+}

@@ -1,0 +1,11 @@
+﻿{
+  "persona_id": "synthesizer_vector_v0_1",
+  "version": "0.1",
+  "wins": [],
+  "failures": [],
+  "preferred_patterns": [
+    "single_next_action",
+    "tradeoff_explicit"
+  ],
+  "last_updated": "2026-02-28"
+}

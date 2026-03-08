@@ -1,0 +1,11 @@
+﻿{
+  "persona_id": "researcher_vector_v0_1",
+  "version": "0.1",
+  "wins": [],
+  "failures": [],
+  "preferred_patterns": [
+    "facts_vs_assumptions_split",
+    "hypothesis_list_first"
+  ],
+  "last_updated": "2026-02-28"
+}
