@@ -3,9 +3,6 @@
   "version": "0.1",
   "wins": [],
   "failures": [],
-  "preferred_patterns": [
-    "issue_risk_fix_triplet",
-    "constraint_first_review"
-  ],
-  "last_updated": "2026-02-28"
+  "preferred_patterns": [],
+  "last_updated": ""
 }
