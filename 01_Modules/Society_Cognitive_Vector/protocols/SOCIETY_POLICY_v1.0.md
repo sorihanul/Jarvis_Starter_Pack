@@ -1,6 +1,6 @@
 ﻿# Society Policy v1.0
 
-Path: `F:\LLM\Society`
+Path: `01_Modules/Society_Cognitive_Vector`
 
 ## Purpose
 This folder stores agent-centric identity, stance, speech, and self-reassembly artifacts.
@@ -20,12 +20,12 @@ Do not use it for:
 - final structural decisions
 
 ## Split Rule
-- `F:\LLM\Agents\Agenda` = system change / implementation / agreement / propagation
-- `F:\LLM\Society` = agent identity / stance / speech / reassembly
+- `LOGS/Agenda/AGENDA_LOG.md` = system change / implementation / agreement / propagation log
+- `01_Modules/Society_Cognitive_Vector/` = agent identity / stance / speech / reassembly
 
 ## Operating Rule
 1. Society is descriptive, not legislative.
-2. If a Society note becomes a system decision, summarize and promote it into `F:\LLM\Agents\Agenda`.
+2. If a Society note becomes a system decision, summarize and promote it into `LOGS/Agenda/AGENDA_LOG.md`.
 3. Keep agent speech attributable by speaker or unit.
 4. Archive old Society chatter rather than deleting it.
 

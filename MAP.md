@@ -22,7 +22,10 @@ Jarvis_Workspace/
 │
 ├── 01_Modules/ (확장 기능 및 도구 모음)
 │   ├── Coding_Sequential_Agent_Starter/ (순차적 코딩 & 리뷰 에이전트 파이프라인 모음)
+│   ├── Learning_Loop_Lite_Starter/ (세션 종료 캡슐과 승격 후보를 남기는 경량 학습 루프)
+│   ├── Madang_Pan_Lite_Starter/ (전면 대화 라우팅 및 짧은 브리핑 모듈)
 │   ├── Persona_Agent_Starter/ (맞춤형 문체/성격 기반 에이전트 생성 프레임워크)
+│   ├── Project_Workspace_Lite_Starter/ (프로젝트 작업장을 4문서로 시작하는 경량 모듈)
 │   └── AILO_Coding_Engine_Module_PUBLIC_v1.1.md (기본 코딩 엔진 체계)
 │
 ├── 02_Protocols/ (업무 처리 통제 루틴)
@@ -41,11 +44,11 @@ Jarvis_Workspace/
 │   └── AGENDA_Flow_Template.ps1 (아젠다 템플릿 생성 스크립트)
 │
 ├── [TASK & EXECUTION LAYER] (가변, 임시 및 기록 데이터)
-│   ├── AGENTS/ (에이전트 개별 정의서 모음 및 기존 Agenda 구동 로그)
+│   ├── AGENTS/ (에이전트 개별 정의서 모음)
 │   ├── SKILLS/ (폴더 공용 도구 모음)
-│   ├── TASKS/ (현재 수행중인 작업 목록 및 임시 작업 파일)
-│   ├── CAPSULES/ (완료된 Task의 최종 세션 요약 데이터)
-│   └── LOGS/ (실행 로그 및 에러 내역)
+│   ├── TASKS/ (현재 수행중인 작업 목록, 프로젝트 작업장, 운영 방법론 문서)
+│   ├── CAPSULES/ (완료된 Task의 최종 세션 요약 데이터, 캡슐 템플릿, Agenda 캡슐)
+│   └── LOGS/ (실행 로그, 에러 내역, Agenda 로그)
 │
 └── README.md (스타터 팩 최초 사용 설명서)
 ```

@@ -63,8 +63,8 @@ By default, the batch file stores the DB here:
 ### Direct engine call (optional)
 If you want a custom DB path:
 ```powershell
-python 04_Knowledge\IVK2_Improved\ivk2_improved.py build <YOUR_DOCUMENT_FOLDER> --db <YOUR_OUTPUT_PATH>\ivk2\index.sqlite
-python 04_Knowledge\IVK2_Improved\ivk2_improved.py query "프롬프트 설계 원칙" --db <YOUR_OUTPUT_PATH>\ivk2\index.sqlite -k 10
+python 04_Knowledge\IVK2_Improved\ivk2_improved.py build <YOUR_DOCUMENT_FOLDER> --db .\tmp\ivk2\index.sqlite
+python 04_Knowledge\IVK2_Improved\ivk2_improved.py query "프롬프트 설계 원칙" --db .\tmp\ivk2\index.sqlite -k 10
 ```
 
 ## Dual profile (for large vaults)

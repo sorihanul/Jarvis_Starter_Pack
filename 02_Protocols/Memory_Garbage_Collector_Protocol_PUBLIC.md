@@ -26,7 +26,7 @@
     *   삭제 대상이 아닌 항목들만 임시 리스트에 담는다.
     *   `auto_mined.jsonl`을 덮어쓰기(Overwrite)한다.
 5.  **Report**: 삭제된 항목 수와 확보된 용량을 로그로 남긴다.
-    *   Public-friendly log path: `<YOUR_OUTPUT_PATH>\Jarvis_Starter_Pack\gc_report.log`
+    *   Public-friendly log path example: `LOGS/gc_report.log`
 
 ## 4. 예외 처리 (Exceptions)
 *   **Manual Override**: `keep_forever: true` 플래그가 있는 항목은 점수와 무관하게 보존한다.
@@ -36,4 +36,3 @@
 *   **Night Owl Workflow**: 매주 정기 점검 시 실행.
 *   **Disk Constraint**: 디스크 용량 부족 경고(Red Alert) 시 긴급 실행.
 *   **Command**: `/gc` 명령어로 수동 실행.
-

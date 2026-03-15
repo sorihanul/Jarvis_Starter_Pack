@@ -8,12 +8,12 @@
 
 ## Build (one command)
 ```powershell
-<YOUR_WORKSPACE_PATH>\IVK2_Improved\run_ivk2_dual_profile.bat <YOUR_PATH> 30
+04_Knowledge\IVK2_Improved\run_ivk2_dual_profile.bat <YOUR_DOCUMENT_FOLDER> 30
 ```
 
 ## Query merged results
 ```powershell
-python <YOUR_WORKSPACE_PATH>\IVK2_Improved\ivk2_improved.py query-dual "질문" --hot-db <YOUR_WORKSPACE_PATH>\IVK2_Improved\data\hot.sqlite --cold-db <YOUR_WORKSPACE_PATH>\IVK2_Improved\data\cold.sqlite -k 10
+python 04_Knowledge\IVK2_Improved\ivk2_improved.py query-dual "질문" --hot-db 04_Knowledge\IVK2_Improved\data\hot.sqlite --cold-db 04_Knowledge\IVK2_Improved\data\cold.sqlite -k 10
 ```
 
 ## Notes

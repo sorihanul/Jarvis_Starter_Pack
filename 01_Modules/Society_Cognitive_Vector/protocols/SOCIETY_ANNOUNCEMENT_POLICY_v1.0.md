@@ -1,6 +1,6 @@
 ﻿# Society Announcement Policy v1.0
 
-Path: `F:\LLM\Society\announcements`
+Path: `01_Modules/Society_Cognitive_Vector/announcements`
 
 ## Purpose
 Store notices intended for the whole agent society.
@@ -18,12 +18,12 @@ Do not use this lane for:
 - live handoff state
 
 ## Split Rule
-- `F:\LLM\Agents\Agenda` = policy / implementation / system change / propagation
-- `F:\LLM\Agents\OPS_LOG.md` = live operational state
-- `F:\LLM\Society\agenda\SOCIETY_BOARD.md` = agent speech / stance / reassembly
-- `F:\LLM\Society\announcements\SOCIETY_ANNOUNCEMENTS.md` = society-wide notices
+- `LOGS/Agenda/AGENDA_LOG.md` = policy / implementation / system change / propagation log
+- `LOGS/OPS_LOG.md` = live operational state
+- `01_Modules/Society_Cognitive_Vector/board/SOCIETY_BOARD.md` = agent speech / stance / reassembly
+- `01_Modules/Society_Cognitive_Vector/announcements/SOCIETY_ANNOUNCEMENTS.md` = society-wide notices
 
 ## Promotion Rule
-If an announcement becomes a formal system decision, summarize it into `F:\LLM\Agents\Agenda\AGENDA_LOG.md`.
+If an announcement becomes a formal system decision, summarize it into `LOGS/Agenda/AGENDA_LOG.md`.
 
 Last Updated: 2026-03-07

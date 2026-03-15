@@ -17,11 +17,19 @@
 - `00_Core`: 정체성/코어 스펙
 - `01_Modules`: 모듈 명세
   - 선택 모듈: `01_Modules/Persona_Agent_Starter/` (글쓰기 페르소나 구성)
+  - 선택 모듈: `01_Modules/Madang_Pan_Lite_Starter/` (전면 대화 라우터/브리핑 경량판)
+  - 선택 모듈: `01_Modules/Project_Workspace_Lite_Starter/` (프로젝트 작업장 시작 레일)
+  - 선택 모듈: `01_Modules/Learning_Loop_Lite_Starter/` (세션 종료 학습/승격 후보 기록)
 - `02_Protocols`: 운영 프로토콜
 - `03_Memory`: 메모리 구현
 - `04_Knowledge`: 지식/검색
 - `05_Scripts`: 보조 스크립트
 - `AGENTS`, `SKILLS`, `TASKS`, `CAPSULES`, `LOGS`: 작업 레이어
+
+## 선택형 운영 문서
+- `TASKS/JARVIS_STARTER_ORCHESTRATION_METHOD_v0.1.md`: 메인 세션과 프로젝트 오케스트레이션 세션을 어떻게 나눠 쓰는지 설명하는 방법론
+- `TASKS/SEMI_AUTO_PRESET_v0.1.md`: 완전 자동이 아닌 반자동 운영 개념 프리셋
+- `TASKS/BROWSER_USAGE_POLICY_v0.1.md`: 브라우저 사용을 필수 기능이 아닌 선택형 보조 능력으로 설명하는 정책 문서
 
 ## 환경 호환
 - Antigravity: `.agent` 레이어 패치 권장

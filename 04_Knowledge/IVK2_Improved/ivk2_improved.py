@@ -36,6 +36,11 @@ DEFAULT_EXTS = {
 SKIP_DIRS = {".git", "node_modules", "__pycache__", ".venv", "venv", ".ivk2"}
 
 TOKEN_RE = re.compile(r"[A-Za-z0-9_\-\u3131-\u318E\uAC00-\uD7A3]+")
+SCRIPT_DIR = Path(__file__).resolve().parent
+DEFAULT_DATA_DIR = SCRIPT_DIR / "data"
+DEFAULT_DB_PATH = DEFAULT_DATA_DIR / "index.sqlite"
+DEFAULT_HOT_DB_PATH = DEFAULT_DATA_DIR / "hot.sqlite"
+DEFAULT_COLD_DB_PATH = DEFAULT_DATA_DIR / "cold.sqlite"
 
 
 def stable_hash64(s: str) -> int:
@@ -473,7 +478,7 @@ def main() -> int:
 
     p_build = sub.add_parser("build", help="build/update index")
     p_build.add_argument("root")
-    p_build.add_argument("--db", default=r"<YOUR_OUTPUT_PATH>\ivk2\index.sqlite")
+    p_build.add_argument("--db", default=str(DEFAULT_DB_PATH))
     p_build.add_argument("--ext", action="append", default=[])
     p_build.add_argument("--keep-missing", action="store_true")
     p_build.add_argument("--mtime-days-max", type=float, default=None, help="include only files newer than N days")
@@ -481,25 +486,25 @@ def main() -> int:
 
     p_query = sub.add_parser("query", help="query index")
     p_query.add_argument("q")
-    p_query.add_argument("--db", default=r"<YOUR_OUTPUT_PATH>\ivk2\index.sqlite")
+    p_query.add_argument("--db", default=str(DEFAULT_DB_PATH))
     p_query.add_argument("-k", type=int, default=12)
     p_query.add_argument("--domain", default=None)
     p_query.add_argument("--reliability-min", type=float, default=0.0)
 
     p_qdual = sub.add_parser("query-dual", help="query hot+cold indexes and merge")
     p_qdual.add_argument("q")
-    p_qdual.add_argument("--hot-db", default=r"<YOUR_OUTPUT_PATH>\ivk2\hot.sqlite")
-    p_qdual.add_argument("--cold-db", default=r"<YOUR_OUTPUT_PATH>\ivk2\cold.sqlite")
+    p_qdual.add_argument("--hot-db", default=str(DEFAULT_HOT_DB_PATH))
+    p_qdual.add_argument("--cold-db", default=str(DEFAULT_COLD_DB_PATH))
     p_qdual.add_argument("-k", type=int, default=12)
     p_qdual.add_argument("--domain", default=None)
     p_qdual.add_argument("--reliability-min", type=float, default=0.0)
     p_qdual.add_argument("--hot-weight", type=float, default=1.08)
 
     p_stats = sub.add_parser("stats", help="index stats")
-    p_stats.add_argument("--db", default=r"<YOUR_OUTPUT_PATH>\ivk2\index.sqlite")
+    p_stats.add_argument("--db", default=str(DEFAULT_DB_PATH))
 
     p_vac = sub.add_parser("vacuum", help="compact sqlite db")
-    p_vac.add_argument("--db", default=r"<YOUR_OUTPUT_PATH>\ivk2\index.sqlite")
+    p_vac.add_argument("--db", default=str(DEFAULT_DB_PATH))
 
     args = p.parse_args()
 
