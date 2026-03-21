@@ -19,3 +19,6 @@
 - 긴 로그 대신 압축된 캡슐만 남긴다.
 - 반복 검증된 것만 `SKILLS` 또는 `AGENTS` 승격 후보가 된다.
 - `OpenViking`은 전면 도입하지 않고, 계층형 요약과 세션 커밋 사고방식만 참고한다.
+
+같이 읽으면 좋은 문서:
+- `TASKS/SESSION_LOGGING_GUIDE_v0.1.md`

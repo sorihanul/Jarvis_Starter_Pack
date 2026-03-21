@@ -17,6 +17,9 @@
 - 세션 종료 후 교훈과 승격 후보를 남기고 싶다면 `01_Modules/Learning_Loop_Lite_Starter/README.md`
 - 메인 세션과 프로젝트 오케스트레이션 세션의 분리 원칙을 보고 싶다면 `TASKS/JARVIS_STARTER_ORCHESTRATION_METHOD_v0.1.md`
 - 브라우저 사용 가능 범위를 알고 싶다면 `TASKS/BROWSER_USAGE_POLICY_v0.1.md`
+- 세션 로그와 캡슐을 어디에 어떻게 남길지 알고 싶다면 `TASKS/SESSION_LOGGING_GUIDE_v0.1.md`
+- 여러 세션을 병행할 때 세션 정체성을 고정하고 싶다면 `TASKS/SESSION_CARD_GUIDE_v0.1.md`
+- Codex에서 고급 분업 패턴까지 쓰고 싶다면 `01_Modules/Codex_Agent_Starter/README.md`
 
 `01_Modules/Madang_Pan_Lite_Starter/`는:
 - 요청 분류

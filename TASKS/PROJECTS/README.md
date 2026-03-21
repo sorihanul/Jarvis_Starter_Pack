@@ -14,7 +14,8 @@
 빠른 시작:
 1. `TASKS/PROJECTS/_TEMPLATES/`의 파일을 복사한다.
 2. 새 폴더 `TASKS/PROJECTS/<project_id>/`를 만든다.
-3. `BOOT_ENTRY.md`, `MISSION.md`, `ROADMAP.md`, `ORCHESTRATOR.md`를 채운다.
+3. 필요하면 `TASKS/SESSION_CARD_TEMPLATE_v0.1.md`를 참고해 프로젝트 오케스트레이션 세션 카드를 먼저 만든다.
+4. `BOOT_ENTRY.md`, `MISSION.md`, `ROADMAP.md`, `ORCHESTRATOR.md`를 채운다.
 
 예:
 - `TASKS/PROJECTS/my_first_project/`

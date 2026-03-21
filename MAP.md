@@ -22,6 +22,7 @@ Jarvis_Workspace/
 │
 ├── 01_Modules/ (확장 기능 및 도구 모음)
 │   ├── Coding_Sequential_Agent_Starter/ (순차적 코딩 & 리뷰 에이전트 파이프라인 모음)
+│   ├── Codex_Agent_Starter/ (Codex의 서브에이전트 기능을 자비스 스타터에 얹는 경량 애드온)
 │   ├── Learning_Loop_Lite_Starter/ (세션 종료 캡슐과 승격 후보를 남기는 경량 학습 루프)
 │   ├── Madang_Pan_Lite_Starter/ (전면 대화 라우팅 및 짧은 브리핑 모듈)
 │   ├── Persona_Agent_Starter/ (맞춤형 문체/성격 기반 에이전트 생성 프레임워크)
@@ -46,9 +47,9 @@ Jarvis_Workspace/
 ├── [TASK & EXECUTION LAYER] (가변, 임시 및 기록 데이터)
 │   ├── AGENTS/ (에이전트 개별 정의서 모음)
 │   ├── SKILLS/ (폴더 공용 도구 모음)
-│   ├── TASKS/ (현재 수행중인 작업 목록, 프로젝트 작업장, 운영 방법론 문서)
+│   ├── TASKS/ (현재 수행중인 작업 목록, 프로젝트 작업장, 운영 방법론 문서, 세션 로그/세션 카드 가이드)
 │   ├── CAPSULES/ (완료된 Task의 최종 세션 요약 데이터, 캡슐 템플릿, Agenda 캡슐)
-│   └── LOGS/ (실행 로그, 에러 내역, Agenda 로그)
+│   └── LOGS/ (원시 실행 로그, 에러 내역, 오케스트레이션 진행 기록)
 │
 └── README.md (스타터 팩 최초 사용 설명서)
 ```
@@ -59,6 +60,7 @@ Jarvis_Workspace/
 - `02_Protocols/PIPELINE_CONTRACT_v1.3.md`: 대화/실행 분리 및 오케스트레이터 운영 규칙
 - `00_Core/한글 AILO-H...md`: 최상위 불변 자비스(가라사니 시스템) 규칙 (`MAIN_IDENTITY`를 겸함)
 - `POLICY.md`: AI가 지켜야 하는 작업 수행 태도 및 출력 형식
+- `01_Modules/Codex_Agent_Starter/README.md`: Codex의 에이전트 기능을 선택적으로 붙이는 방법
 
 ## 🗺 READ ORDER (부팅 시 권장 읽기 순서)
 1) `START_HERE.md`

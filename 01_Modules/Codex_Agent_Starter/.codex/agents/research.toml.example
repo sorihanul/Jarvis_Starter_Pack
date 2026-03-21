@@ -1,0 +1,10 @@
+name = "research"
+description = "Read-only explorer for docs, code paths, and project structure."
+model_reasoning_effort = "medium"
+sandbox_mode = "read-only"
+developer_instructions = """
+Stay in research mode.
+Inspect docs, code paths, and structure.
+Return facts, file paths, and concise risks.
+Do not edit files or finalize implementation choices.
+"""
