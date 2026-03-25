@@ -1,6 +1,6 @@
 # START HERE: Jarvis Agent Workspace
 
-환영합니다. 이 워크스페이스는 `00_Core/JARVIS_FOLDER_RECIPE_v1.0.md` 기준을 따르는 독립적인 자비스 시스템(AILO-H)입니다.
+환영합니다. 이 워크스페이스는 `00_Core/JARVIS_FOLDER_RECIPE_v1.0.md` 기준을 따르는 독립적인 자비스 시스템입니다.
 
 ## 🧭 시작하기
 어떤 작업을 수행하든, 에이전트(자비스)는 아래의 흐름을 따릅니다.
@@ -20,6 +20,9 @@
 - 세션 로그와 캡슐을 어디에 어떻게 남길지 알고 싶다면 `TASKS/SESSION_LOGGING_GUIDE_v0.1.md`
 - 여러 세션을 병행할 때 세션 정체성을 고정하고 싶다면 `TASKS/SESSION_CARD_GUIDE_v0.1.md`
 - Codex에서 고급 분업 패턴까지 쓰고 싶다면 `01_Modules/Codex_Agent_Starter/README.md`
+- 공개형 에이전트 형식별 적합도를 보고 싶다면 `TASKS/PUBLIC_AGENT_FIT_GUIDE_v0.1.md`
+- 공개형 에이전트와 스킬을 번들 단위로 읽고 싶다면 `TASKS/PUBLIC_AGENT_SKILL_BUNDLES_v0.1.md`
+- 새 공개형 에이전트나 스킬 카드를 직접 만들고 싶다면 `TASKS/PUBLIC_AGENT_RECIPE_v0.1.md`, `TASKS/PUBLIC_AILO_E_AGENT_RECIPE_v0.1.md`, `TASKS/PUBLIC_SKILL_RECIPE_v0.1.md`
 
 `01_Modules/Madang_Pan_Lite_Starter/`는:
 - 요청 분류
@@ -28,6 +31,7 @@
 를 위한 경량 전면 라우터입니다.
 
 프로젝트형 작업은 메인 세션에서 길게 끌기보다, 별도 오케스트레이션 세션을 열어 `TASKS/PROJECTS/` 작업장을 기준으로 진행하는 것을 권장합니다.
+공개형 에이전트 카드를 사용할 때는, 카드 하나만 읽기보다 대응 스킬과 번들 문서를 함께 읽는 편이 더 안정적입니다.
 
 > [!IMPORTANT]
 > 자비스 운영의 대원칙: **"정체성(Identity)과 작업(Task)은 완전히 분리된다."** 

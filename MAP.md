@@ -45,9 +45,9 @@ Jarvis_Workspace/
 │   └── AGENDA_Flow_Template.ps1 (아젠다 템플릿 생성 스크립트)
 │
 ├── [TASK & EXECUTION LAYER] (가변, 임시 및 기록 데이터)
-│   ├── AGENTS/ (에이전트 개별 정의서 모음)
-│   ├── SKILLS/ (폴더 공용 도구 모음)
-│   ├── TASKS/ (현재 수행중인 작업 목록, 프로젝트 작업장, 운영 방법론 문서, 세션 로그/세션 카드 가이드)
+│   ├── AGENTS/ (에이전트 개별 정의서 모음, 공개형 카드 포함)
+│   ├── SKILLS/ (폴더 공용 도구 모음, 공개형 카드와 짝을 이루는 스킬 포함)
+│   ├── TASKS/ (현재 수행중인 작업 목록, 프로젝트 작업장, 운영 방법론 문서, 세션 로그/세션 카드 가이드, 공개형 번들/레시피 가이드)
 │   ├── CAPSULES/ (완료된 Task의 최종 세션 요약 데이터, 캡슐 템플릿, Agenda 캡슐)
 │   └── LOGS/ (원시 실행 로그, 에러 내역, 오케스트레이션 진행 기록)
 │
@@ -58,9 +58,14 @@ Jarvis_Workspace/
 - `START_HERE.md`: 에이전트 초기화 진입점
 - `MAP.md`: 컴포넌트 간 이동 및 역할 이해 목적 지도 
 - `02_Protocols/PIPELINE_CONTRACT_v1.3.md`: 대화/실행 분리 및 오케스트레이터 운영 규칙
-- `00_Core/한글 AILO-H...md`: 최상위 불변 자비스(가라사니 시스템) 규칙 (`MAIN_IDENTITY`를 겸함)
+- `00_Core/한글 AILO-H Full-Stack v0.91 — Unified Core Specification.md`: 최상위 불변 자비스(가라사니 시스템) 규칙 (`MAIN_IDENTITY`를 겸함)
 - `POLICY.md`: AI가 지켜야 하는 작업 수행 태도 및 출력 형식
 - `01_Modules/Codex_Agent_Starter/README.md`: Codex의 에이전트 기능을 선택적으로 붙이는 방법
+- `TASKS/PUBLIC_AGENT_FIT_GUIDE_v0.1.md`: 공개형 에이전트 형식별 적합도 가이드
+- `TASKS/PUBLIC_AGENT_SKILL_BUNDLES_v0.1.md`: 공개형 에이전트 카드와 스킬 번들 가이드
+- `TASKS/PUBLIC_AGENT_RECIPE_v0.1.md`: 공개형 일반 에이전트 카드를 만드는 레시피
+- `TASKS/PUBLIC_AILO_E_AGENT_RECIPE_v0.1.md`: 공개형 AILO-E 에이전트 카드를 만드는 레시피
+- `TASKS/PUBLIC_SKILL_RECIPE_v0.1.md`: 공개형 스킬 카드를 만드는 레시피
 
 ## 🗺 READ ORDER (부팅 시 권장 읽기 순서)
 1) `START_HERE.md`

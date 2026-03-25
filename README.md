@@ -33,6 +33,12 @@
 - `TASKS/BROWSER_USAGE_POLICY_v0.1.md`: 브라우저 사용을 필수 기능이 아닌 선택형 보조 능력으로 설명하는 정책 문서
 - `TASKS/SESSION_LOGGING_GUIDE_v0.1.md`: `TASKS`, `CAPSULES`, `LOGS`를 언제 어떻게 남기는지 설명하는 생산 안내
 - `TASKS/SESSION_CARD_GUIDE_v0.1.md`: 여러 세션을 병행할 때 세션 정체성을 어떻게 고정하는지 설명하는 가이드
+- `TASKS/PUBLIC_AGENT_FIT_GUIDE_v0.1.md`: 어떤 작업에 어떤 공개형 에이전트 형식이 맞는지 정리한 적합도 가이드
+- `TASKS/PUBLIC_AGENT_SKILL_BUNDLES_v0.1.md`: 공개형 에이전트 카드와 스킬을 어떤 묶음으로 읽어야 하는지 정리한 번들 가이드
+- `TASKS/PUBLIC_AGENT_BUNDLE_SESSION_SAMPLES_v0.1.md`: 세션 카드와 함께 읽는 공개형 번들 샘플
+- `TASKS/PUBLIC_AGENT_RECIPE_v0.1.md`: 공개형 일반 에이전트 카드를 어떻게 만드는지 정리한 제작 레시피
+- `TASKS/PUBLIC_AILO_E_AGENT_RECIPE_v0.1.md`: 공개형 AILO-E 에이전트를 언제 어떻게 만드는지 정리한 제작 레시피
+- `TASKS/PUBLIC_SKILL_RECIPE_v0.1.md`: 공개형 스킬 카드를 어떻게 만드는지 정리한 제작 레시피
 
 ## 환경 호환
 - Antigravity: `.agent` 레이어 패치 권장
@@ -51,6 +57,7 @@
 1. 코어(`00_Core~05_Scripts`)를 작업 중 임의 수정하지 마세요.
 2. 임시 산출물은 작업 레이어에만 남기세요.
 3. 문제가 생기면 코어 수정보다 패치 레이어부터 점검하세요.
+4. 공개형 에이전트 카드는 가능하면 대응 스킬과 번들 단위로 함께 읽으세요.
 
 ## 시작 파일
 - `START_HERE.md`
