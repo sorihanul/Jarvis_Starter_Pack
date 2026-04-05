@@ -25,6 +25,7 @@ Jarvis_Workspace/
 │   ├── Codex_Agent_Starter/ (Codex의 서브에이전트 기능을 자비스 스타터에 얹는 경량 애드온)
 │   ├── Learning_Loop_Lite_Starter/ (세션 종료 캡슐과 승격 후보를 남기는 경량 학습 루프)
 │   ├── Madang_Pan_Lite_Starter/ (전면 대화 라우팅 및 짧은 브리핑 모듈)
+│   ├── Obsidian_Runtime_Surface_Lite_Starter/ (Obsidian을 브레인이 아닌 지식층 보기면으로 붙이는 선택형 모듈)
 │   ├── Persona_Agent_Starter/ (맞춤형 문체/성격 기반 에이전트 생성 프레임워크)
 │   ├── Project_Workspace_Lite_Starter/ (프로젝트 작업장을 4문서로 시작하는 경량 모듈)
 │   └── AILO_Coding_Engine_Module_PUBLIC_v1.1.md (기본 코딩 엔진 체계)
@@ -61,6 +62,7 @@ Jarvis_Workspace/
 - `00_Core/한글 AILO-H Full-Stack v0.91 — Unified Core Specification.md`: 최상위 불변 자비스(가라사니 시스템) 규칙 (`MAIN_IDENTITY`를 겸함)
 - `POLICY.md`: AI가 지켜야 하는 작업 수행 태도 및 출력 형식
 - `01_Modules/Codex_Agent_Starter/README.md`: Codex의 에이전트 기능을 선택적으로 붙이는 방법
+- `01_Modules/Obsidian_Runtime_Surface_Lite_Starter/README.md`: Obsidian을 지식층 보기면으로 붙이는 옵션 모듈
 - `TASKS/PUBLIC_AGENT_FIT_GUIDE_v0.1.md`: 공개형 에이전트 형식별 적합도 가이드
 - `TASKS/PUBLIC_AGENT_SKILL_BUNDLES_v0.1.md`: 공개형 에이전트 카드와 스킬 번들 가이드
 - `TASKS/PUBLIC_AGENT_RECIPE_v0.1.md`: 공개형 일반 에이전트 카드를 만드는 레시피

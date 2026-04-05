@@ -21,6 +21,7 @@
   - 선택 모듈: `01_Modules/Madang_Pan_Lite_Starter/` (전면 대화 라우터/브리핑 경량판)
   - 선택 모듈: `01_Modules/Project_Workspace_Lite_Starter/` (프로젝트 작업장 시작 레일)
   - 선택 모듈: `01_Modules/Learning_Loop_Lite_Starter/` (세션 종료 학습/승격 후보 기록)
+  - 선택 모듈: `01_Modules/Obsidian_Runtime_Surface_Lite_Starter/` (Obsidian을 브레인이 아닌 지식층 보기면으로 붙이는 선택형 운용 표면)
 - `02_Protocols`: 운영 프로토콜
 - `03_Memory`: 메모리 구현
 - `04_Knowledge`: 지식/검색
