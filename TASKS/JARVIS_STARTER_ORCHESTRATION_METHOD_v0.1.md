@@ -82,6 +82,8 @@
 - 세션 학습이 필요하면 `01_Modules/Learning_Loop_Lite_Starter/README.md`
 - 보안 게이트가 필요하면 `TASKS/SECURITY_GATE_AGENT_SPEC_v0.1.md`
 - 세션 정체성 고정이 필요하면 `TASKS/SESSION_CARD_GUIDE_v0.1.md`
+- 세션 연속성 최소 표면을 정하려면 `TASKS/JARVIS_SESSION_CONTINUITY_MINIMUM_v0.1.md`
+- 긴 세션에서 읽기 순서를 다시 정하려면 `TASKS/JARVIS_CONTEXT_REALIGNMENT_NOTE_v0.1.md`
 
 ### 에이전트 진입 원칙
 1. 코어를 읽고 작업 레이어로 내려온다.

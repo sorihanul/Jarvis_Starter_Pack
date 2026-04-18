@@ -63,6 +63,8 @@ Jarvis_Workspace/
 - `POLICY.md`: AI가 지켜야 하는 작업 수행 태도 및 출력 형식
 - `01_Modules/Codex_Agent_Starter/README.md`: Codex의 에이전트 기능을 선택적으로 붙이는 방법
 - `01_Modules/Obsidian_Runtime_Surface_Lite_Starter/README.md`: Obsidian을 지식층 보기면으로 붙이는 옵션 모듈
+- `TASKS/JARVIS_SESSION_CONTINUITY_MINIMUM_v0.1.md`: 세션 연속성을 위한 최소 표면 기준
+- `TASKS/JARVIS_CONTEXT_REALIGNMENT_NOTE_v0.1.md`: 세션 재정렬 시 다시 읽는 순서
 - `TASKS/PUBLIC_AGENT_FIT_GUIDE_v0.1.md`: 공개형 에이전트 형식별 적합도 가이드
 - `TASKS/PUBLIC_AGENT_SKILL_BUNDLES_v0.1.md`: 공개형 에이전트 카드와 스킬 번들 가이드
 - `TASKS/PUBLIC_AGENT_RECIPE_v0.1.md`: 공개형 일반 에이전트 카드를 만드는 레시피

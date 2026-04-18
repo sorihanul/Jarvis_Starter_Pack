@@ -19,6 +19,8 @@
 - 브라우저 사용 가능 범위를 알고 싶다면 `TASKS/BROWSER_USAGE_POLICY_v0.1.md`
 - 세션 로그와 캡슐을 어디에 어떻게 남길지 알고 싶다면 `TASKS/SESSION_LOGGING_GUIDE_v0.1.md`
 - 여러 세션을 병행할 때 세션 정체성을 고정하고 싶다면 `TASKS/SESSION_CARD_GUIDE_v0.1.md`
+- 세션 연속성을 어떤 최소 표면으로 유지할지 정하고 싶다면 `TASKS/JARVIS_SESSION_CONTINUITY_MINIMUM_v0.1.md`
+- 세션이 길어져 무엇부터 다시 읽어야 할지 정하고 싶다면 `TASKS/JARVIS_CONTEXT_REALIGNMENT_NOTE_v0.1.md`
 - Codex에서 고급 분업 패턴까지 쓰고 싶다면 `01_Modules/Codex_Agent_Starter/README.md`
 - Obsidian을 지식층 보기면으로 붙이고 싶다면 `01_Modules/Obsidian_Runtime_Surface_Lite_Starter/README.md`
 - 공개형 에이전트 형식별 적합도를 보고 싶다면 `TASKS/PUBLIC_AGENT_FIT_GUIDE_v0.1.md`

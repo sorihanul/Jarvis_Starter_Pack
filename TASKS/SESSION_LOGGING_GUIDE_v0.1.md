@@ -46,6 +46,8 @@
 - `세션 카드`는 이 세션이 누구인지 정한다.
 - `로그`는 이 세션에서 어떤 일이 있었는지 남긴다.
 - 둘을 같은 문서로 섞지 않는 편이 좋다.
+- 세션을 다시 이어갈 최소 표면은 `TASKS/JARVIS_SESSION_CONTINUITY_MINIMUM_v0.1.md`에서 따로 정한다.
+- 무엇부터 다시 읽을지는 `TASKS/JARVIS_CONTEXT_REALIGNMENT_NOTE_v0.1.md`에서 따로 정한다.
 
 ## 3. 언제 로그를 만들지 말아야 하는가
 
