@@ -28,7 +28,7 @@
 
 ## 빠른 시작
 
-처음이면 [QUICK_START_3_MIN.md](QUICK_START_3_MIN.md)를 먼저 봐도 된다.
+처음이면 [INSTALL_AND_USAGE_GUIDE.md](INSTALL_AND_USAGE_GUIDE.md) 또는 [QUICK_START_3_MIN.md](QUICK_START_3_MIN.md)를 먼저 봐도 된다.
 
 1. 모델에게 이 폴더를 열게 한다.
 2. "부팅해"라고 지시한다.

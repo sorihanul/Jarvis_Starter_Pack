@@ -1,5 +1,7 @@
 # 3-Minute Quick Start
 
+설치부터 보고 싶다면 [INSTALL_AND_USAGE_GUIDE.md](INSTALL_AND_USAGE_GUIDE.md)를 먼저 읽는다.
+
 ## 1. 폴더를 연다
 
 모델에게 이 폴더를 읽게 한다.
