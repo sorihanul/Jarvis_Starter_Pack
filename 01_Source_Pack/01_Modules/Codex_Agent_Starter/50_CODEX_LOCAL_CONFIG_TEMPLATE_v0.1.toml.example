@@ -1,0 +1,43 @@
+# Example local Codex config for Jarvis Starter users.
+# Rename and place as .codex/config.toml in your trusted project if needed.
+# This file shows one local role-fragment pattern for advanced users.
+# The public default documented by Codex is standalone custom agents under .codex/agents/*.toml.
+# Treat this file as a local example that may need adjustment for your Codex version.
+
+[features]
+multi_agent = true
+
+[agents]
+max_threads = 4
+max_depth = 1
+
+# Non-standard local example below:
+# if your Codex setup does not support this pattern, use .codex/agents/*.toml instead.
+[agents.research]
+description = "Read docs, inspect structure, and return facts and paths."
+config_file = "../01_Modules/Codex_Agent_Starter/roles/research.toml"
+
+[agents.implementation]
+description = "Make bounded changes with clear file ownership."
+config_file = "../01_Modules/Codex_Agent_Starter/roles/implementation.toml"
+
+[agents.validation]
+description = "Verify tests, behavior, and remaining risks without taking over implementation."
+config_file = "../01_Modules/Codex_Agent_Starter/roles/validation.toml"
+
+[agents.synthesis]
+description = "Combine sub-agent results into a concise final report for the main session."
+config_file = "../01_Modules/Codex_Agent_Starter/roles/synthesis.toml"
+
+[agents.security_gate]
+description = "Check inbound or outbound risk, secrets, and policy-sensitive content."
+config_file = "../01_Modules/Codex_Agent_Starter/roles/security_gate.toml"
+
+[agents.writing]
+description = "Draft or revise text while preserving user tone, structure, and constraints."
+config_file = "../01_Modules/Codex_Agent_Starter/roles/writing.toml"
+
+# Optional:
+# You can keep project instruction discovery standard and let Codex read AGENTS.md.
+# project_doc_max_bytes = 65536
+# project_doc_fallback_filenames = ["TEAM_GUIDE.md"]
