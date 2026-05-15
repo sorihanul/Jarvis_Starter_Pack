@@ -50,6 +50,20 @@
 - `../01_Source_Pack/AGENTS/`
 - `../01_Source_Pack/SKILLS/`
 
+## Agent Route Memory
+
+에이전트 카드 제작, 역할 분리, Codex 서브에이전트 운용이 필요할 때만 여는 경로다.
+
+- `../01_Source_Pack/AGENT_INDEX.md`
+- `../01_Source_Pack/TASKS/PUBLIC_AGENT_RECIPE_v0.1.md`
+- `../01_Source_Pack/TASKS/PUBLIC_AILO_E_AGENT_RECIPE_v0.1.md`
+- `../01_Source_Pack/TASKS/PUBLIC_AGENT_FIT_GUIDE_v0.1.md`
+- `../01_Source_Pack/TASKS/PUBLIC_AGENT_SKILL_BUNDLES_v0.1.md`
+- `../01_Source_Pack/01_Modules/Codex_Agent_Starter/README.md`
+- `../01_Source_Pack/01_Modules/Codex_Agent_Starter/10_CODEX_AGENT_UTILIZATION_v0.1.md`
+- `../01_Source_Pack/01_Modules/Codex_Agent_Starter/20_SUBAGENT_BRIEF_TEMPLATE_v0.1.md`
+- `../01_Source_Pack/01_Modules/Codex_Agent_Starter/30_CODEX_FILE_SURFACE_GUIDE_v0.1.md`
+
 ## Do Not Read By Default
 
 아래는 기본 부팅 때 읽지 않는다.
@@ -58,6 +72,7 @@
 - `../01_Source_Pack/LOGS/`
 - `../01_Source_Pack/CAPSULES/`
 - `../01_Source_Pack/05_Scripts/`
+- `Agent Route Memory` 전체
 - 오래된 테스트 산출물
 
 ## 읽기 원칙

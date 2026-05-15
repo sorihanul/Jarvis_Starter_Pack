@@ -48,6 +48,24 @@
 - 옵션팩이 필요해 보이면 먼저 `../../01_Source_Pack/06_Option_Packs/OPTION_PACK_ROUTER.md`를 읽고 1~3개 팩만 고른다.
 - 옵션팩은 기본 부팅 때 모두 읽지 않고, 현재 요청과 직접 맞는 팩만 읽는다.
 
+## 에이전트와 서브에이전트 참고
+
+에이전트 카드 제작, 역할 분리, Codex 서브에이전트 운용이 필요하면 아래를 후보로 본다.
+
+- `../../01_Source_Pack/AGENT_INDEX.md`
+- `../../01_Source_Pack/TASKS/PUBLIC_AGENT_RECIPE_v0.1.md`
+- `../../01_Source_Pack/TASKS/PUBLIC_AILO_E_AGENT_RECIPE_v0.1.md`
+- `../../01_Source_Pack/TASKS/PUBLIC_AGENT_FIT_GUIDE_v0.1.md`
+- `../../01_Source_Pack/TASKS/PUBLIC_AGENT_SKILL_BUNDLES_v0.1.md`
+- `../../01_Source_Pack/01_Modules/Codex_Agent_Starter/README.md`
+- `../../01_Source_Pack/01_Modules/Codex_Agent_Starter/10_CODEX_AGENT_UTILIZATION_v0.1.md`
+- `../../01_Source_Pack/01_Modules/Codex_Agent_Starter/20_SUBAGENT_BRIEF_TEMPLATE_v0.1.md`
+- `../../01_Source_Pack/01_Modules/Codex_Agent_Starter/30_CODEX_FILE_SURFACE_GUIDE_v0.1.md`
+
+이 목록은 기본 부팅 대상이 아니다.
+요청이 에이전트 제작, 역할 분리, 서브에이전트 위임, Codex 역할 파일 작성과 직접 관련될 때만 읽는다.
+실제 Codex custom agent 정의를 만들 때는 `.codex/agents/*.toml` 형식을 우선 후보로 본다.
+
 ## 읽기 제한
 
 - 모든 모듈을 한 번에 읽지 않는다.
