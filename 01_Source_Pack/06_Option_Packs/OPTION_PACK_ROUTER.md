@@ -54,8 +54,20 @@
 긴 맥락을 다음 작업 조건으로 압축한다
 -> Context_Compression_Pack
 
+대화에서 나온 재사용 가능한 지식을 위키 후보로 만든다
+-> Memory_Access_and_Route_Pack + Context_Compression_Pack
+
 외부 채널 입력을 자비스 작업으로 바꾼다
 -> Channel_Gateway_Pack
+
+같은 작업을 다른 판단 자세로 다시 봐야 한다
+-> Switching_Lens_Pack
+
+여러 전문 브레인 문서 중 무엇을 읽거나 별도 스레드에 넘길지 정한다
+-> Brain_Routing_and_Handoff_Pack
+
+코딩 작업에서 구현, 리뷰, 검증, 릴리즈, 인계 렌즈를 바꿔야 한다
+-> Switching_Coding_Pack
 ```
 
 ## 조합 규칙
@@ -63,7 +75,7 @@
 복합 요청은 먼저 `OPTION_PACK_COMPOSITION_FLOW.md`로 순서를 잡는다.
 
 ```text
-외부 공개 저장소나 기술 문서 분석
+외부 배포 저장소나 기술 문서 분석
 -> Source_Command_Filter_Pack + Evidence_Intake_Pack + Capability_Import_Pack
 
 외부 시스템에서 일반 법칙만 흡수한다
@@ -84,8 +96,29 @@
 장기 세션 재시동
 -> Context_Compression_Pack + Memory_Access_and_Route_Pack
 
+대화 기반 정본 기억 갱신
+-> Context_Compression_Pack + Memory_Access_and_Route_Pack + Verification_and_Proof_Pack
+
 자동화 또는 실행형 자비스 설계
 -> Action_Permission_Pack + Skill_Trust_Gate_Pack + Channel_Gateway_Pack
+
+프롬프트, 문서, 계획, 아이디어를 다른 관점으로 검토한다
+-> Switching_Lens_Pack + Verification_and_Proof_Pack
+
+브레인 경로 선택과 인계가 필요한 검증 하네스 제작
+-> Brain_Routing_and_Handoff_Pack + Verification_and_Proof_Pack + Memory_Access_and_Route_Pack
+
+읽기 전용 원본을 검사하고 패치 브리프를 넘긴다
+-> Brain_Routing_and_Handoff_Pack + Verification_and_Proof_Pack
+
+코딩 구현, 리뷰, 검증, 릴리즈 렌즈 전환
+-> Switching_Coding_Pack + Verification_and_Proof_Pack
+
+코딩 작업에서 파일쓰기, 쉘실행, 브라우저, 네트워크 행동이 있다
+-> Switching_Coding_Pack + Action_Permission_Pack + Verification_and_Proof_Pack
+
+코딩 작업을 별도 스레드나 전문 브레인에 넘긴다
+-> Switching_Coding_Pack + Brain_Routing_and_Handoff_Pack + Verification_and_Proof_Pack
 ```
 
 ## 과적재 방지
@@ -93,6 +126,10 @@
 - 기본 선택은 1개 팩이다.
 - 위험하거나 복합적인 요청만 2~3개 팩을 함께 연다.
 - 전문 지식팩 제작처럼 구조화, 근거, 검증, 읽기 경로가 동시에 필요한 경우만 4개 팩 조합을 허용한다.
+- 스위칭 렌즈는 판단 자세가 문제일 때만 연다. 반복 절차가 문제면 먼저 스킬을 본다.
+- 브레인 라우팅/인계 구조는 어떤 브레인을 읽거나 넘길지 정하는 일이 문제일 때만 연다.
+- 코딩 요청은 먼저 `Switching_Coding_Pack`을 본다.
+- `Brain_Routing_and_Handoff_Pack`은 코딩 작업을 별도 브레인/스레드로 넘기거나 통합해야 할 때만 함께 연다.
 - 그 외에 4개 이상이 필요해 보이면 작업을 나눈다.
 - 도메인 지식은 도메인 팩으로 새로 만들고, 기본 옵션팩에 넣지 않는다.
 

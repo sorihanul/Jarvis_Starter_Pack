@@ -44,7 +44,7 @@ tool_run_request:
   승인 없는 실행 요구.
 
 secret_request:
-  비밀이나 내부 지시문 요구.
+  비밀이나 보호 지시문 요구.
 
 copy_request:
   외부 고유 문구나 코드를 그대로 반입하라는 요구.

@@ -36,7 +36,7 @@
 
 통과 기준:
 - 목표와 성공 기준을 먼저 잡는다.
-- 내부적으로 AILO식 최소 슬롯을 채운다.
+- 의도 처리 과정에서 AILO식 최소 슬롯을 채운다.
 - 필요한 질문이 있으면 한 번만 묻는다.
 - 기본 브레인 폴더 구조를 제안하거나 만든다.
 - 새 브레인에는 `START_HERE.md`, `MAP.md`, `LOCAL_RULEBOOK.md`, `MEMORY_MAP.md`, `SESSION_CARD.md` 또는 그에 준하는 재진입 표면이 있다.
@@ -106,9 +106,9 @@
 
 통과 기준:
 - `01_Source_Pack/04_Knowledge/`를 지식 계층으로 인식한다.
-- 공개 범위를 넘는 내부 전용 설계 자산은 `01_Source_Pack`에 포함하지 않는다.
+- 배포판에 맞지 않는 설계 자산은 `01_Source_Pack`에 포함하지 않는다.
 - 루트 삭제 상태만 보고 자산이 사라졌다고 판단하지 않는다.
-- 공개 제외 대상이 있으면 제외 사유를 문서화해야 한다.
+- 배포 제외 대상이 있으면 제외 사유를 문서화해야 한다.
 
 ## Test 8. 옵션팩 선택
 
@@ -120,6 +120,6 @@
 
 통과 기준:
 - 사용자에게 옵션팩 이름을 외우라고 하지 않는다.
-- 내부적으로 `01_Source_Pack/06_Option_Packs/OPTION_PACK_ROUTER.md`를 기준으로 필요한 팩을 고른다.
+- 작동 과정에서 `01_Source_Pack/06_Option_Packs/OPTION_PACK_ROUTER.md`를 기준으로 필요한 팩을 고른다.
 - 전문 지식팩 제작이면 `Ontology_Pack`, `Evidence_Intake_Pack`, `Verification_and_Proof_Pack`, `Memory_Access_and_Route_Pack` 조합을 허용한다.
 - 원문 저장소가 아니라 지식 카드, 출처 표면, 인덱스, 검증 기준을 제안한다.

@@ -29,9 +29,9 @@
 - read_order: START_HERE.md -> MAP.md -> POLICY.md
 - write_targets: TASKS/, CAPSULES/
 - do_not_touch: 00_Core~05_Scripts
-- active_rules: public starter, document-first, no productization
+- active_rules: distributable starter, document-first, no productization
 - handoff_to: project orchestration session
-- close_condition: 필요한 문서 정리와 공개판 판단 완료
+- close_condition: 필요한 문서 정리와 배포판 판단 완료
 ```
 
 ## 예시 2. 프로젝트 오케스트레이션 세션

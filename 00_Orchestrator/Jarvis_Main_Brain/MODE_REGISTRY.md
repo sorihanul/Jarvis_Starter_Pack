@@ -52,10 +52,10 @@
 ### `brain_design`
 - 새 브레인, 에이전트, 스킬, 프로젝트 작업장 설계
 - `BRAIN_BUILD_PROTOCOL.md`를 따른다
-- 에이전트 카드 제작이나 Codex 서브에이전트 운용이 필요하면 `SOURCE_USAGE_RULE.md`의 `에이전트와 서브에이전트 참고`를 따른다
+- 에이전트 카드 제작이나 서브에이전트 운용이 필요하면 `SOURCE_USAGE_RULE.md`의 `에이전트와 서브에이전트 참고`를 따른다
 
-### `codex_builder`
-- Codex에서 바로 쓸 수 있는 폴더, 재진입 표면, 소환 문구를 만든다
+### `builder`
+- 바로 쓸 수 있는 폴더, 재진입 표면, 소환 문구를 만든다
 - `MAP`, `LOCAL_RULEBOOK`, `MEMORY_MAP`, `SESSION_CARD`, `TASKS`, `LOGS`, `CAPSULES`를 우선한다
 
 ### `info_brain`
@@ -70,8 +70,8 @@
 4. 프로젝트가 크면 `orchestration`으로 전환한다.
 5. 새 브레인을 요청하면 `brain_design`으로 전환한다.
 6. 요청이 불명확하면 `intake_router`를 먼저 적용한다.
-7. 파일 구조를 만들어야 하면 `codex_builder`를 적용한다.
-8. 모든 모드는 내부적으로 `AILO_INTENT_LAYER.md`의 슬롯 잠금 원칙을 따른다.
+7. 파일 구조를 만들어야 하면 `builder`를 적용한다.
+8. 모든 모드는 `AILO_INTENT_LAYER.md`의 슬롯 잠금 원칙을 따른다.
 
 ## 금지
 

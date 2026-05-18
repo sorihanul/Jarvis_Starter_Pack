@@ -22,19 +22,19 @@ Jarvis_Workspace/
 │
 ├── 01_Modules/ (확장 기능 및 도구 모음)
 │   ├── Coding_Sequential_Agent_Starter/ (순차적 코딩 & 리뷰 에이전트 파이프라인 모음)
-│   ├── Codex_Agent_Starter/ (Codex의 서브에이전트 기능을 자비스 스타터에 얹는 경량 애드온)
+│   ├── Host_Agent_Starter/ (호스트 작업 환경의 서브에이전트 기능을 자비스 스타터에 얹는 경량 애드온)
 │   ├── Learning_Loop_Lite_Starter/ (세션 종료 캡슐과 승격 후보를 남기는 경량 학습 루프)
 │   ├── Madang_Pan_Lite_Starter/ (전면 대화 라우팅 및 짧은 브리핑 모듈)
 │   ├── Memory_Access_Tree_Lite_Starter/ (저장된 기억에서 다시 확인할 파일 후보를 고르는 기억 접근 지도)
 │   ├── Obsidian_Runtime_Surface_Lite_Starter/ (Obsidian을 브레인이 아닌 지식층 보기면으로 붙이는 선택형 모듈)
 │   ├── Persona_Agent_Starter/ (맞춤형 문체/성격 기반 에이전트 생성 프레임워크)
 │   ├── Project_Workspace_Lite_Starter/ (프로젝트 작업장을 4문서로 시작하는 경량 모듈)
-│   └── AILO_Coding_Engine_Module_PUBLIC_v1.1.md (기본 코딩 엔진 체계)
+│   └── AILO_Coding_Engine_Module_DISTRIBUTABLE_v1.1.md (기본 코딩 엔진 체계)
 │
 ├── 02_Protocols/ (업무 처리 통제 루틴)
 │   ├── PIPELINE_CONTRACT_v1.3.md (대화/실행 분리 및 승인 파이프라인)
-│   ├── AGENDA_Flow_Protocol_PUBLIC_v1.0.md (업무 안건 처리 플로우)
-│   └── Memory_Garbage_Collector_Protocol_PUBLIC.md (메모리 정리 주기 통제)
+│   ├── AGENDA_Flow_Protocol_DISTRIBUTABLE_v1.0.md (업무 안건 처리 플로우)
+│   └── Memory_Garbage_Collector_Protocol_DISTRIBUTABLE.md (메모리 정리 주기 통제)
 │
 ├── 03_Memory/ (기억 관리 로직 구현체)
 │   └── Jarvis_Memory.py (기억 압축/저장 스크립트)
@@ -63,9 +63,9 @@ Jarvis_Workspace/
 │   └── Channel_Gateway_Pack/ (외부 채널 요청 정규화)
 │
 ├── [TASK & EXECUTION LAYER] (가변, 임시 및 기록 데이터)
-│   ├── AGENTS/ (에이전트 개별 정의서 모음, 공개형 카드 포함)
-│   ├── SKILLS/ (폴더 공용 도구 모음, 공개형 카드와 짝을 이루는 스킬 포함)
-│   ├── TASKS/ (현재 수행중인 작업 목록, 프로젝트 작업장, 운영 방법론 문서, 세션 로그/세션 카드 가이드, 공개형 번들/레시피 가이드)
+│   ├── AGENTS/ (에이전트 개별 정의서 모음, 배포형 카드 포함)
+│   ├── SKILLS/ (폴더 공용 도구 모음, 배포형 카드와 짝을 이루는 스킬 포함)
+│   ├── TASKS/ (현재 수행중인 작업 목록, 프로젝트 작업장, 운영 방법론 문서, 세션 로그/세션 카드 가이드, 배포형 번들/레시피 가이드)
 │   ├── CAPSULES/ (완료된 Task의 최종 세션 요약 데이터, 캡슐 템플릿, Agenda 캡슐)
 │   └── LOGS/ (원시 실행 로그, 에러 내역, 오케스트레이션 진행 기록)
 │
@@ -78,7 +78,7 @@ Jarvis_Workspace/
 - `02_Protocols/PIPELINE_CONTRACT_v1.3.md`: 대화/실행 분리 및 오케스트레이터 운영 규칙
 - `00_Core/한글 AILO-H Full-Stack v0.91 — Unified Core Specification.md`: 최상위 불변 자비스(가라사니 시스템) 규칙 (`MAIN_IDENTITY`를 겸함)
 - `POLICY.md`: AI가 지켜야 하는 작업 수행 태도 및 출력 형식
-- `01_Modules/Codex_Agent_Starter/README.md`: Codex의 에이전트 기능을 선택적으로 붙이는 방법
+- `01_Modules/Host_Agent_Starter/README.md`: 호스트 작업 환경의 에이전트 기능을 선택적으로 붙이는 방법
 - `01_Modules/Memory_Access_Tree_Lite_Starter/README.md`: 저장된 기억에서 필요한 파일 후보만 고르는 기억 접근 지도
 - `01_Modules/Obsidian_Runtime_Surface_Lite_Starter/README.md`: Obsidian을 지식층 보기면으로 붙이는 옵션 모듈
 - `04_Knowledge/IVK2_Improved/README.md`: 개선형 지식 접근/검색 실험체
@@ -97,11 +97,11 @@ Jarvis_Workspace/
 - `06_Option_Packs/Channel_Gateway_Pack/README.md`: 외부 채널 입력을 안전한 작업 요청으로 바꾸는 규칙
 - `TASKS/JARVIS_SESSION_CONTINUITY_MINIMUM_v0.1.md`: 세션 연속성을 위한 최소 표면 기준
 - `TASKS/JARVIS_CONTEXT_REALIGNMENT_NOTE_v0.1.md`: 세션 재정렬 시 다시 읽는 순서
-- `TASKS/PUBLIC_AGENT_FIT_GUIDE_v0.1.md`: 공개형 에이전트 형식별 적합도 가이드
-- `TASKS/PUBLIC_AGENT_SKILL_BUNDLES_v0.1.md`: 공개형 에이전트 카드와 스킬 번들 가이드
-- `TASKS/PUBLIC_AGENT_RECIPE_v0.1.md`: 공개형 일반 에이전트 카드를 만드는 레시피
-- `TASKS/PUBLIC_AILO_E_AGENT_RECIPE_v0.1.md`: 공개형 AILO-E 에이전트 카드를 만드는 레시피
-- `TASKS/PUBLIC_SKILL_RECIPE_v0.1.md`: 공개형 스킬 카드를 만드는 레시피
+- `TASKS/DISTRIBUTABLE_AGENT_FIT_GUIDE_v0.1.md`: 배포형 에이전트 형식별 적합도 가이드
+- `TASKS/DISTRIBUTABLE_AGENT_SKILL_BUNDLES_v0.1.md`: 배포형 에이전트 카드와 스킬 번들 가이드
+- `TASKS/DISTRIBUTABLE_AGENT_RECIPE_v0.1.md`: 배포형 일반 에이전트 카드를 만드는 레시피
+- `TASKS/DISTRIBUTABLE_AILO_E_AGENT_RECIPE_v0.1.md`: 배포형 AILO-E 에이전트 카드를 만드는 레시피
+- `TASKS/DISTRIBUTABLE_SKILL_RECIPE_v0.1.md`: 배포형 스킬 카드를 만드는 레시피
 
 ## 🗺 READ ORDER (부팅 시 권장 읽기 순서)
 1) `START_HERE.md`

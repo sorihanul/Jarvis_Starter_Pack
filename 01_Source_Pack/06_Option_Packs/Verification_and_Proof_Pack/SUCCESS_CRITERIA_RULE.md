@@ -23,7 +23,7 @@ out_of_scope:
 ```text
 The boot path lists the required files in order.
 The new option pack has a README and at least one usage example.
-No public package file contains internal local paths.
+No release package file contains machine-specific local paths.
 The validation command reports zero missing required files.
 ```
 

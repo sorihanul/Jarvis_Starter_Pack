@@ -41,7 +41,7 @@ risk_level:
 purpose:
   make the package easier to use
 scope:
-  public starter package only
+  distributable starter package only
 affected_files_or_systems:
   one new Markdown file
 approval_state:
@@ -49,7 +49,7 @@ approval_state:
 rollback_possible:
   yes
 validation_plan:
-  check required files, public wording, internal path leaks, and whitespace
+  check required files, release wording, machine-specific path leaks, and whitespace
 stop_condition:
   no deletion, no global rule change, no external side effect
 ```

@@ -10,7 +10,7 @@
 
 ```text
 source_label:
-source_type: local_file | public_package | user_provided | generated | unknown
+source_type: local_file | distributable_package | user_provided | generated | unknown
 license:
 maintainer_visible:
 version_or_date:

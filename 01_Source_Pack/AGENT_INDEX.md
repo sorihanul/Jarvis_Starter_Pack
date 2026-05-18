@@ -27,38 +27,38 @@
 
 ### 4. AILO-E 인테이크 치프 (AILO-E Intake Chief)
 - **파일**: `AGENTS/agent_ailo_e_intake_chief.md`
-- **역할**: 현재 요청의 범위를 잠그고, 첫 라우팅과 첫 검토면을 결정하는 `L2 AILO-E++` 공개형 치프입니다.
+- **역할**: 현재 요청의 범위를 잠그고, 첫 라우팅과 첫 검토면을 결정하는 `L2 AILO-E++` 배포형 치프입니다.
 - **주요 스킬**: `SKILLS/skill_scope_lock.md`, `SKILLS/skill_route_lock.md`
 - **주요 특징**: `basic / research / writing / coding / project_orchestration / security_gate_first` 중 첫 경로를 고정하고, 필요 시 별도 오케스트레이션 세션을 권장합니다.
 
-### 5. 공개형 인테이크 라우터 (Public Intake Router)
-- **파일**: `AGENTS/agent_public_intake_router.md`
-- **역할**: 현재 요청을 무겁지 않은 공개형 문법으로 읽고, 첫 경로와 첫 검토면을 빠르게 고정합니다.
+### 5. 배포형 인테이크 라우터 (Distributable Intake Router)
+- **파일**: `AGENTS/agent_distributable_intake_router.md`
+- **역할**: 현재 요청을 무겁지 않은 배포형 문법으로 읽고, 첫 경로와 첫 검토면을 빠르게 고정합니다.
 - **주요 스킬**: `SKILLS/skill_scope_lock.md`, `SKILLS/skill_route_lock.md`
 
-### 6. 공개형 리서치 스페셜리스트 (Public Research Specialist)
-- **파일**: `AGENTS/agent_public_research_specialist.md`
-- **역할**: 빠른 조사와 바로 쓸 수 있는 근거 패키지 생산에 맞춘 공개형 리서치 follower입니다.
+### 6. 배포형 리서치 스페셜리스트 (Distributable Research Specialist)
+- **파일**: `AGENTS/agent_distributable_research_specialist.md`
+- **역할**: 빠른 조사와 바로 쓸 수 있는 근거 패키지 생산에 맞춘 배포형 리서치 follower입니다.
 - **주요 스킬**: `SKILLS/skill_research.md`, `SKILLS/skill_evidence_pack.md`
 
 ### 7. AILO-E 리서치 스페셜리스트 (AILO-E Research Specialist)
 - **파일**: `AGENTS/agent_ailo_e_research_specialist.md`
-- **역할**: 근거와 불확실성을 더 엄격하게 잠그는 공개형 AILO-E 리서치 follower입니다.
+- **역할**: 근거와 불확실성을 더 엄격하게 잠그는 배포형 AILO-E 리서치 follower입니다.
 - **주요 스킬**: `SKILLS/skill_research.md`, `SKILLS/skill_evidence_pack.md`
 
-### 8. 공개형 코딩 스페셜리스트 (Public Coding Specialist)
-- **파일**: `AGENTS/agent_public_coding_specialist.md`
-- **역할**: 저위험 보조 수정과 patch-shaped output에 맞춘 현재 공개형 기본 코딩 스페셜리스트입니다.
+### 8. 배포형 코딩 스페셜리스트 (Distributable Coding Specialist)
+- **파일**: `AGENTS/agent_distributable_coding_specialist.md`
+- **역할**: 저위험 보조 수정과 patch-shaped output에 맞춘 현재 배포형 기본 코딩 스페셜리스트입니다.
 - **주요 스킬**: `SKILLS/skill_patch_shape.md`, `SKILLS/skill_review.md`
 
 ### 9. AILO-E 코드 워커 (AILO-E Code Worker)
 - **파일**: `AGENTS/agent_ailo_e_code_worker.md`
-- **역할**: blocker honesty와 stop posture가 중요한 코딩 작업에 맞춘 공개형 AILO-E 코드 워커입니다.
+- **역할**: blocker honesty와 stop posture가 중요한 코딩 작업에 맞춘 배포형 AILO-E 코드 워커입니다.
 - **주요 스킬**: `SKILLS/skill_patch_shape.md`, `SKILLS/skill_review.md`
 
-### 10. 공개형 글쓰기 스페셜리스트 (Public Writing Specialist)
-- **파일**: `AGENTS/agent_public_writing_specialist.md`
-- **역할**: 브리프를 실제 사용 가능한 초안으로 빠르게 전환하는 공개형 글쓰기 follower입니다.
+### 10. 배포형 글쓰기 스페셜리스트 (Distributable Writing Specialist)
+- **파일**: `AGENTS/agent_distributable_writing_specialist.md`
+- **역할**: 브리프를 실제 사용 가능한 초안으로 빠르게 전환하는 배포형 글쓰기 follower입니다.
 - **주요 스킬**: `SKILLS/skill_brief_to_draft.md`, `SKILLS/skill_review.md`
 
 *(추가 에이전트가 개발되면 여기에 인덱싱하세요)*

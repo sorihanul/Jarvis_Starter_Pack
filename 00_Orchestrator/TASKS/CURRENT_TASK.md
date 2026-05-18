@@ -6,7 +6,7 @@
 - owner: Jarvis_Main_Brain
 - active_scope: none
 - current_request: none
-- last_completed: option pack verification and package acceptance surface update
+- last_completed: initial_distribution_ready
 - next_action: wait_for_user_request
 
 ## 사용 규칙

@@ -2,35 +2,51 @@
 
 ## 목적
 
-`부팅해`로 시작한 메인 오케스트레이터가 다음 세션에서 바로 이어받을 최소 상태를 제공한다.
+이 캡슐은 `부팅해` 이후 메인 오케스트레이터가 이어받을 최소 상태만 제공한다.
 
-## 현재 구조
+이 파일은 변경 이력이 아니다.
+현재 재진입에 필요한 짧은 인계 상태만 남긴다.
 
-- live_brain: `00_Orchestrator/Jarvis_Main_Brain`
+## 현재 상태
+
+- status: `initial_ready`
+- active_user_task: `none`
+- latest_session_log: `none`
+- active_capsule_scope: `initial_orchestrator_state`
+
+## 런타임 표면
+
+- main_brain: `00_Orchestrator/Jarvis_Main_Brain`
 - local_rulebook: `00_Orchestrator/LOCAL_RULEBOOK.md`
 - memory_map: `00_Orchestrator/MEMORY_MAP.md`
 - session_card: `00_Orchestrator/SESSION_CARD.md`
+- current_task: `00_Orchestrator/TASKS/CURRENT_TASK.md`
+- session_log: `00_Orchestrator/LOGS/SESSION_OPS_LOG.md`
+- current_capsule: `00_Orchestrator/CAPSULES/CURRENT_CAPSULE.md`
 - source_pack: `01_Source_Pack`
-- live_tasks: `00_Orchestrator/TASKS`
-- live_logs: `00_Orchestrator/LOGS`
-- live_capsules: `00_Orchestrator/CAPSULES`
-- ailo_intent_layer: `00_Orchestrator/Jarvis_Main_Brain/AILO_INTENT_LAYER.md`
 
-## 현재 결정
+## 기본 규칙
 
-- `01_Source_Pack`은 원천소스다.
-- 오케스트레이터의 현재 작업 기록은 `00_Orchestrator` 내부 작업면에 둔다.
-- 새 브레인과 프로젝트는 원천소스 밖에 만든다.
-- 메인 브레인은 사용자의 자연어 요청을 AILO식 의도 슬롯으로 바꾼 뒤 목적, 범위, 금지, 산출물, 소환문구로 좁혀 코덱스 실행 구조를 만든다.
-- 옵션팩이 필요하면 먼저 `01_Source_Pack/06_Option_Packs/OPTION_PACK_ROUTER.md`를 읽고 1~3개만 고른다.
-- 복합 요청이면 `01_Source_Pack/06_Option_Packs/OPTION_PACK_COMPOSITION_FLOW.md`로 팩 순서를 잡고, 방어, 수집, 구조화, 실행, 검증 순서를 기본값으로 둔다.
-- 패키지를 고친 뒤에는 루트 `ACCEPTANCE_TESTS.md`로 부팅, 원천소스 경계, 옵션팩 선택, 새 브레인 제작, 작업 적치, 공개 위생을 확인한다.
+- `01_Source_Pack`은 원천소스다. 현재 작업 폴더로 쓰지 않는다.
+- 현재 사용자 작업은 `00_Orchestrator/TASKS`, `00_Orchestrator/LOGS`, `00_Orchestrator/CAPSULES`에 둔다.
+- 원천소스를 열기 전에는 `Jarvis_Main_Brain/SOURCE_USAGE_RULE.md`를 확인한다.
+- 옵션팩이 필요해 보이면 `01_Source_Pack/06_Option_Packs/OPTION_PACK_ROUTER.md`를 먼저 본다.
+- 여러 옵션팩이 필요하면 `01_Source_Pack/06_Option_Packs/OPTION_PACK_COMPOSITION_FLOW.md`로 순서를 잡는다.
+- 대화 원문 전체를 기억으로 저장하지 않는다.
+- 다시 쓸 결정, 규칙, 사용법, 실패 기준만 Canon Memory 후보가 될 수 있다.
+- 이 캡슐은 짧게 유지한다. 자세한 세션 이력은 `LOGS/SESSION_OPS_LOG.md`로 보낸다.
 
 ## 다음 행동
 
-- 사용자가 요청하면 `Jarvis_Main_Brain/BOOT.md`를 기준으로 부팅한다.
-- 부팅 때 `LOCAL_RULEBOOK.md`, `MEMORY_MAP.md`, `SESSION_CARD.md`, `AILO_INTENT_LAYER.md`를 함께 읽는다.
-- 요청 성격에 따라 직접 처리, 브레인 제작, 프로젝트 오케스트레이션으로 분기한다.
-- 외부 공개 저장소, 에이전트 시스템, 기술 문서를 자비스 능력으로 바꿀 때는 `01_Source_Pack/06_Option_Packs/Capability_Import_Pack`을 후보로 읽는다.
-- 옵션팩이 필요해 보이면 먼저 `01_Source_Pack/06_Option_Packs/OPTION_PACK_ROUTER.md`를 읽고 1~3개 팩만 고른다.
-- 복합 옵션팩 흐름이 필요하면 `OPTION_PACK_COMPOSITION_FLOW.md`를 먼저 보고, 완료 전 `Verification_and_Proof_Pack`으로 성공 기준과 남은 리스크를 분리한다.
+사용자가 `부팅해`로 시작하면:
+
+1. `Jarvis_Main_Brain/BOOT.md`를 읽는다.
+2. 현재 요청을 확인한다.
+3. 아래 중 하나로 분기한다.
+   - 직접 처리
+   - 브레인 제작
+   - 프로젝트 작업장
+   - 정보 수집
+   - 리뷰 또는 검증
+4. 해당 분기에 필요한 원천소스만 연다.
+5. 현재 작업 흔적은 오케스트레이터 작업 표면에 남기고 `01_Source_Pack`에는 남기지 않는다.

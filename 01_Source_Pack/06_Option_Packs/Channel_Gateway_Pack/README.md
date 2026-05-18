@@ -43,8 +43,8 @@ authenticated_remote:
 untrusted_remote:
   출처는 있으나 권한이 낮은 외부 메시지.
 
-public_input:
-  공개 웹훅, 댓글, 알 수 없는 발신자.
+incoming_input:
+  배포 웹훅, 댓글, 알 수 없는 발신자.
 ```
 
 ## 운영 규칙

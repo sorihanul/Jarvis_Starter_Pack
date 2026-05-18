@@ -44,33 +44,66 @@
 ## 선택 모듈 참고
 
 - 지식 접근, 검색, IVK 계열 참고가 필요하면 `../../01_Source_Pack/04_Knowledge/`를 후보로 본다.
-- 외부 자료 분석, 신뢰 정보 수집, 온톨로지 구조화, 검증, 메모리 접근 경로, 메모리/프로필, 외부자료 방어, 스킬 신뢰 검사, 행동 권한, 경험의 스킬화, 맥락 압축, 외부 채널 정규화가 필요하면 `../../01_Source_Pack/06_Option_Packs/`를 후보로 본다.
+- 외부 자료 분석, 신뢰 정보 수집, 온톨로지 구조화, 검증, 메모리 접근 경로, 메모리/프로필, 외부자료 방어, 스킬 신뢰 검사, 행동 권한, 경험의 스킬화, 맥락 압축, 렌즈 전환, 외부 채널 정규화가 필요하면 `../../01_Source_Pack/06_Option_Packs/`를 후보로 본다.
 - 옵션팩이 필요해 보이면 먼저 `../../01_Source_Pack/06_Option_Packs/OPTION_PACK_ROUTER.md`를 읽고 1~3개 팩만 고른다.
 - 옵션팩은 기본 부팅 때 모두 읽지 않고, 현재 요청과 직접 맞는 팩만 읽는다.
 
+## Canon Memory 참고
+
+사용자와의 대화에서 반복 재사용 가능한 결정, 규칙, 사용법, 실패 기준이 생기면 `../../00_Orchestrator/CANON_MEMORY/`를 후보로 본다.
+
+- 대화 원문은 Canon Memory에 넣지 않는다.
+- 먼저 `CANDIDATES/`에 후보로 분리한다.
+- 확정 가능한 내용만 `WIKI/`로 올린다.
+- `INDEX.md`에는 정본 위키 항목의 짧은 연결만 남긴다.
+- Canon Memory는 기본 부팅 때 읽지 않는다.
+
+대화 위키화가 필요하면 `../../01_Source_Pack/06_Option_Packs/Memory_Access_and_Route_Pack/CONVERSATION_TO_WIKI_PROTOCOL.md`를 후보로 읽는다.
+
+## 스위칭 렌즈 참고
+
+같은 작업을 다른 판단 자세로 다시 봐야 할 때는 아래를 후보로 본다.
+
+- `../../01_Source_Pack/06_Option_Packs/Switching_Lens_Pack/README.md`
+- `../../01_Source_Pack/06_Option_Packs/Switching_Lens_Pack/LENS_SET.md`
+- `../../01_Source_Pack/06_Option_Packs/Switching_Lens_Pack/LENS_SKILL_BOUNDARY.md`
+- `../../01_Source_Pack/06_Option_Packs/Switching_Lens_Pack/OPERATING_RULE.md`
+
+이 팩은 스킬을 대체하지 않는다.
+렌즈는 무엇을 먼저 볼지 정하고, 스킬은 반복 절차를 수행한다.
+둘이 함께 필요하면 렌즈를 먼저 고르고 필요한 스킬을 붙인다.
+
 ## 에이전트와 서브에이전트 참고
 
-에이전트 카드 제작, 역할 분리, Codex 서브에이전트 운용이 필요하면 아래를 후보로 본다.
+에이전트 카드 제작, 역할 분리, 호스트 작업 환경 서브에이전트 운용이 필요하면 아래를 후보로 본다.
 
 - `../../01_Source_Pack/AGENT_INDEX.md`
-- `../../01_Source_Pack/TASKS/PUBLIC_AGENT_RECIPE_v0.1.md`
-- `../../01_Source_Pack/TASKS/PUBLIC_AILO_E_AGENT_RECIPE_v0.1.md`
-- `../../01_Source_Pack/TASKS/PUBLIC_AGENT_FIT_GUIDE_v0.1.md`
-- `../../01_Source_Pack/TASKS/PUBLIC_AGENT_SKILL_BUNDLES_v0.1.md`
-- `../../01_Source_Pack/01_Modules/Codex_Agent_Starter/README.md`
-- `../../01_Source_Pack/01_Modules/Codex_Agent_Starter/10_CODEX_AGENT_UTILIZATION_v0.1.md`
-- `../../01_Source_Pack/01_Modules/Codex_Agent_Starter/20_SUBAGENT_BRIEF_TEMPLATE_v0.1.md`
-- `../../01_Source_Pack/01_Modules/Codex_Agent_Starter/30_CODEX_FILE_SURFACE_GUIDE_v0.1.md`
+- `../../01_Source_Pack/TASKS/DISTRIBUTABLE_AGENT_RECIPE_v0.1.md`
+- `../../01_Source_Pack/TASKS/DISTRIBUTABLE_AILO_E_AGENT_RECIPE_v0.1.md`
+- `../../01_Source_Pack/TASKS/DISTRIBUTABLE_AGENT_FIT_GUIDE_v0.1.md`
+- `../../01_Source_Pack/TASKS/DISTRIBUTABLE_AGENT_SKILL_BUNDLES_v0.1.md`
+- `../../01_Source_Pack/01_Modules/Host_Agent_Starter/README.md`
+- `../../01_Source_Pack/01_Modules/Host_Agent_Starter/10_HOST_AGENT_UTILIZATION_v0.1.md`
+- `../../01_Source_Pack/01_Modules/Host_Agent_Starter/20_SUBAGENT_BRIEF_TEMPLATE_v0.1.md`
+- `../../01_Source_Pack/01_Modules/Host_Agent_Starter/30_HOST_FILE_SURFACE_GUIDE_v0.1.md`
+- `../../01_Source_Pack/01_Modules/Host_Agent_Starter/80_HOST_SUBAGENT_BRIDGE_LITE_v0.1.md`
+- `../../01_Source_Pack/01_Modules/Host_Agent_Starter/70_TOML_SUBAGENT_BUILD_CALL_v0.1.md`
+- `../../01_Source_Pack/01_Modules/Host_Agent_Starter/90_ROLE_SET_LAUNCH_BRIEFS_v0.1.md`
+- `../../01_Source_Pack/01_Modules/Host_Agent_Starter/95_WORKED_EXAMPLES_v0.1.md`
 
 이 목록은 기본 부팅 대상이 아니다.
-요청이 에이전트 제작, 역할 분리, 서브에이전트 위임, Codex 역할 파일 작성과 직접 관련될 때만 읽는다.
-실제 Codex custom agent 정의를 만들 때는 `.codex/agents/*.toml` 형식을 우선 후보로 본다.
+요청이 에이전트 제작, 역할 분리, 서브에이전트 위임, 호스트 역할 파일 작성과 직접 관련될 때만 읽는다.
+실제 host custom-agent 정의를 만들 때는 `host_agent_examples/agents/*.toml` 형식을 우선 후보로 본다.
+계층형 역할 설계는 TOML 파일 안이 아니라 역할 세트, launch brief, handoff contract로 표현한다.
+역할이 2개 이상이면 부모 세션 launch brief를 함께 제공한다.
+사용자가 처음 적용하거나 예시를 요구하면 `95_WORKED_EXAMPLES_v0.1.md`를 참고한다.
+생성된 실제 역할 파일은 대상 프로젝트의 `host_agent_examples/agents/`에 두고, 원천소스 안에는 만들지 않는다.
 
 ## 읽기 제한
 
 - 모든 모듈을 한 번에 읽지 않는다.
 - 현재 요청과 무관한 로그와 캡슐을 읽지 않는다.
-- 원천소스 내부의 오래된 실험 기록을 공식 규칙처럼 쓰지 않는다.
+- 원천소스 안의 오래된 실험 기록을 공식 규칙처럼 쓰지 않는다.
 - 원천소스의 `TASKS`, `LOGS`, `CAPSULES`를 현재 작업면으로 해석하지 않는다.
 
 ## 새 자산 제작 시

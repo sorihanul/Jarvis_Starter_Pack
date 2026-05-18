@@ -20,14 +20,14 @@
 1. `PERSONA_BUILD_SPEC_v1.0.md`
 2. `PERSONA_SEED_TEMPLATE_v1.0.md`
 3. `PERSONA_RUN_PROTOCOL_v1.0.md`
-4. `PERSONA_PUBLIC_MODE_v1.0.md`
+4. `PERSONA_DISTRIBUTABLE_MODE_v1.0.md`
 
 ## 사용 원칙
 
 - 사용자가 긴 페르소나 설정을 직접 쓰게 하지 않는다.
 - 목적, 역할, 금지, 출력 기준을 먼저 잡는다.
 - 실제 작업에 도움이 되지 않는 성격 묘사는 줄인다.
-- 공개용 페르소나는 특정 개인, 비공개 체계, 내부 작업 경로에 의존하지 않는다.
+- 배포형 페르소나는 특정 개인, 제한 체계, 기기 고유 작업 경로에 의존하지 않는다.
 
 ## 산출물
 

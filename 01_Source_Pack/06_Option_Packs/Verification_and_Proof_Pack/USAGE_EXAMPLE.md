@@ -8,13 +8,13 @@ Jarvis added a new option-pack document and needs to verify whether the package 
 
 ```text
 goal:
-  The new document is connected to the option pack and does not leak private or source-specific material.
+  The new document is connected to the option pack and does not leak sensitive or source-specific material.
 
 success_criteria:
   - The required files exist.
   - The pack README lists the new file.
-  - No internal local path appears in the public package.
-  - No outside project name or URL appears in the public package.
+  - No machine-specific local path appears in the release package.
+  - No outside project name or URL appears in the release package.
   - The text has no trailing whitespace.
 
 failure_conditions:
@@ -87,7 +87,7 @@ target:
 goal:
   confirm document-package integrity
 success_criteria:
-  required files, README connection, no private/source-specific leakage
+  required files, README connection, no sensitive/source-specific leakage
 proof_level:
   static_checked
 checks_run:

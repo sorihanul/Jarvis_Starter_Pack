@@ -2,6 +2,31 @@
 
 이 저장소는 두 폴더 체제로 운용한다.
 
+## 기본 관점
+
+자비스 스타터는 운용형 에이전트가 아니다.
+모델이 읽고 따를 문서형 하네스다.
+
+범용 모델은 이미 넓은 지식과 도구를 가진다. 자비스 스타터는 그 능력을 특정 목적에 맞게 유도하는 작업 제어 문서 묶음이다.
+
+구성은 호스트 모델과 작업 환경에 따라 달라진다.
+같은 자비스 스타터라도 어떤 모델이 읽는지, 어떤 파일 접근과 도구 사용이 가능한지, 어떤 산출물이 필요한지에 따라 실제 사용 방식은 달라진다.
+
+```text
+general model:
+  broad knowledge and tools
+
+brain:
+  direction, boundary, source use, output shape
+
+jarvis:
+  document harness, source pack, option packs, task records, reusable artifacts
+```
+
+즉 브레인은 범용 모델의 지식을 새로 주입하는 것이 아니라, 이미 가진 지식과 도구를 어디에 쓰고 어디에는 쓰지 말아야 하는지 정한다.
+
+자비스는 그 결과가 한 번 쓰고 사라지지 않게 한다. 필요한 자료를 읽고, 불필요한 방향으로 새지 않고, 작업 흔적을 남기고, 다음 작업에서 다시 쓸 수 있게 만든다.
+
 ## 독립 배포 원칙
 
 이 패키지는 이 폴더 안의 파일만으로 이해되고 부팅되어야 한다.
@@ -9,15 +34,15 @@
 - 특정 개인 로컬 경로를 요구하지 않는다.
 - 특정 외부 문서를 다시 열어야만 작동하지 않는다.
 - 외부 자료에서 얻은 아이디어는 중립적인 기능 규칙으로 다시 쓴다.
-- 공개 범위를 넘는 내부 제작 기술은 포함하지 않는다.
+- 이 패키지 안의 파일만으로 설명되고 부팅된다.
 
 ## 먼저 여는 곳
 
 - `00_Orchestrator/`
-  - 실제로 부팅해서 쓰는 자비스 메인 브레인
+  - 모델이 먼저 읽는 자비스 메인 하네스
   - 처음 사용하는 사람은 여기서 시작한다
   - 현재 작업, 로그, 인수인계 요약도 이 폴더 아래에서 관리한다
-  - 사용자의 자연어 요청을 AILO식 의도 슬롯으로 좁혀 브레인, 스킬, 프로젝트 작업장, 소환문구로 바꾼다
+  - 사용자의 자연어 요청을 AILO식 의도 슬롯으로 정리해 브레인, 스킬, 프로젝트 작업장, 소환문구로 바꾼다
 
 ## 원천소스
 
@@ -32,11 +57,11 @@
 
 1. 모델에게 이 폴더를 열게 한다.
 2. "부팅해"라고 지시한다.
-3. 모델은 `BOOT.md`, `00_Orchestrator/Jarvis_Main_Brain/BOOT.md`, `00_Orchestrator/LOCAL_RULEBOOK.md`, `00_Orchestrator/MEMORY_MAP.md`, `00_Orchestrator/SESSION_CARD.md`, `00_Orchestrator/Jarvis_Main_Brain/AILO_INTENT_LAYER.md` 기준으로 메인 브레인을 부팅한다.
+3. 모델은 `BOOT.md`, `00_Orchestrator/Jarvis_Main_Brain/BOOT.md`, `00_Orchestrator/LOCAL_RULEBOOK.md`, `00_Orchestrator/MEMORY_MAP.md`, `00_Orchestrator/SESSION_CARD.md`, `00_Orchestrator/Jarvis_Main_Brain/AILO_INTENT_LAYER.md` 기준으로 메인 하네스를 읽는다.
 4. 새 브레인이나 프로젝트가 필요하면 메인 브레인에게 만들라고 지시한다.
 
 사용자는 옵션팩 이름을 외울 필요가 없다.
-하고 싶은 일을 자연어로 말하면, 자비스가 필요한 옵션팩을 내부에서 고른다.
+하고 싶은 일을 자연어로 말하면, 자비스가 필요한 옵션팩을 요청에 맞게 고른다.
 
 예:
 
@@ -63,8 +88,8 @@
 
 ## 검증
 
-패키지를 고친 뒤에는 [ACCEPTANCE_TESTS.md](ACCEPTANCE_TESTS.md)를 기준으로 부팅, 원천소스 경계, 옵션팩 선택, 새 브레인 제작, 작업 적치, 공개 위생을 확인한다.
+패키지를 고친 뒤에는 [ACCEPTANCE_TESTS.md](ACCEPTANCE_TESTS.md)를 기준으로 부팅, 원천소스 경계, 옵션팩 선택, 새 브레인 제작, 작업 적치, 배포 위생을 확인한다.
 
 ## 한 줄 원칙
 
-사용자는 `00_Orchestrator`에서 시작하고, 자비스는 `01_Source_Pack`을 원천소스로 참고한다.
+사용자는 `00_Orchestrator`에서 시작하고, 자비스는 `01_Source_Pack`을 원천소스로 참고하며, 호스트 모델의 넓은 능력을 목적 있는 작업 흐름으로 유도한다.

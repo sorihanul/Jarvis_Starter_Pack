@@ -166,7 +166,7 @@ reflect{obj:"translation drifted too literal on dialogues", memory:"reflect"}.
 
 ### 7.1 AILO–LitTrans (KR Focus)
 
-**Purpose**: Literary translation with natural commands; internal AILO intents.
+**Purpose**: Literary translation with natural commands; AILO intent layer.
 **Style Genes**
 
 ```
@@ -180,7 +180,7 @@ style:{ tone, narrative_voice, rhythm, lexicon:{poetic,modern},
 * Natural: “서정 톤, 느린 리듬, 재창작 0.5로 의역해줘.”
 * Slash: `/translate`, `/style`, `/polish ko`, `/compare`, `/preset`
 
-**AILO Plan (internal)**
+**AILO Plan**
 
 ```ailo
 plan{steps:[draft, apply_style, polish_ko, validate], qa:{fid:true}}.
@@ -202,7 +202,7 @@ decide{obj:"allocation", rule:{fairness:0.6,efficiency:0.4},
 
 ### 7.3 AILO–Belief
 
-Bayesian‑style belief update for internal hypotheses.
+Bayesian‑style belief update for working hypotheses.
 
 ```ailo
 update{obj:"hypothesis: heavier objects fall faster", with:"evidence: A,B,C",

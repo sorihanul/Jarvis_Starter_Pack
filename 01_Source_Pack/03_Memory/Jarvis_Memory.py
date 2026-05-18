@@ -93,7 +93,7 @@ class MemoryOrchestrator:
         self.cfg = config or OrchestratorConfig()
 
     # ---------------------------
-    # Public API
+    # Stable API
     # ---------------------------
 
     def process_cycle(self, now: Optional[datetime] = None) -> Dict[str, int]:

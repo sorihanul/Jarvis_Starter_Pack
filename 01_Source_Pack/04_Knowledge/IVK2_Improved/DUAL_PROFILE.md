@@ -20,5 +20,5 @@ python 04_Knowledge\IVK2_Improved\ivk2_improved.py query-dual "질문" --hot-db 
 - hot 결과에 기본 가중치(1.08)를 준다.
 - 필요하면 `--hot-weight`로 조정한다.
 - 저장 용량이 커지면 `vacuum`으로 압축한다.
-- 스타터팩 기본 저장 위치는 패키지 내부 `data\` 폴더다.
-- 생성된 `*.sqlite` 파일은 로컬 인덱스이므로 공개 패키지에 포함하지 않는다.
+- 스타터팩 기본 저장 위치는 패키지 안의 `data\` 폴더다.
+- 생성된 `*.sqlite` 파일은 로컬 인덱스이므로 배포 패키지에 포함하지 않는다.

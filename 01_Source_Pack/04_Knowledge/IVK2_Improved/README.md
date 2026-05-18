@@ -38,7 +38,7 @@ Shortest path:
 By default, the batch file stores the DB here:
 - `04_Knowledge\IVK2_Improved\data\index.sqlite` (로컬 build 후 생성)
 
-`*.sqlite` 인덱스에는 로컬 파일 경로가 들어갈 수 있으므로 공개 패키지에 포함하지 않는다.
+`*.sqlite` 인덱스에는 로컬 파일 경로가 들어갈 수 있으므로 배포 패키지에 포함하지 않는다.
 
 ## Commands
 
@@ -88,7 +88,7 @@ If you later want hybrid search:
 - do not merge web results directly into the local DB by default
 
 ## Notes
-- Intended for internal/local corpus search.
+- Intended for local corpus search.
 - Good for "find where I already thought about this".
 - For latest web facts, use web search separately.
 - `run_ivk2.bat`는 먼저 `python`을, 없으면 `py -3`를 사용합니다.

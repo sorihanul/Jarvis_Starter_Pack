@@ -46,7 +46,7 @@ move_or_rename_many:
   여러 파일 이동, 이름 변경.
 
 global_or_core_policy_change:
-  글로벌 규칙, 코어 정책, 공개 배포 기준 변경.
+  글로벌 규칙, 코어 정책, 배포 배포 기준 변경.
 
 secret_or_account_access:
   키, 토큰, 계정, 인증 정보 접근.

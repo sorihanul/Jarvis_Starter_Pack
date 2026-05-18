@@ -4,7 +4,7 @@
 
 This file turns useful patterns from outside systems into neutral Jarvis option-pack rules.
 
-It does not copy source code, product names, private notes, or repository-specific language.
+It does not copy source code, product names, restricted notes, or repository-specific language.
 
 The goal is simple:
 

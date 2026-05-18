@@ -42,7 +42,7 @@ By default, this starter version stores the index here:
 04_Knowledge\IVK2_Improved\data\index.sqlite
 ```
 
-`index.sqlite`는 공개 패키지에 포함하지 않는다. 처음 build를 실행하면 로컬에서 새로 생성된다.
+`index.sqlite`는 배포 패키지에 포함하지 않는다. 처음 build를 실행하면 로컬에서 새로 생성된다.
 
 That means you can copy this package and keep the index close to the tool.
 
