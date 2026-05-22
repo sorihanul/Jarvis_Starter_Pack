@@ -21,6 +21,17 @@
 
 decision | rule | how_to | failure_pattern | glossary | concept
 
+## candidate_status
+
+candidate_only | needs_review | ready_for_wiki | rejected
+
+## metadata_draft
+
+- confidence:
+- possible_conflict:
+- related:
+- may_supersede:
+
 ## content
 
 짧은 정리.

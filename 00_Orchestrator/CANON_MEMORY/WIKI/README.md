@@ -12,6 +12,16 @@
 ```text
 # <title>
 
+## metadata
+
+status: active | provisional | experimental | deprecated
+confidence: high | medium | low
+supersedes: none | <file>
+superseded_by: none | <file>
+related: []
+conflict_check: clear | unresolved | prefer:<file> | see:<file>
+last_reviewed: YYYY-MM-DD | unknown
+
 ## one-line
 
 한 줄 정의.
@@ -32,3 +42,10 @@
 
 원문 대화 전체가 아니라 출처 단서만 짧게 적는다.
 ```
+
+## 정본 메타 규칙
+
+- `status`가 `deprecated`이면 기본 읽기 후보에서 제외한다.
+- `confidence`가 낮으면 규칙처럼 쓰지 말고 확인 대상으로 둔다.
+- `supersedes`와 `superseded_by`는 정본 대체 관계를 남긴다.
+- `conflict_check`가 `unresolved`이면 결론처럼 쓰지 않는다.

@@ -12,9 +12,15 @@
 ```text
 - title:
   file:
+  status:
+  confidence:
   read_when:
   do_not_read_when:
   scope:
+  supersedes:
+  superseded_by:
+  related:
+  conflict_check:
   last_reviewed:
 ```
 

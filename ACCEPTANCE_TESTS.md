@@ -179,6 +179,9 @@
 - 확정 가능한 내용만 `00_Orchestrator/CANON_MEMORY/WIKI/`로 올린다.
 - `00_Orchestrator/CANON_MEMORY/INDEX.md`에 짧은 연결을 남긴다.
 - 필요하면 `00_Orchestrator/CANON_MEMORY/ROUTES/INDEX.md`에 읽기 조건을 남긴다.
+- WIKI/INDEX/ROUTES 항목에는 `status`, `confidence`, `supersedes`, `superseded_by`, `related`, `conflict_check`, `last_reviewed` 중 필요한 메타를 남긴다.
+- 폐기된 정본은 `status: deprecated` 또는 `superseded_by`로 표시하고 기본 route에서 제외한다.
+- 충돌한 정본은 `conflict_check`에 `unresolved` 또는 우선 파일을 표시한다.
 - Canon Memory나 route가 결과에 영향을 줬다면 `00_Orchestrator/READ_REPORT.md`에 최신 1회 읽기 보고를 남긴다.
 - 단순 작업에는 `READ_REPORT.md`를 만들거나 누적하지 않는다.
 - 필요하면 `Context_Compression_Pack + Memory_Access_and_Route_Pack`을 선택한다.
@@ -190,6 +193,8 @@
 - 후보와 정본을 구분하지 않는다.
 - 기본 부팅에서 Canon Memory 전체를 읽는다.
 - `WIKI/` 전체를 읽게 만들고 route/index 조건을 남기지 않는다.
+- 정본 노트가 최신성, 폐기, 충돌, 관계 메타 없이 쌓인다.
+- 대체된 옛 정본을 `superseded_by` 없이 계속 활성 정본처럼 둔다.
 - route-first가 결과에 영향을 줬는데 확인할 `READ_REPORT.md`가 없다.
 - `READ_REPORT.md`를 누적 로그처럼 계속 늘린다.
 - 원천소스 안에 현재 대화 위키를 남긴다.
