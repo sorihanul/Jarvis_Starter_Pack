@@ -1,0 +1,42 @@
+{
+  "suite": "SKILL_MANUFACTURING_ALL_PROOFS_v0_1",
+  "samples": 3,
+  "passed": 3,
+  "failed": 0,
+  "overall": "PASS",
+  "results": [
+    {
+      "sample": "SOURCE_REVIEW_SKILL_SAMPLE_v0_1",
+      "returncode": 0,
+      "stdout": {
+        "overall": "PASS",
+        "function_calls": 12,
+        "output": "06_Skill_Manufacturing_Proofs/SOURCE_REVIEW_SKILL_SAMPLE_v0_1/SOURCE_REVIEW_SKILL_BUILD_OUTPUT_v0_1.json"
+      },
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "sample": "PROMPT_VALIDATION_SKILL_SAMPLE_v0_1",
+      "returncode": 0,
+      "stdout": {
+        "overall": "PASS",
+        "function_calls": 12,
+        "output": "06_Skill_Manufacturing_Proofs/PROMPT_VALIDATION_SKILL_SAMPLE_v0_1/PROMPT_VALIDATION_SKILL_BUILD_OUTPUT_v0_1.json"
+      },
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "sample": "WIKI_NOTE_INTAKE_SKILL_SAMPLE_v0_1",
+      "returncode": 0,
+      "stdout": {
+        "overall": "PASS",
+        "function_calls": 12,
+        "output": "06_Skill_Manufacturing_Proofs/WIKI_NOTE_INTAKE_SKILL_SAMPLE_v0_1/WIKI_NOTE_INTAKE_SKILL_BUILD_OUTPUT_v0_1.json"
+      },
+      "stderr": "",
+      "passed": true
+    }
+  ]
+}

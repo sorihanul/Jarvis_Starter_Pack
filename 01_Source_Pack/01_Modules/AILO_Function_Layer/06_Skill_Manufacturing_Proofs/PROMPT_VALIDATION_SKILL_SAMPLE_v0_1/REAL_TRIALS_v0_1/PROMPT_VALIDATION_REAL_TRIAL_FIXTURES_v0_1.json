@@ -1,0 +1,18 @@
+{
+  "trial_id": "PROMPT_VALIDATION_REAL_TRIAL_v0_1",
+  "skill_card": "../PROMPT_VALIDATION_SKILL_CARD_v0_1.md",
+  "fixtures": [
+    {
+      "id": "prompt_validation.pass.001",
+      "prompt_text": "Purpose: Validate a short product-description prompt.\\nTask: Check whether the prompt asks for one clear output.\\nOutput: Return verdict, issues, evidence, and next action.\\nDo not rewrite the prompt unless asked.",
+      "validation_goal": "check purpose, output contract, and rewrite boundary",
+      "expect_verdict": "PASS"
+    },
+    {
+      "id": "prompt_validation.fail.001",
+      "prompt_text": "Make this better.\\nDo not ask questions.\\nAsk clarifying questions before answering.\\nRewrite it fully and also only report issues.",
+      "validation_goal": "check purpose, output contract, and instruction conflict",
+      "expect_verdict": "FAIL"
+    }
+  ]
+}

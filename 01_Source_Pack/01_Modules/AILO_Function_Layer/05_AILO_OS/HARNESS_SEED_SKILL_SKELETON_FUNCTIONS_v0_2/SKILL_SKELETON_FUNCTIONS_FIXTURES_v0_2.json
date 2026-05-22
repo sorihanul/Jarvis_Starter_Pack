@@ -1,0 +1,149 @@
+{
+  "seed": "ailo_os_harness_seed.skill_skeleton_functions",
+  "fixtures": [
+    {
+      "id": "fixture.input_contract_bind.pass.001",
+      "input": {
+        "run_id": "skill-pass-001",
+        "function_id": "basic_fn.input_contract_bind.v0.2",
+        "slots": {
+          "skill_goal": "build a source review skill",
+          "raw_inputs": ["source_path", "review_goal", "style_preference"],
+          "required_candidates": ["source_path", "review_goal"]
+        }
+      },
+      "expect": {"ok": true, "validation_result": "PASS", "required_output_keys": ["required_inputs", "optional_inputs", "rejected_inputs", "missing_inputs"]}
+    },
+    {
+      "id": "fixture.step_sequence_lock.pass.001",
+      "input": {
+        "run_id": "skill-pass-002",
+        "function_id": "basic_fn.step_sequence_lock.v0.2",
+        "slots": {
+          "skill_goal": "review source material",
+          "candidate_steps": ["scope", "read", "extract", "report"]
+        }
+      },
+      "expect": {"ok": true, "validation_result": "PASS", "required_output_keys": ["ordered_steps", "optional_steps", "forbidden_reorder", "stop_rule"]}
+    },
+    {
+      "id": "fixture.acceptance_criteria_bind.pass.001",
+      "input": {
+        "run_id": "skill-pass-003",
+        "function_id": "basic_fn.acceptance_criteria_bind.v0.2",
+        "slots": {
+          "output_goal": "short verification report",
+          "quality_constraints": ["evidence-backed", "bounded"],
+          "failure_constraints": ["no source path", "no pass/fail"]
+        }
+      },
+      "expect": {"ok": true, "validation_result": "PASS", "required_output_keys": ["pass_if", "fail_if", "proof_required", "review_stop_rule"]}
+    },
+    {
+      "id": "fixture.fixture_contract_bind.pass.001",
+      "input": {
+        "run_id": "skill-pass-004",
+        "function_id": "basic_fn.fixture_contract_bind.v0.2",
+        "slots": {
+          "function_or_skill_id": "skill.source_review.v0.1",
+          "input_contract": ["source_path", "review_goal"],
+          "output_contract": ["findings", "evidence", "risk"]
+        }
+      },
+      "expect": {"ok": true, "validation_result": "PASS", "required_output_keys": ["positive_fixture_shape", "negative_fixture_shape", "required_assertions", "fixture_stop_rule"]}
+    },
+    {
+      "id": "fixture.handoff_packet_bind.pass.001",
+      "input": {
+        "run_id": "skill-pass-005",
+        "function_id": "basic_fn.handoff_packet_bind.v0.2",
+        "slots": {
+          "current_stage": "source_review",
+          "next_stage": "skill_draft",
+          "artifact_summary": "source review is complete",
+          "open_items": ["one unclear boundary"]
+        }
+      },
+      "expect": {"ok": true, "validation_result": "PASS", "required_output_keys": ["handoff_fields", "required_artifacts", "open_items", "next_entrypoint"]}
+    },
+    {
+      "id": "fixture.retry_policy_check.pass.001",
+      "input": {
+        "run_id": "skill-pass-006",
+        "function_id": "basic_fn.retry_policy_check.v0.2",
+        "slots": {
+          "failure_reason": "validation_failed",
+          "attempt_count": 1,
+          "max_attempts": 2,
+          "risk": "low"
+        }
+      },
+      "expect": {"ok": true, "validation_result": "PASS", "required_output_keys": ["retry_decision", "reason", "next_attempt_change", "stop_condition"], "retry_decision": "RETRY"}
+    },
+    {
+      "id": "fixture.cost_budget_lock.pass.001",
+      "input": {
+        "run_id": "skill-pass-007",
+        "function_id": "basic_fn.cost_budget_lock.v0.2",
+        "slots": {
+          "task_scope": "review one source file",
+          "available_budget": "small",
+          "risk": "low"
+        }
+      },
+      "expect": {"ok": true, "validation_result": "PASS", "required_output_keys": ["read_limit", "token_budget", "time_budget", "expansion_trigger"]}
+    },
+    {
+      "id": "fixture.dependency_check.pass.001",
+      "input": {
+        "run_id": "skill-pass-008",
+        "function_id": "basic_fn.dependency_check.v0.2",
+        "slots": {
+          "required_dependencies": ["source_path", "local_rule"],
+          "available_dependencies": ["source_path", "local_rule", "map"]
+        }
+      },
+      "expect": {"ok": true, "validation_result": "PASS", "required_output_keys": ["satisfied", "missing", "blocked", "next_requirement"], "blocked": false}
+    },
+    {
+      "id": "fixture.input_contract_bind.fail.001",
+      "input": {"run_id": "skill-fail-001", "function_id": "basic_fn.input_contract_bind.v0.2", "slots": {"raw_inputs": ["source_path"]}},
+      "expect": {"ok": false, "validation_result": "FAIL", "reason": "missing_required_input", "missing_slots": ["skill_goal"]}
+    },
+    {
+      "id": "fixture.step_sequence_lock.fail.001",
+      "input": {"run_id": "skill-fail-002", "function_id": "basic_fn.step_sequence_lock.v0.2", "slots": {"skill_goal": "review source"}},
+      "expect": {"ok": false, "validation_result": "FAIL", "reason": "missing_required_input", "missing_slots": ["candidate_steps"]}
+    },
+    {
+      "id": "fixture.acceptance_criteria_bind.fail.001",
+      "input": {"run_id": "skill-fail-003", "function_id": "basic_fn.acceptance_criteria_bind.v0.2", "slots": {"quality_constraints": ["bounded"]}},
+      "expect": {"ok": false, "validation_result": "FAIL", "reason": "missing_required_input", "missing_slots": ["output_goal"]}
+    },
+    {
+      "id": "fixture.fixture_contract_bind.fail.001",
+      "input": {"run_id": "skill-fail-004", "function_id": "basic_fn.fixture_contract_bind.v0.2", "slots": {"function_or_skill_id": "skill.x"}},
+      "expect": {"ok": false, "validation_result": "FAIL", "reason": "missing_required_input", "missing_slots": ["input_contract", "output_contract"]}
+    },
+    {
+      "id": "fixture.handoff_packet_bind.fail.001",
+      "input": {"run_id": "skill-fail-005", "function_id": "basic_fn.handoff_packet_bind.v0.2", "slots": {"current_stage": "review", "next_stage": "draft"}},
+      "expect": {"ok": false, "validation_result": "FAIL", "reason": "missing_required_input", "missing_slots": ["artifact_summary"]}
+    },
+    {
+      "id": "fixture.retry_policy_check.fail.001",
+      "input": {"run_id": "skill-fail-006", "function_id": "basic_fn.retry_policy_check.v0.2", "slots": {"failure_reason": "x", "attempt_count": 1}},
+      "expect": {"ok": false, "validation_result": "FAIL", "reason": "missing_required_input", "missing_slots": ["max_attempts"]}
+    },
+    {
+      "id": "fixture.cost_budget_lock.fail.001",
+      "input": {"run_id": "skill-fail-007", "function_id": "basic_fn.cost_budget_lock.v0.2", "slots": {"available_budget": "small"}},
+      "expect": {"ok": false, "validation_result": "FAIL", "reason": "missing_required_input", "missing_slots": ["task_scope"]}
+    },
+    {
+      "id": "fixture.dependency_check.fail.001",
+      "input": {"run_id": "skill-fail-008", "function_id": "basic_fn.dependency_check.v0.2", "slots": {"required_dependencies": ["source_path"]}},
+      "expect": {"ok": false, "validation_result": "FAIL", "reason": "missing_required_input", "missing_slots": ["available_dependencies"]}
+    }
+  ]
+}

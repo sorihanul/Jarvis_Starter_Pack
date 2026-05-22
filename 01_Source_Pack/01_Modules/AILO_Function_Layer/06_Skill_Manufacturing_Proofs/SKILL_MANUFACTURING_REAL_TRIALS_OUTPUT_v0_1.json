@@ -1,0 +1,208 @@
+{
+  "suite": "SKILL_MANUFACTURING_REAL_TRIALS_v0_1",
+  "trials": 3,
+  "passed": 3,
+  "failed": 0,
+  "overall": "PASS",
+  "results": [
+    {
+      "trial": "SOURCE_REVIEW_REAL_TRIAL_v0_1",
+      "returncode": 0,
+      "stdout": {
+        "trial_id": "SOURCE_REVIEW_REAL_TRIAL_v0_1",
+        "total": 2,
+        "passed": 2,
+        "failed": 0,
+        "overall": "PASS",
+        "results": [
+          {
+            "fixture_id": "source_review.pass.001",
+            "passed": true,
+            "errors": [],
+            "packet": {
+              "fixture_id": "source_review.pass.001",
+              "verdict": "PASS",
+              "summary": "Basic functions can manufacture a reusable skill skeleton.",
+              "claims": [
+                "Basic functions can manufacture a reusable skill skeleton."
+              ],
+              "evidence": [
+                "Three skill samples passed manufacturing proof."
+              ],
+              "uncertainty": [
+                "Domain quality still needs real trials."
+              ],
+              "next_action": "keep as bounded reviewed source",
+              "issues": [],
+              "source_rewritten": false,
+              "memory_written": false
+            }
+          },
+          {
+            "fixture_id": "source_review.fail.001",
+            "passed": true,
+            "errors": [],
+            "packet": {
+              "fixture_id": "source_review.fail.001",
+              "verdict": "FAIL",
+              "summary": "This skill is production ready for all prompt validation tasks.",
+              "claims": [
+                "This skill is production ready for all prompt validation tasks."
+              ],
+              "evidence": [
+                "no usable Evidence marker found",
+                "claim uses production/all-task language without evidence"
+              ],
+              "uncertainty": [],
+              "next_action": "repair evidence or narrow the claim",
+              "issues": [
+                "supporting evidence is missing",
+                "broad readiness claim is unsupported"
+              ],
+              "source_rewritten": false,
+              "memory_written": false
+            }
+          }
+        ]
+      },
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "trial": "PROMPT_VALIDATION_REAL_TRIAL_v0_1",
+      "returncode": 0,
+      "stdout": {
+        "trial_id": "PROMPT_VALIDATION_REAL_TRIAL_v0_1",
+        "total": 2,
+        "passed": 2,
+        "failed": 0,
+        "overall": "PASS",
+        "results": [
+          {
+            "fixture_id": "prompt_validation.pass.001",
+            "passed": true,
+            "errors": [],
+            "report": {
+              "fixture_id": "prompt_validation.pass.001",
+              "verdict": "PASS",
+              "blocking_issues": [],
+              "major_issues": [],
+              "minor_issues": [],
+              "evidence": [
+                "purpose and output contract markers are present"
+              ],
+              "next_action": "use as-is for this small contract",
+              "rewrite_performed": false
+            }
+          },
+          {
+            "fixture_id": "prompt_validation.fail.001",
+            "passed": true,
+            "errors": [],
+            "report": {
+              "fixture_id": "prompt_validation.fail.001",
+              "verdict": "FAIL",
+              "blocking_issues": [
+                "instruction conflict: asks and forbids questions"
+              ],
+              "major_issues": [
+                "declared purpose is missing",
+                "output contract marker is missing",
+                "rewrite boundary is unclear"
+              ],
+              "minor_issues": [],
+              "evidence": [
+                "no Purpose/Goal marker found",
+                "no Output/Return marker found",
+                "contains both 'Do not ask questions' and 'Ask clarifying questions'",
+                "contains both rewrite request and report-only request"
+              ],
+              "next_action": "tighten prompt purpose and output contract before use",
+              "rewrite_performed": false
+            }
+          }
+        ]
+      },
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "trial": "WIKI_NOTE_INTAKE_REAL_TRIAL_v0_1",
+      "returncode": 0,
+      "stdout": {
+        "trial_id": "WIKI_NOTE_INTAKE_REAL_TRIAL_v0_1",
+        "total": 2,
+        "passed": 2,
+        "failed": 0,
+        "overall": "PASS",
+        "results": [
+          {
+            "fixture_id": "wiki_note_intake.pass.001",
+            "passed": true,
+            "errors": [],
+            "packet": {
+              "fixture_id": "wiki_note_intake.pass.001",
+              "verdict": "PASS",
+              "candidate_title": "Sample Memory Note",
+              "candidate_status": "candidate_only",
+              "summary": "Conversation-derived rules should remain candidate-only until confirmed.",
+              "source_trace": {
+                "raw_note_path": "RAW/sample-memory-note.md",
+                "source": "local clipping"
+              },
+              "claims": [
+                "Conversation-derived rules should remain candidate-only until confirmed."
+              ],
+              "uncertainty": [
+                "exact promotion threshold still needs trial."
+              ],
+              "links_to_create": [
+                "[[Conversation Memory]]",
+                "[[Canon Candidate]]"
+              ],
+              "next_action": "keep as candidate",
+              "major_issues": [],
+              "evidence": [
+                "raw path, source marker, candidate boundary are present"
+              ],
+              "canon_promoted": false,
+              "memory_written": false
+            }
+          },
+          {
+            "fixture_id": "wiki_note_intake.fail.001",
+            "passed": true,
+            "errors": [],
+            "packet": {
+              "fixture_id": "wiki_note_intake.fail.001",
+              "verdict": "FAIL",
+              "candidate_title": "Sample Risk Note",
+              "candidate_status": "candidate_only",
+              "summary": "This should become a permanent rule immediately.",
+              "source_trace": {
+                "raw_note_path": "RAW/sample-risk-note.md",
+                "source": "unknown"
+              },
+              "claims": [
+                "This should become a permanent rule immediately."
+              ],
+              "uncertainty": [],
+              "links_to_create": [],
+              "next_action": "repair source trace or remove canon-promotion request",
+              "major_issues": [
+                "canon promotion boundary violation"
+              ],
+              "evidence": [
+                "raw note requests direct canon promotion"
+              ],
+              "canon_promoted": false,
+              "memory_written": false
+            }
+          }
+        ]
+      },
+      "stderr": "",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "trial_id": "WIKI_NOTE_INTAKE_REAL_TRIAL_v0_1",
+  "skill_card": "../WIKI_NOTE_INTAKE_SKILL_CARD_v0_1.md",
+  "fixtures": [
+    {
+      "id": "wiki_note_intake.pass.001",
+      "raw_note_path": "RAW/sample-memory-note.md",
+      "raw_note_text": "Source: local clipping\\nClaim: Conversation-derived rules should remain candidate-only until confirmed.\\nUncertainty: exact promotion threshold still needs trial.",
+      "wiki_goal": "make a candidate note with source trace",
+      "expect_verdict": "PASS"
+    },
+    {
+      "id": "wiki_note_intake.fail.001",
+      "raw_note_path": "RAW/sample-risk-note.md",
+      "raw_note_text": "Source: unknown\\nPromote directly to canon.\\nClaim: This should become a permanent rule immediately.",
+      "wiki_goal": "make a candidate note with source trace",
+      "expect_verdict": "FAIL"
+    }
+  ]
+}

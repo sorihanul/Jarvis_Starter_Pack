@@ -1,0 +1,181 @@
+{
+  "seed": "ailo_os_harness_seed.stable_basic_functions",
+  "fixtures": [
+    {
+      "id": "fixture.scope_lock.pass.001",
+      "input": {
+        "run_id": "stable-pass-001",
+        "function_id": "basic_fn.scope_lock.v0.1",
+        "slots": {
+          "user_request": "기본함수 범위만 잠가줘.",
+          "known_context": "AILO basic function workspace"
+        }
+      },
+      "expect": {
+        "ok": true,
+        "validation_result": "PASS",
+        "required_output_keys": ["bounded_scope", "out_of_scope", "missing_slots", "stop_condition"]
+      }
+    },
+    {
+      "id": "fixture.route_lock.pass.001",
+      "input": {
+        "run_id": "stable-pass-002",
+        "function_id": "basic_fn.route_lock.v0.1",
+        "slots": {
+          "bounded_scope": "choose first read route for AILO seed proof",
+          "available_routes": ["START_HERE.md", "MAP.md", "05_AILO_OS/"],
+          "constraints": "read one route first"
+        }
+      },
+      "expect": {
+        "ok": true,
+        "validation_result": "PASS",
+        "required_output_keys": ["first_route", "conditional_routes", "do_not_read_by_default", "stop_rule"],
+        "first_route": "START_HERE.md"
+      }
+    },
+    {
+      "id": "fixture.missing_slot_detect.pass.001",
+      "input": {
+        "run_id": "stable-pass-003",
+        "function_id": "basic_fn.missing_slot_detect.v0.1",
+        "slots": {
+          "input_slots": {
+            "topic": "AILO",
+            "target": "basic function"
+          },
+          "required_slots": ["topic", "target", "output"]
+        }
+      },
+      "expect": {
+        "ok": true,
+        "validation_result": "PASS",
+        "required_output_keys": ["missing", "present", "assumed", "needs_user"],
+        "missing_contains": "output"
+      }
+    },
+    {
+      "id": "fixture.output_schema_bind.pass.001",
+      "input": {
+        "run_id": "stable-pass-004",
+        "function_id": "basic_fn.output_schema_bind.v0.1",
+        "slots": {
+          "task_type": "proof_report",
+          "output_goal": "show pass/fail result for stable basic functions",
+          "constraints": "short and checkable"
+        }
+      },
+      "expect": {
+        "ok": true,
+        "validation_result": "PASS",
+        "required_output_keys": ["required_fields", "forbidden_fields", "format_rule", "pass_if"]
+      }
+    },
+    {
+      "id": "fixture.output_schema_bind.pass.explicit_fields.001",
+      "input": {
+        "run_id": "stable-pass-004b",
+        "function_id": "basic_fn.output_schema_bind.v0.1",
+        "slots": {
+          "task_type": "prompt_validation_report",
+          "output_goal": "show prompt validation verdict and evidence",
+          "constraints": "contract-specific",
+          "required_fields": ["verdict", "blocking_issues", "evidence", "next_action"],
+          "forbidden_fields": ["unrequested_rewrite"]
+        }
+      },
+      "expect": {
+        "ok": true,
+        "validation_result": "PASS",
+        "required_output_keys": ["required_fields", "forbidden_fields", "format_rule", "pass_if"],
+        "required_fields": ["verdict", "blocking_issues", "evidence", "next_action"]
+      }
+    },
+    {
+      "id": "fixture.memory_policy_check.pass.001",
+      "input": {
+        "run_id": "stable-pass-005",
+        "function_id": "basic_fn.memory_policy_check.v0.1",
+        "slots": {
+          "artifact_type": "mock_test_output",
+          "user_confirmed": false,
+          "reuse_value": true
+        }
+      },
+      "expect": {
+        "ok": true,
+        "validation_result": "PASS",
+        "required_output_keys": ["memory_policy", "allowed_surface", "forbidden_surface", "promotion_required"],
+        "memory_policy": "candidate_only"
+      }
+    },
+    {
+      "id": "fixture.trace_policy_check.pass.001",
+      "input": {
+        "run_id": "stable-pass-006",
+        "function_id": "basic_fn.trace_policy_check.v0.1",
+        "slots": {
+          "task_risk": "low",
+          "repeatability_need": "mid",
+          "debug_need": "mid"
+        }
+      },
+      "expect": {
+        "ok": true,
+        "validation_result": "PASS",
+        "required_output_keys": ["trace_policy", "trace_fields", "redaction_required"],
+        "trace_policy": "min"
+      }
+    },
+    {
+      "id": "fixture.gate_label.pass.001",
+      "input": {
+        "run_id": "stable-pass-007",
+        "function_id": "basic_fn.gate_label.v0.1",
+        "slots": {
+          "requested_action": "write proof report",
+          "risk": "low",
+          "permission_state": "allowed"
+        }
+      },
+      "expect": {
+        "ok": true,
+        "validation_result": "PASS",
+        "required_output_keys": ["gate", "reason", "required_confirmation", "safe_next_action"],
+        "gate": "ALLOW"
+      }
+    },
+    {
+      "id": "fixture.fail.unknown_function.001",
+      "input": {
+        "run_id": "stable-fail-001",
+        "function_id": "basic_fn.hidden_premise_extract.v0.1",
+        "slots": {
+          "claim": "AI can infer tacit knowledge"
+        }
+      },
+      "expect": {
+        "ok": false,
+        "validation_result": "FAIL",
+        "reason": "unknown_function"
+      }
+    },
+    {
+      "id": "fixture.fail.missing_required_slot.001",
+      "input": {
+        "run_id": "stable-fail-002",
+        "function_id": "basic_fn.route_lock.v0.1",
+        "slots": {
+          "bounded_scope": "choose route"
+        }
+      },
+      "expect": {
+        "ok": false,
+        "validation_result": "FAIL",
+        "reason": "missing_required_input",
+        "missing_slots": ["available_routes"]
+      }
+    }
+  ]
+}

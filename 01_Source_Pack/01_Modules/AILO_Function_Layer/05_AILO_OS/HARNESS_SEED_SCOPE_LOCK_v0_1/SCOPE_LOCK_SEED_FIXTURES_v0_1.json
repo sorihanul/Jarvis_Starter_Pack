@@ -1,0 +1,73 @@
+{
+  "seed": "ailo_os_harness_seed.scope_lock",
+  "function": "basic_fn.scope_lock.v0.1",
+  "fixtures": [
+    {
+      "id": "fixture.pass.001",
+      "name": "pass",
+      "input": {
+        "run_id": "seed-pass-001",
+        "user_request": "지금 기본함수 문서에 후보 상태와 실패 출력을 반영해줘.",
+        "known_context": "AILO basic function workspace"
+      },
+      "expect": {
+        "ok": true,
+        "validation_result": "PASS",
+        "required_output_keys": [
+          "bounded_scope",
+          "out_of_scope",
+          "missing_slots",
+          "stop_condition"
+        ],
+        "memory_policy": "none"
+      }
+    },
+    {
+      "id": "fixture.fail.missing_input.001",
+      "name": "missing input",
+      "input": {
+        "run_id": "seed-fail-001",
+        "user_request": "",
+        "known_context": "AILO basic function workspace"
+      },
+      "expect": {
+        "ok": false,
+        "reason": "missing_required_input",
+        "missing_slots": [
+          "user_request"
+        ],
+        "validation_result": "FAIL"
+      }
+    },
+    {
+      "id": "fixture.fail.unknown_function.001",
+      "name": "unknown function",
+      "input": {
+        "run_id": "seed-fail-002",
+        "function_id": "basic_fn.hidden_premise_extract.v0.1",
+        "user_request": "숨은 전제를 찾아줘."
+      },
+      "expect": {
+        "ok": false,
+        "reason": "unknown_function",
+        "suggested_layer": "harness_contract_fix",
+        "validation_result": "FAIL"
+      }
+    },
+    {
+      "id": "fixture.pass.execution_forbidden.001",
+      "name": "execution forbidden",
+      "input": {
+        "run_id": "seed-pass-002",
+        "user_request": "이 문서를 실제로 고쳐줘.",
+        "known_context": "scope_lock seed test"
+      },
+      "expect": {
+        "ok": true,
+        "validation_result": "PASS",
+        "out_of_scope_contains": "perform the actual edit",
+        "final_task_executed": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "sample_id": "WIKI_NOTE_INTAKE_SKILL_SAMPLE_v0_1",
+  "output_prefix": "WIKI_NOTE_INTAKE_SKILL",
+  "card_title": "Wiki Note Intake Skill Card v0.1",
+  "report_title": "Wiki Note Intake Skill Proof Report v0.1",
+  "skill_id": "skill.wiki_note_intake.v0.1",
+  "skill_goal": "turn one raw note into a bounded wiki candidate note with trace",
+  "known_context": "AILO basic function skill manufacturing sample",
+  "required_inputs": [
+    "raw_note_path",
+    "wiki_goal"
+  ],
+  "optional_inputs": [
+    "source_context",
+    "target_index",
+    "linking_style"
+  ],
+  "required_dependencies": [
+    "raw_note_path",
+    "local_read_permission"
+  ],
+  "available_dependencies": [
+    "raw_note_path",
+    "local_read_permission",
+    "candidate_output_folder"
+  ],
+  "available_budget": "small",
+  "risk": "mid",
+  "candidate_steps": [
+    "lock intake scope",
+    "read raw note path",
+    "extract reusable claims",
+    "separate source trace and interpretation",
+    "draft wiki candidate note",
+    "mark non-canon status",
+    "emit handoff packet"
+  ],
+  "task_type": "wiki_note_intake_packet",
+  "output_goal": "bounded wiki candidate note with trace",
+  "output_constraints": "candidate-only, trace-visible, no canon promotion",
+  "output_contract": [
+    "candidate_title",
+    "candidate_status",
+    "summary",
+    "source_trace",
+    "claims",
+    "uncertainty",
+    "links_to_create",
+    "next_action"
+  ],
+  "acceptance": {
+    "pass_if": [
+      "raw source path is named",
+      "candidate status is explicit",
+      "source trace and interpretation are separated"
+    ],
+    "fail_if": [
+      "canon promotion",
+      "source trace missing",
+      "unbounded folder scan"
+    ]
+  },
+  "artifact_type": "skill_card",
+  "user_confirmed": false,
+  "reuse_value": true,
+  "task_risk": "mid",
+  "repeatability_need": "high",
+  "debug_need": "high",
+  "requested_action": "create wiki note intake skill skeleton sample",
+  "permission_state": "allowed",
+  "current_stage": "skill_skeleton_build",
+  "next_stage": "real_wiki_note_intake_trial",
+  "open_items": [
+    "real wiki note quality still needs raw-note fixtures"
+  ]
+}

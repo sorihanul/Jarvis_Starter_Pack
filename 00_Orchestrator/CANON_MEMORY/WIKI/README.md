@@ -1,0 +1,51 @@
+# Canon Memory Wiki
+
+## 목적
+
+반복 재사용 가능한 정본 지식을 둔다.
+
+이 폴더는 원천소스 저장소가 아니다.
+대화에서 확정된 결정, 규칙, 사용법을 다음 모델이 다시 읽기 쉬운 노트로 정리하는 곳이다.
+
+## 노트 형식
+
+```text
+# <title>
+
+## metadata
+
+status: active | provisional | experimental | deprecated
+confidence: high | medium | low
+supersedes: none | <file>
+superseded_by: none | <file>
+related: []
+conflict_check: clear | unresolved | prefer:<file> | see:<file>
+last_reviewed: YYYY-MM-DD | unknown
+
+## one-line
+
+한 줄 정의.
+
+## when_to_use
+
+언제 다시 읽는가.
+
+## rule
+
+정본 규칙이나 결정.
+
+## boundary
+
+무엇을 하지 않는가.
+
+## source_trace
+
+원문 대화 전체가 아니라 출처 단서만 짧게 적는다.
+```
+
+## 정본 메타 규칙
+
+- `status`가 `deprecated`이면 기본 읽기 후보에서 제외한다.
+- `confidence`가 낮으면 규칙처럼 쓰지 말고 확인 대상으로 둔다.
+- `supersedes`와 `superseded_by`는 정본 대체 관계를 남긴다.
+- `conflict_check`가 `unresolved`이면 결론처럼 쓰지 않는다.

@@ -1,0 +1,413 @@
+﻿{
+  "mode": "run-fixtures",
+  "fixture_file": "HARNESS_SEED_STABLE_BASIC_FUNCTIONS_v0_1/STABLE_BASIC_FUNCTIONS_FIXTURES_v0_1.json",
+  "total": 10,
+  "passed": 10,
+  "failed": 0,
+  "overall": "PASS",
+  "results": [
+    {
+      "fixture_id": "fixture.scope_lock.pass.001",
+      "passed": true,
+      "errors": [],
+      "result": {
+        "ok": true,
+        "function_id": "basic_fn.scope_lock.v0.1",
+        "output": {
+          "bounded_scope": "lock the execution scope for request: 기본함수 범위만 잠가줘.",
+          "out_of_scope": [
+            "perform the final task",
+            "write memory",
+            "call cognitive functions",
+            "call engines"
+          ],
+          "missing_slots": [],
+          "stop_condition": "stop after returning scope control fields"
+        },
+        "final_task_executed": false,
+        "memory_written": false
+      },
+      "trace": {
+        "run_id": "stable-pass-001",
+        "seed": "ailo_os_harness_seed.stable_basic_functions",
+        "selected_function": "basic_fn.scope_lock.v0.1",
+        "input_keys": [
+          "function_id",
+          "slots"
+        ],
+        "output_keys": [
+          "bounded_scope",
+          "out_of_scope",
+          "missing_slots",
+          "stop_condition"
+        ],
+        "memory_policy": "none",
+        "trace_policy": "min",
+        "validation_result": "PASS",
+        "failure_reason": null
+      }
+    },
+    {
+      "fixture_id": "fixture.route_lock.pass.001",
+      "passed": true,
+      "errors": [],
+      "result": {
+        "ok": true,
+        "function_id": "basic_fn.route_lock.v0.1",
+        "output": {
+          "first_route": "START_HERE.md",
+          "conditional_routes": [
+            {
+              "route": "MAP.md",
+              "when": "needed after first route"
+            },
+            {
+              "route": "05_AILO_OS/",
+              "when": "needed after first route"
+            }
+          ],
+          "do_not_read_by_default": [
+            "MAP.md",
+            "05_AILO_OS/"
+          ],
+          "stop_rule": "stop after the first route unless a condition opens another route"
+        },
+        "final_task_executed": false,
+        "memory_written": false
+      },
+      "trace": {
+        "run_id": "stable-pass-002",
+        "seed": "ailo_os_harness_seed.stable_basic_functions",
+        "selected_function": "basic_fn.route_lock.v0.1",
+        "input_keys": [
+          "function_id",
+          "slots"
+        ],
+        "output_keys": [
+          "first_route",
+          "conditional_routes",
+          "do_not_read_by_default",
+          "stop_rule"
+        ],
+        "memory_policy": "none",
+        "trace_policy": "min",
+        "validation_result": "PASS",
+        "failure_reason": null
+      }
+    },
+    {
+      "fixture_id": "fixture.missing_slot_detect.pass.001",
+      "passed": true,
+      "errors": [],
+      "result": {
+        "ok": true,
+        "function_id": "basic_fn.missing_slot_detect.v0.1",
+        "output": {
+          "missing": [
+            "output"
+          ],
+          "present": [
+            "topic",
+            "target"
+          ],
+          "assumed": [],
+          "needs_user": true
+        },
+        "final_task_executed": false,
+        "memory_written": false
+      },
+      "trace": {
+        "run_id": "stable-pass-003",
+        "seed": "ailo_os_harness_seed.stable_basic_functions",
+        "selected_function": "basic_fn.missing_slot_detect.v0.1",
+        "input_keys": [
+          "function_id",
+          "slots"
+        ],
+        "output_keys": [
+          "missing",
+          "present",
+          "assumed",
+          "needs_user"
+        ],
+        "memory_policy": "none",
+        "trace_policy": "min",
+        "validation_result": "PASS",
+        "failure_reason": null
+      }
+    },
+    {
+      "fixture_id": "fixture.output_schema_bind.pass.001",
+      "passed": true,
+      "errors": [],
+      "result": {
+        "ok": true,
+        "function_id": "basic_fn.output_schema_bind.v0.1",
+        "output": {
+          "required_fields": [
+            "result",
+            "evidence",
+            "next_action"
+          ],
+          "forbidden_fields": [
+            "hidden_appendix",
+            "unrequested_options"
+          ],
+          "format_rule": "return a compact proof_report with only required fields",
+          "pass_if": [
+            "required_fields exist",
+            "forbidden_fields are absent",
+            "format_rule is followed"
+          ]
+        },
+        "final_task_executed": false,
+        "memory_written": false
+      },
+      "trace": {
+        "run_id": "stable-pass-004",
+        "seed": "ailo_os_harness_seed.stable_basic_functions",
+        "selected_function": "basic_fn.output_schema_bind.v0.1",
+        "input_keys": [
+          "function_id",
+          "slots"
+        ],
+        "output_keys": [
+          "required_fields",
+          "forbidden_fields",
+          "format_rule",
+          "pass_if"
+        ],
+        "memory_policy": "none",
+        "trace_policy": "min",
+        "validation_result": "PASS",
+        "failure_reason": null
+      }
+    },
+    {
+      "fixture_id": "fixture.output_schema_bind.pass.explicit_fields.001",
+      "passed": true,
+      "errors": [],
+      "result": {
+        "ok": true,
+        "function_id": "basic_fn.output_schema_bind.v0.1",
+        "output": {
+          "required_fields": [
+            "verdict",
+            "blocking_issues",
+            "evidence",
+            "next_action"
+          ],
+          "forbidden_fields": [
+            "unrequested_rewrite"
+          ],
+          "format_rule": "return a compact prompt_validation_report with only required fields",
+          "pass_if": [
+            "required_fields exist",
+            "forbidden_fields are absent",
+            "format_rule is followed"
+          ]
+        },
+        "final_task_executed": false,
+        "memory_written": false
+      },
+      "trace": {
+        "run_id": "stable-pass-004b",
+        "seed": "ailo_os_harness_seed.stable_basic_functions",
+        "selected_function": "basic_fn.output_schema_bind.v0.1",
+        "input_keys": [
+          "function_id",
+          "slots"
+        ],
+        "output_keys": [
+          "required_fields",
+          "forbidden_fields",
+          "format_rule",
+          "pass_if"
+        ],
+        "memory_policy": "none",
+        "trace_policy": "min",
+        "validation_result": "PASS",
+        "failure_reason": null
+      }
+    },
+    {
+      "fixture_id": "fixture.memory_policy_check.pass.001",
+      "passed": true,
+      "errors": [],
+      "result": {
+        "ok": true,
+        "function_id": "basic_fn.memory_policy_check.v0.1",
+        "output": {
+          "memory_policy": "candidate_only",
+          "allowed_surface": "candidate surface",
+          "forbidden_surface": [
+            "canon memory",
+            "global rulebook",
+            "preference memory"
+          ],
+          "promotion_required": true
+        },
+        "final_task_executed": false,
+        "memory_written": false
+      },
+      "trace": {
+        "run_id": "stable-pass-005",
+        "seed": "ailo_os_harness_seed.stable_basic_functions",
+        "selected_function": "basic_fn.memory_policy_check.v0.1",
+        "input_keys": [
+          "function_id",
+          "slots"
+        ],
+        "output_keys": [
+          "memory_policy",
+          "allowed_surface",
+          "forbidden_surface",
+          "promotion_required"
+        ],
+        "memory_policy": "none",
+        "trace_policy": "structured",
+        "validation_result": "PASS",
+        "failure_reason": null
+      }
+    },
+    {
+      "fixture_id": "fixture.trace_policy_check.pass.001",
+      "passed": true,
+      "errors": [],
+      "result": {
+        "ok": true,
+        "function_id": "basic_fn.trace_policy_check.v0.1",
+        "output": {
+          "trace_policy": "min",
+          "trace_fields": [
+            "run_id",
+            "function_id",
+            "validation_result"
+          ],
+          "redaction_required": false
+        },
+        "final_task_executed": false,
+        "memory_written": false
+      },
+      "trace": {
+        "run_id": "stable-pass-006",
+        "seed": "ailo_os_harness_seed.stable_basic_functions",
+        "selected_function": "basic_fn.trace_policy_check.v0.1",
+        "input_keys": [
+          "function_id",
+          "slots"
+        ],
+        "output_keys": [
+          "trace_policy",
+          "trace_fields",
+          "redaction_required"
+        ],
+        "memory_policy": "none",
+        "trace_policy": "min",
+        "validation_result": "PASS",
+        "failure_reason": null
+      }
+    },
+    {
+      "fixture_id": "fixture.gate_label.pass.001",
+      "passed": true,
+      "errors": [],
+      "result": {
+        "ok": true,
+        "function_id": "basic_fn.gate_label.v0.1",
+        "output": {
+          "gate": "ALLOW",
+          "reason": "permission_state=allowed, risk=low",
+          "required_confirmation": false,
+          "safe_next_action": "proceed"
+        },
+        "final_task_executed": false,
+        "memory_written": false
+      },
+      "trace": {
+        "run_id": "stable-pass-007",
+        "seed": "ailo_os_harness_seed.stable_basic_functions",
+        "selected_function": "basic_fn.gate_label.v0.1",
+        "input_keys": [
+          "function_id",
+          "slots"
+        ],
+        "output_keys": [
+          "gate",
+          "reason",
+          "required_confirmation",
+          "safe_next_action"
+        ],
+        "memory_policy": "none",
+        "trace_policy": "structured",
+        "validation_result": "PASS",
+        "failure_reason": null
+      }
+    },
+    {
+      "fixture_id": "fixture.fail.unknown_function.001",
+      "passed": true,
+      "errors": [],
+      "result": {
+        "ok": false,
+        "function_id": "basic_fn.hidden_premise_extract.v0.1",
+        "reason": "unknown_function",
+        "missing_slots": [],
+        "suggested_layer": "harness_contract_fix",
+        "final_task_executed": false,
+        "memory_written": false,
+        "run_id": "stable-fail-001"
+      },
+      "trace": {
+        "run_id": "stable-fail-001",
+        "seed": "ailo_os_harness_seed.stable_basic_functions",
+        "selected_function": null,
+        "input_keys": [
+          "function_id",
+          "slots"
+        ],
+        "output_keys": [],
+        "memory_policy": "none",
+        "trace_policy": "min",
+        "validation_result": "FAIL",
+        "failure_reason": "unknown_function"
+      }
+    },
+    {
+      "fixture_id": "fixture.fail.missing_required_slot.001",
+      "passed": true,
+      "errors": [],
+      "result": {
+        "ok": false,
+        "function_id": "basic_fn.route_lock.v0.1",
+        "reason": "missing_required_input",
+        "missing_slots": [
+          "available_routes"
+        ],
+        "suggested_layer": "basic_function_tightening",
+        "final_task_executed": false,
+        "memory_written": false,
+        "run_id": "stable-fail-002"
+      },
+      "trace": {
+        "run_id": "stable-fail-002",
+        "seed": "ailo_os_harness_seed.stable_basic_functions",
+        "selected_function": null,
+        "input_keys": [
+          "function_id",
+          "slots"
+        ],
+        "output_keys": [
+          "first_route",
+          "conditional_routes",
+          "do_not_read_by_default",
+          "stop_rule"
+        ],
+        "memory_policy": "none",
+        "trace_policy": "min",
+        "validation_result": "FAIL",
+        "failure_reason": "missing_required_input"
+      }
+    }
+  ]
+}

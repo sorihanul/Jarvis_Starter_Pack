@@ -1,0 +1,122 @@
+{
+  "seed": "ailo_os_harness_seed.stable_basic_functions",
+  "purpose": "negative fixtures for each stable basic function",
+  "fixtures": [
+    {
+      "id": "fixture.scope_lock.fail.missing_user_request.001",
+      "input": {
+        "run_id": "negative-fail-001",
+        "function_id": "basic_fn.scope_lock.v0.1",
+        "slots": {
+          "known_context": "missing user request"
+        }
+      },
+      "expect": {
+        "ok": false,
+        "validation_result": "FAIL",
+        "reason": "missing_required_input",
+        "missing_slots": ["user_request"]
+      }
+    },
+    {
+      "id": "fixture.route_lock.fail.missing_available_routes.001",
+      "input": {
+        "run_id": "negative-fail-002",
+        "function_id": "basic_fn.route_lock.v0.1",
+        "slots": {
+          "bounded_scope": "choose first route"
+        }
+      },
+      "expect": {
+        "ok": false,
+        "validation_result": "FAIL",
+        "reason": "missing_required_input",
+        "missing_slots": ["available_routes"]
+      }
+    },
+    {
+      "id": "fixture.missing_slot_detect.fail.missing_required_slots.001",
+      "input": {
+        "run_id": "negative-fail-003",
+        "function_id": "basic_fn.missing_slot_detect.v0.1",
+        "slots": {
+          "input_slots": {
+            "topic": "AILO"
+          }
+        }
+      },
+      "expect": {
+        "ok": false,
+        "validation_result": "FAIL",
+        "reason": "missing_required_input",
+        "missing_slots": ["required_slots"]
+      }
+    },
+    {
+      "id": "fixture.output_schema_bind.fail.missing_output_goal.001",
+      "input": {
+        "run_id": "negative-fail-004",
+        "function_id": "basic_fn.output_schema_bind.v0.1",
+        "slots": {
+          "task_type": "report"
+        }
+      },
+      "expect": {
+        "ok": false,
+        "validation_result": "FAIL",
+        "reason": "missing_required_input",
+        "missing_slots": ["output_goal"]
+      }
+    },
+    {
+      "id": "fixture.memory_policy_check.fail.missing_artifact_type.001",
+      "input": {
+        "run_id": "negative-fail-005",
+        "function_id": "basic_fn.memory_policy_check.v0.1",
+        "slots": {
+          "reuse_value": true
+        }
+      },
+      "expect": {
+        "ok": false,
+        "validation_result": "FAIL",
+        "reason": "missing_required_input",
+        "missing_slots": ["artifact_type"]
+      }
+    },
+    {
+      "id": "fixture.trace_policy_check.fail.missing_debug_need.001",
+      "input": {
+        "run_id": "negative-fail-006",
+        "function_id": "basic_fn.trace_policy_check.v0.1",
+        "slots": {
+          "task_risk": "low",
+          "repeatability_need": "mid"
+        }
+      },
+      "expect": {
+        "ok": false,
+        "validation_result": "FAIL",
+        "reason": "missing_required_input",
+        "missing_slots": ["debug_need"]
+      }
+    },
+    {
+      "id": "fixture.gate_label.fail.missing_permission_state.001",
+      "input": {
+        "run_id": "negative-fail-007",
+        "function_id": "basic_fn.gate_label.v0.1",
+        "slots": {
+          "requested_action": "write file",
+          "risk": "mid"
+        }
+      },
+      "expect": {
+        "ok": false,
+        "validation_result": "FAIL",
+        "reason": "missing_required_input",
+        "missing_slots": ["permission_state"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "trial_id": "WIKI_NOTE_INTAKE_REAL_TRIAL_v0_1",
+  "total": 2,
+  "passed": 2,
+  "failed": 0,
+  "overall": "PASS",
+  "results": [
+    {
+      "fixture_id": "wiki_note_intake.pass.001",
+      "passed": true,
+      "errors": [],
+      "packet": {
+        "fixture_id": "wiki_note_intake.pass.001",
+        "verdict": "PASS",
+        "candidate_title": "Sample Memory Note",
+        "candidate_status": "candidate_only",
+        "summary": "Conversation-derived rules should remain candidate-only until confirmed.",
+        "source_trace": {
+          "raw_note_path": "RAW/sample-memory-note.md",
+          "source": "local clipping"
+        },
+        "claims": [
+          "Conversation-derived rules should remain candidate-only until confirmed."
+        ],
+        "uncertainty": [
+          "exact promotion threshold still needs trial."
+        ],
+        "links_to_create": [
+          "[[Conversation Memory]]",
+          "[[Canon Candidate]]"
+        ],
+        "next_action": "keep as candidate",
+        "major_issues": [],
+        "evidence": [
+          "raw path, source marker, candidate boundary are present"
+        ],
+        "canon_promoted": false,
+        "memory_written": false
+      }
+    },
+    {
+      "fixture_id": "wiki_note_intake.fail.001",
+      "passed": true,
+      "errors": [],
+      "packet": {
+        "fixture_id": "wiki_note_intake.fail.001",
+        "verdict": "FAIL",
+        "candidate_title": "Sample Risk Note",
+        "candidate_status": "candidate_only",
+        "summary": "This should become a permanent rule immediately.",
+        "source_trace": {
+          "raw_note_path": "RAW/sample-risk-note.md",
+          "source": "unknown"
+        },
+        "claims": [
+          "This should become a permanent rule immediately."
+        ],
+        "uncertainty": [],
+        "links_to_create": [],
+        "next_action": "repair source trace or remove canon-promotion request",
+        "major_issues": [
+          "canon promotion boundary violation"
+        ],
+        "evidence": [
+          "raw note requests direct canon promotion"
+        ],
+        "canon_promoted": false,
+        "memory_written": false
+      }
+    }
+  ]
+}

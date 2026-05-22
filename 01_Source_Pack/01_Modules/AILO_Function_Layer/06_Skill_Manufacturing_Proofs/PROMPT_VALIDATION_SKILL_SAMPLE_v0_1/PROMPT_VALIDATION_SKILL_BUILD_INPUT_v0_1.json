@@ -1,0 +1,74 @@
+{
+  "sample_id": "PROMPT_VALIDATION_SKILL_SAMPLE_v0_1",
+  "output_prefix": "PROMPT_VALIDATION_SKILL",
+  "card_title": "Prompt Validation Skill Card v0.1",
+  "report_title": "Prompt Validation Skill Proof Report v0.1",
+  "skill_id": "skill.prompt_validation.v0.1",
+  "skill_goal": "validate one prompt against its declared purpose and output contract",
+  "known_context": "AILO basic function skill manufacturing sample",
+  "required_inputs": [
+    "prompt_text",
+    "validation_goal"
+  ],
+  "optional_inputs": [
+    "target_model",
+    "must_avoid",
+    "expected_output_shape"
+  ],
+  "required_dependencies": [
+    "prompt_text",
+    "validation_goal"
+  ],
+  "available_dependencies": [
+    "prompt_text",
+    "validation_goal",
+    "output_folder"
+  ],
+  "available_budget": "small",
+  "risk": "low",
+  "candidate_steps": [
+    "lock validation scope",
+    "read prompt text",
+    "identify declared purpose",
+    "check instruction conflict",
+    "check output contract",
+    "produce bounded validation report",
+    "emit handoff packet"
+  ],
+  "task_type": "prompt_validation_report",
+  "output_goal": "bounded prompt validation report",
+  "output_constraints": "short, contract-backed, no full rewrite unless explicitly requested",
+  "output_contract": [
+    "verdict",
+    "blocking_issues",
+    "major_issues",
+    "minor_issues",
+    "evidence",
+    "next_action"
+  ],
+  "acceptance": {
+    "pass_if": [
+      "prompt purpose is named",
+      "findings cite prompt evidence",
+      "rewrite is not performed unless requested"
+    ],
+    "fail_if": [
+      "vague critique",
+      "unsupported issue",
+      "unrequested rewrite"
+    ]
+  },
+  "artifact_type": "skill_card",
+  "user_confirmed": false,
+  "reuse_value": true,
+  "task_risk": "low",
+  "repeatability_need": "high",
+  "debug_need": "mid",
+  "requested_action": "create prompt validation skill skeleton sample",
+  "permission_state": "allowed",
+  "current_stage": "skill_skeleton_build",
+  "next_stage": "real_prompt_validation_trial",
+  "open_items": [
+    "real prompt validation quality still needs prompt fixtures"
+  ]
+}

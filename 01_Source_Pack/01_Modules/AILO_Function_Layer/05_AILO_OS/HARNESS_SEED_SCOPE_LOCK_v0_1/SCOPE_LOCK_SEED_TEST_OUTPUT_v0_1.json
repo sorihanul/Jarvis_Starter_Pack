@@ -1,0 +1,166 @@
+﻿{
+  "seed": "ailo_os_harness_seed.scope_lock",
+  "function": "basic_fn.scope_lock.v0.1",
+  "total": 4,
+  "passed": 4,
+  "failed": 0,
+  "overall": "PASS",
+  "results": [
+    {
+      "fixture_id": "fixture.pass.001",
+      "passed": true,
+      "errors": [],
+      "result": {
+        "ok": true,
+        "function_id": "basic_fn.scope_lock.v0.1",
+        "output": {
+          "bounded_scope": "lock the execution scope for request: 지금 기본함수 문서에 후보 상태와 실패 출력을 반영해줘.",
+          "out_of_scope": [
+            "perform the final task",
+            "modify source documents",
+            "write memory",
+            "call cognitive functions",
+            "call engines",
+            "perform the actual edit"
+          ],
+          "missing_slots": [],
+          "stop_condition": "stop after returning the bounded scope, excluded work, missing slots, and stop condition"
+        },
+        "final_task_executed": false,
+        "memory_written": false
+      },
+      "trace": {
+        "run_id": "seed-pass-001",
+        "seed": "ailo_os_harness_seed.scope_lock",
+        "selected_function": "basic_fn.scope_lock.v0.1",
+        "input_keys": [
+          "user_request",
+          "known_context"
+        ],
+        "output_keys": [
+          "bounded_scope",
+          "out_of_scope",
+          "missing_slots",
+          "stop_condition"
+        ],
+        "memory_policy": "none",
+        "trace_policy": "min",
+        "validation_result": "PASS",
+        "failure_reason": null
+      }
+    },
+    {
+      "fixture_id": "fixture.fail.missing_input.001",
+      "passed": true,
+      "errors": [],
+      "result": {
+        "ok": false,
+        "function_id": "basic_fn.scope_lock.v0.1",
+        "reason": "missing_required_input",
+        "missing_slots": [
+          "user_request"
+        ],
+        "suggested_layer": "basic_function_tightening",
+        "run_id": "seed-fail-001",
+        "final_task_executed": false,
+        "memory_written": false
+      },
+      "trace": {
+        "run_id": "seed-fail-001",
+        "seed": "ailo_os_harness_seed.scope_lock",
+        "selected_function": null,
+        "input_keys": [
+          "user_request",
+          "known_context"
+        ],
+        "output_keys": [
+          "bounded_scope",
+          "out_of_scope",
+          "missing_slots",
+          "stop_condition"
+        ],
+        "memory_policy": "none",
+        "trace_policy": "min",
+        "validation_result": "FAIL",
+        "failure_reason": "missing_required_input"
+      }
+    },
+    {
+      "fixture_id": "fixture.fail.unknown_function.001",
+      "passed": true,
+      "errors": [],
+      "result": {
+        "ok": false,
+        "function_id": "basic_fn.hidden_premise_extract.v0.1",
+        "reason": "unknown_function",
+        "missing_slots": [],
+        "suggested_layer": "harness_contract_fix",
+        "run_id": "seed-fail-002",
+        "final_task_executed": false,
+        "memory_written": false
+      },
+      "trace": {
+        "run_id": "seed-fail-002",
+        "seed": "ailo_os_harness_seed.scope_lock",
+        "selected_function": null,
+        "input_keys": [
+          "user_request",
+          "known_context"
+        ],
+        "output_keys": [
+          "bounded_scope",
+          "out_of_scope",
+          "missing_slots",
+          "stop_condition"
+        ],
+        "memory_policy": "none",
+        "trace_policy": "min",
+        "validation_result": "FAIL",
+        "failure_reason": "unknown_function"
+      }
+    },
+    {
+      "fixture_id": "fixture.pass.execution_forbidden.001",
+      "passed": true,
+      "errors": [],
+      "result": {
+        "ok": true,
+        "function_id": "basic_fn.scope_lock.v0.1",
+        "output": {
+          "bounded_scope": "lock the execution scope for request: 이 문서를 실제로 고쳐줘.",
+          "out_of_scope": [
+            "perform the final task",
+            "modify source documents",
+            "write memory",
+            "call cognitive functions",
+            "call engines",
+            "perform the actual edit"
+          ],
+          "missing_slots": [],
+          "stop_condition": "stop after returning the bounded scope, excluded work, missing slots, and stop condition"
+        },
+        "final_task_executed": false,
+        "memory_written": false
+      },
+      "trace": {
+        "run_id": "seed-pass-002",
+        "seed": "ailo_os_harness_seed.scope_lock",
+        "selected_function": "basic_fn.scope_lock.v0.1",
+        "input_keys": [
+          "user_request",
+          "known_context"
+        ],
+        "output_keys": [
+          "bounded_scope",
+          "out_of_scope",
+          "missing_slots",
+          "stop_condition"
+        ],
+        "memory_policy": "none",
+        "trace_policy": "min",
+        "validation_result": "PASS",
+        "failure_reason": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "sample_id": "SOURCE_REVIEW_SKILL_SAMPLE_v0_1",
+  "output_prefix": "SOURCE_REVIEW_SKILL",
+  "card_title": "Source Review Skill Card v0.1",
+  "report_title": "Source Review Skill Proof Report v0.1",
+  "skill_id": "skill.source_review.v0.1",
+  "skill_goal": "review one source file and produce a bounded evidence-backed report",
+  "known_context": "AILO basic function skill manufacturing sample",
+  "required_inputs": [
+    "source_path",
+    "review_goal"
+  ],
+  "optional_inputs": [
+    "source_role",
+    "output_style"
+  ],
+  "required_dependencies": [
+    "source_path",
+    "local_read_permission"
+  ],
+  "available_dependencies": [
+    "source_path",
+    "local_read_permission",
+    "output_folder"
+  ],
+  "available_budget": "small",
+  "risk": "low",
+  "candidate_steps": [
+    "lock scope",
+    "read source path",
+    "extract claims",
+    "separate evidence and uncertainty",
+    "produce bounded report",
+    "emit handoff packet"
+  ],
+  "task_type": "source_review_report",
+  "output_goal": "bounded evidence-backed source review",
+  "output_constraints": "short, source-backed, no broad speculation",
+  "output_contract": [
+    "summary",
+    "claims",
+    "evidence",
+    "uncertainty",
+    "next_action"
+  ],
+  "acceptance": {
+    "pass_if": [
+      "source path is named",
+      "claims and evidence are separated",
+      "uncertainty is visible"
+    ],
+    "fail_if": [
+      "no source path",
+      "unsupported claim",
+      "unbounded rewrite"
+    ]
+  },
+  "artifact_type": "skill_card",
+  "user_confirmed": false,
+  "reuse_value": true,
+  "task_risk": "low",
+  "repeatability_need": "high",
+  "debug_need": "mid",
+  "requested_action": "create skill skeleton sample",
+  "permission_state": "allowed",
+  "current_stage": "skill_skeleton_build",
+  "next_stage": "real_skill_trial",
+  "open_items": [
+    "runner outputs are generic and need real-use tightening"
+  ]
+}

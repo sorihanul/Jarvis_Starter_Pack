@@ -1,0 +1,261 @@
+﻿{
+  "mode": "run-fixtures",
+  "fixture_file": "HARNESS_SEED_STABLE_BASIC_FUNCTIONS_v0_1/STABLE_BASIC_FUNCTIONS_NEGATIVE_FIXTURES_v0_1.json",
+  "total": 7,
+  "passed": 7,
+  "failed": 0,
+  "overall": "PASS",
+  "results": [
+    {
+      "fixture_id": "fixture.scope_lock.fail.missing_user_request.001",
+      "passed": true,
+      "errors": [],
+      "result": {
+        "ok": false,
+        "function_id": "basic_fn.scope_lock.v0.1",
+        "reason": "missing_required_input",
+        "missing_slots": [
+          "user_request"
+        ],
+        "suggested_layer": "basic_function_tightening",
+        "final_task_executed": false,
+        "memory_written": false,
+        "run_id": "negative-fail-001"
+      },
+      "trace": {
+        "run_id": "negative-fail-001",
+        "seed": "ailo_os_harness_seed.stable_basic_functions",
+        "selected_function": null,
+        "input_keys": [
+          "function_id",
+          "slots"
+        ],
+        "output_keys": [
+          "bounded_scope",
+          "out_of_scope",
+          "missing_slots",
+          "stop_condition"
+        ],
+        "memory_policy": "none",
+        "trace_policy": "min",
+        "validation_result": "FAIL",
+        "failure_reason": "missing_required_input"
+      }
+    },
+    {
+      "fixture_id": "fixture.route_lock.fail.missing_available_routes.001",
+      "passed": true,
+      "errors": [],
+      "result": {
+        "ok": false,
+        "function_id": "basic_fn.route_lock.v0.1",
+        "reason": "missing_required_input",
+        "missing_slots": [
+          "available_routes"
+        ],
+        "suggested_layer": "basic_function_tightening",
+        "final_task_executed": false,
+        "memory_written": false,
+        "run_id": "negative-fail-002"
+      },
+      "trace": {
+        "run_id": "negative-fail-002",
+        "seed": "ailo_os_harness_seed.stable_basic_functions",
+        "selected_function": null,
+        "input_keys": [
+          "function_id",
+          "slots"
+        ],
+        "output_keys": [
+          "first_route",
+          "conditional_routes",
+          "do_not_read_by_default",
+          "stop_rule"
+        ],
+        "memory_policy": "none",
+        "trace_policy": "min",
+        "validation_result": "FAIL",
+        "failure_reason": "missing_required_input"
+      }
+    },
+    {
+      "fixture_id": "fixture.missing_slot_detect.fail.missing_required_slots.001",
+      "passed": true,
+      "errors": [],
+      "result": {
+        "ok": false,
+        "function_id": "basic_fn.missing_slot_detect.v0.1",
+        "reason": "missing_required_input",
+        "missing_slots": [
+          "required_slots"
+        ],
+        "suggested_layer": "basic_function_tightening",
+        "final_task_executed": false,
+        "memory_written": false,
+        "run_id": "negative-fail-003"
+      },
+      "trace": {
+        "run_id": "negative-fail-003",
+        "seed": "ailo_os_harness_seed.stable_basic_functions",
+        "selected_function": null,
+        "input_keys": [
+          "function_id",
+          "slots"
+        ],
+        "output_keys": [
+          "missing",
+          "present",
+          "assumed",
+          "needs_user"
+        ],
+        "memory_policy": "none",
+        "trace_policy": "min",
+        "validation_result": "FAIL",
+        "failure_reason": "missing_required_input"
+      }
+    },
+    {
+      "fixture_id": "fixture.output_schema_bind.fail.missing_output_goal.001",
+      "passed": true,
+      "errors": [],
+      "result": {
+        "ok": false,
+        "function_id": "basic_fn.output_schema_bind.v0.1",
+        "reason": "missing_required_input",
+        "missing_slots": [
+          "output_goal"
+        ],
+        "suggested_layer": "basic_function_tightening",
+        "final_task_executed": false,
+        "memory_written": false,
+        "run_id": "negative-fail-004"
+      },
+      "trace": {
+        "run_id": "negative-fail-004",
+        "seed": "ailo_os_harness_seed.stable_basic_functions",
+        "selected_function": null,
+        "input_keys": [
+          "function_id",
+          "slots"
+        ],
+        "output_keys": [
+          "required_fields",
+          "forbidden_fields",
+          "format_rule",
+          "pass_if"
+        ],
+        "memory_policy": "none",
+        "trace_policy": "min",
+        "validation_result": "FAIL",
+        "failure_reason": "missing_required_input"
+      }
+    },
+    {
+      "fixture_id": "fixture.memory_policy_check.fail.missing_artifact_type.001",
+      "passed": true,
+      "errors": [],
+      "result": {
+        "ok": false,
+        "function_id": "basic_fn.memory_policy_check.v0.1",
+        "reason": "missing_required_input",
+        "missing_slots": [
+          "artifact_type"
+        ],
+        "suggested_layer": "basic_function_tightening",
+        "final_task_executed": false,
+        "memory_written": false,
+        "run_id": "negative-fail-005"
+      },
+      "trace": {
+        "run_id": "negative-fail-005",
+        "seed": "ailo_os_harness_seed.stable_basic_functions",
+        "selected_function": null,
+        "input_keys": [
+          "function_id",
+          "slots"
+        ],
+        "output_keys": [
+          "memory_policy",
+          "allowed_surface",
+          "forbidden_surface",
+          "promotion_required"
+        ],
+        "memory_policy": "none",
+        "trace_policy": "structured",
+        "validation_result": "FAIL",
+        "failure_reason": "missing_required_input"
+      }
+    },
+    {
+      "fixture_id": "fixture.trace_policy_check.fail.missing_debug_need.001",
+      "passed": true,
+      "errors": [],
+      "result": {
+        "ok": false,
+        "function_id": "basic_fn.trace_policy_check.v0.1",
+        "reason": "missing_required_input",
+        "missing_slots": [
+          "debug_need"
+        ],
+        "suggested_layer": "basic_function_tightening",
+        "final_task_executed": false,
+        "memory_written": false,
+        "run_id": "negative-fail-006"
+      },
+      "trace": {
+        "run_id": "negative-fail-006",
+        "seed": "ailo_os_harness_seed.stable_basic_functions",
+        "selected_function": null,
+        "input_keys": [
+          "function_id",
+          "slots"
+        ],
+        "output_keys": [
+          "trace_policy",
+          "trace_fields",
+          "redaction_required"
+        ],
+        "memory_policy": "none",
+        "trace_policy": "min",
+        "validation_result": "FAIL",
+        "failure_reason": "missing_required_input"
+      }
+    },
+    {
+      "fixture_id": "fixture.gate_label.fail.missing_permission_state.001",
+      "passed": true,
+      "errors": [],
+      "result": {
+        "ok": false,
+        "function_id": "basic_fn.gate_label.v0.1",
+        "reason": "missing_required_input",
+        "missing_slots": [
+          "permission_state"
+        ],
+        "suggested_layer": "basic_function_tightening",
+        "final_task_executed": false,
+        "memory_written": false,
+        "run_id": "negative-fail-007"
+      },
+      "trace": {
+        "run_id": "negative-fail-007",
+        "seed": "ailo_os_harness_seed.stable_basic_functions",
+        "selected_function": null,
+        "input_keys": [
+          "function_id",
+          "slots"
+        ],
+        "output_keys": [
+          "gate",
+          "reason",
+          "required_confirmation",
+          "safe_next_action"
+        ],
+        "memory_policy": "none",
+        "trace_policy": "structured",
+        "validation_result": "FAIL",
+        "failure_reason": "missing_required_input"
+      }
+    }
+  ]
+}

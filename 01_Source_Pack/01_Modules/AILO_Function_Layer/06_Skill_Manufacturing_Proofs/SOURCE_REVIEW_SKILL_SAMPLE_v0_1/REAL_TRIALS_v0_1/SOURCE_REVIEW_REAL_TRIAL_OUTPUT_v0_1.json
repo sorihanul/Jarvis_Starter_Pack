@@ -1,0 +1,57 @@
+{
+  "trial_id": "SOURCE_REVIEW_REAL_TRIAL_v0_1",
+  "total": 2,
+  "passed": 2,
+  "failed": 0,
+  "overall": "PASS",
+  "results": [
+    {
+      "fixture_id": "source_review.pass.001",
+      "passed": true,
+      "errors": [],
+      "packet": {
+        "fixture_id": "source_review.pass.001",
+        "verdict": "PASS",
+        "summary": "Basic functions can manufacture a reusable skill skeleton.",
+        "claims": [
+          "Basic functions can manufacture a reusable skill skeleton."
+        ],
+        "evidence": [
+          "Three skill samples passed manufacturing proof."
+        ],
+        "uncertainty": [
+          "Domain quality still needs real trials."
+        ],
+        "next_action": "keep as bounded reviewed source",
+        "issues": [],
+        "source_rewritten": false,
+        "memory_written": false
+      }
+    },
+    {
+      "fixture_id": "source_review.fail.001",
+      "passed": true,
+      "errors": [],
+      "packet": {
+        "fixture_id": "source_review.fail.001",
+        "verdict": "FAIL",
+        "summary": "This skill is production ready for all prompt validation tasks.",
+        "claims": [
+          "This skill is production ready for all prompt validation tasks."
+        ],
+        "evidence": [
+          "no usable Evidence marker found",
+          "claim uses production/all-task language without evidence"
+        ],
+        "uncertainty": [],
+        "next_action": "repair evidence or narrow the claim",
+        "issues": [
+          "supporting evidence is missing",
+          "broad readiness claim is unsupported"
+        ],
+        "source_rewritten": false,
+        "memory_written": false
+      }
+    }
+  ]
+}

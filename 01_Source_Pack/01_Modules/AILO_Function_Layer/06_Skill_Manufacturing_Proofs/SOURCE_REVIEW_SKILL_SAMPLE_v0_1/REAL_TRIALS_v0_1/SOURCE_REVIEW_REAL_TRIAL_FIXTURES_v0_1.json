@@ -1,0 +1,20 @@
+{
+  "trial_id": "SOURCE_REVIEW_REAL_TRIAL_v0_1",
+  "skill_card": "../SOURCE_REVIEW_SKILL_CARD_v0_1.md",
+  "fixtures": [
+    {
+      "id": "source_review.pass.001",
+      "source_path": "samples/source-review-pass.md",
+      "source_text": "Claim: Basic functions can manufacture a reusable skill skeleton.\\nEvidence: Three skill samples passed manufacturing proof.\\nUncertainty: Domain quality still needs real trials.",
+      "review_goal": "separate claim, evidence, uncertainty, and next action",
+      "expect_verdict": "PASS"
+    },
+    {
+      "id": "source_review.fail.001",
+      "source_path": "samples/source-review-fail.md",
+      "source_text": "Claim: This skill is production ready for all prompt validation tasks.\\nEvidence: none",
+      "review_goal": "reject unsupported broad readiness claim",
+      "expect_verdict": "FAIL"
+    }
+  ]
+}

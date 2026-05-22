@@ -1,0 +1,8 @@
+{
+  "run_id": "mini-sample-001",
+  "function_id": "basic_fn.scope_lock.v0.1",
+  "slots": {
+    "user_request": "다음 구현 순서를 좁혀줘.",
+    "known_context": "AILO non-Rust mini harness"
+  }
+}

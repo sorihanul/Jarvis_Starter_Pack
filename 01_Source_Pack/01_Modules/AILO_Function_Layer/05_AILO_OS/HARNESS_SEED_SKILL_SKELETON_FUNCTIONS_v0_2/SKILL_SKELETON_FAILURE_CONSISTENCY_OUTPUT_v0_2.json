@@ -1,0 +1,229 @@
+{
+  "check": "SKILL_SKELETON_FAILURE_CONSISTENCY_v0_2",
+  "failure_cases": 8,
+  "passed": 8,
+  "failed": 0,
+  "expected_function_count": 8,
+  "covered_function_count": 8,
+  "missing_functions": [],
+  "unexpected_functions": [],
+  "overall": "PASS",
+  "checks": [
+    {
+      "fixture_id": "fixture.input_contract_bind.fail.001",
+      "function_id": "basic_fn.input_contract_bind.v0.2",
+      "passed": true,
+      "errors": [],
+      "failure_keys": [
+        "final_task_executed",
+        "function_id",
+        "memory_written",
+        "missing_slots",
+        "ok",
+        "reason",
+        "run_id",
+        "suggested_layer"
+      ],
+      "trace_keys": [
+        "failure_reason",
+        "input_keys",
+        "memory_policy",
+        "output_keys",
+        "run_id",
+        "seed",
+        "selected_function",
+        "trace_policy",
+        "validation_result"
+      ]
+    },
+    {
+      "fixture_id": "fixture.step_sequence_lock.fail.001",
+      "function_id": "basic_fn.step_sequence_lock.v0.2",
+      "passed": true,
+      "errors": [],
+      "failure_keys": [
+        "final_task_executed",
+        "function_id",
+        "memory_written",
+        "missing_slots",
+        "ok",
+        "reason",
+        "run_id",
+        "suggested_layer"
+      ],
+      "trace_keys": [
+        "failure_reason",
+        "input_keys",
+        "memory_policy",
+        "output_keys",
+        "run_id",
+        "seed",
+        "selected_function",
+        "trace_policy",
+        "validation_result"
+      ]
+    },
+    {
+      "fixture_id": "fixture.acceptance_criteria_bind.fail.001",
+      "function_id": "basic_fn.acceptance_criteria_bind.v0.2",
+      "passed": true,
+      "errors": [],
+      "failure_keys": [
+        "final_task_executed",
+        "function_id",
+        "memory_written",
+        "missing_slots",
+        "ok",
+        "reason",
+        "run_id",
+        "suggested_layer"
+      ],
+      "trace_keys": [
+        "failure_reason",
+        "input_keys",
+        "memory_policy",
+        "output_keys",
+        "run_id",
+        "seed",
+        "selected_function",
+        "trace_policy",
+        "validation_result"
+      ]
+    },
+    {
+      "fixture_id": "fixture.fixture_contract_bind.fail.001",
+      "function_id": "basic_fn.fixture_contract_bind.v0.2",
+      "passed": true,
+      "errors": [],
+      "failure_keys": [
+        "final_task_executed",
+        "function_id",
+        "memory_written",
+        "missing_slots",
+        "ok",
+        "reason",
+        "run_id",
+        "suggested_layer"
+      ],
+      "trace_keys": [
+        "failure_reason",
+        "input_keys",
+        "memory_policy",
+        "output_keys",
+        "run_id",
+        "seed",
+        "selected_function",
+        "trace_policy",
+        "validation_result"
+      ]
+    },
+    {
+      "fixture_id": "fixture.handoff_packet_bind.fail.001",
+      "function_id": "basic_fn.handoff_packet_bind.v0.2",
+      "passed": true,
+      "errors": [],
+      "failure_keys": [
+        "final_task_executed",
+        "function_id",
+        "memory_written",
+        "missing_slots",
+        "ok",
+        "reason",
+        "run_id",
+        "suggested_layer"
+      ],
+      "trace_keys": [
+        "failure_reason",
+        "input_keys",
+        "memory_policy",
+        "output_keys",
+        "run_id",
+        "seed",
+        "selected_function",
+        "trace_policy",
+        "validation_result"
+      ]
+    },
+    {
+      "fixture_id": "fixture.retry_policy_check.fail.001",
+      "function_id": "basic_fn.retry_policy_check.v0.2",
+      "passed": true,
+      "errors": [],
+      "failure_keys": [
+        "final_task_executed",
+        "function_id",
+        "memory_written",
+        "missing_slots",
+        "ok",
+        "reason",
+        "run_id",
+        "suggested_layer"
+      ],
+      "trace_keys": [
+        "failure_reason",
+        "input_keys",
+        "memory_policy",
+        "output_keys",
+        "run_id",
+        "seed",
+        "selected_function",
+        "trace_policy",
+        "validation_result"
+      ]
+    },
+    {
+      "fixture_id": "fixture.cost_budget_lock.fail.001",
+      "function_id": "basic_fn.cost_budget_lock.v0.2",
+      "passed": true,
+      "errors": [],
+      "failure_keys": [
+        "final_task_executed",
+        "function_id",
+        "memory_written",
+        "missing_slots",
+        "ok",
+        "reason",
+        "run_id",
+        "suggested_layer"
+      ],
+      "trace_keys": [
+        "failure_reason",
+        "input_keys",
+        "memory_policy",
+        "output_keys",
+        "run_id",
+        "seed",
+        "selected_function",
+        "trace_policy",
+        "validation_result"
+      ]
+    },
+    {
+      "fixture_id": "fixture.dependency_check.fail.001",
+      "function_id": "basic_fn.dependency_check.v0.2",
+      "passed": true,
+      "errors": [],
+      "failure_keys": [
+        "final_task_executed",
+        "function_id",
+        "memory_written",
+        "missing_slots",
+        "ok",
+        "reason",
+        "run_id",
+        "suggested_layer"
+      ],
+      "trace_keys": [
+        "failure_reason",
+        "input_keys",
+        "memory_policy",
+        "output_keys",
+        "run_id",
+        "seed",
+        "selected_function",
+        "trace_policy",
+        "validation_result"
+      ]
+    }
+  ]
+}

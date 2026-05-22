@@ -1,0 +1,575 @@
+{
+  "sample": "PROMPT_VALIDATION_SKILL_SAMPLE_v0_1",
+  "function_calls": 12,
+  "passed": 12,
+  "failed": 0,
+  "overall": "PASS",
+  "skill_card": {
+    "skill_id": "skill.prompt_validation.v0.1",
+    "goal": "validate one prompt against its declared purpose and output contract",
+    "inputs": {
+      "required_inputs": [
+        "prompt_text",
+        "validation_goal"
+      ],
+      "optional_inputs": [
+        "target_model",
+        "must_avoid",
+        "expected_output_shape"
+      ],
+      "rejected_inputs": [],
+      "missing_inputs": []
+    },
+    "dependencies": {
+      "satisfied": [
+        "prompt_text",
+        "validation_goal"
+      ],
+      "missing": [],
+      "blocked": false,
+      "next_requirement": "none"
+    },
+    "budget": {
+      "read_limit": "first route only unless expansion trigger fires",
+      "token_budget": "small",
+      "time_budget": "small",
+      "expansion_trigger": "missing required evidence or blocked validation"
+    },
+    "steps": {
+      "ordered_steps": [
+        "lock validation scope",
+        "read prompt text",
+        "identify declared purpose",
+        "check instruction conflict",
+        "check output contract",
+        "produce bounded validation report",
+        "emit handoff packet"
+      ],
+      "optional_steps": [],
+      "forbidden_reorder": [
+        "lock validation scope",
+        "read prompt text",
+        "identify declared purpose",
+        "check instruction conflict",
+        "check output contract",
+        "produce bounded validation report",
+        "emit handoff packet"
+      ],
+      "stop_rule": "stop after locking the step order; do not execute the steps"
+    },
+    "output_schema": {
+      "required_fields": [
+        "verdict",
+        "blocking_issues",
+        "major_issues",
+        "minor_issues",
+        "evidence",
+        "next_action"
+      ],
+      "forbidden_fields": [
+        "hidden_appendix",
+        "unrequested_options"
+      ],
+      "format_rule": "return a compact prompt_validation_report with only required fields",
+      "pass_if": [
+        "required_fields exist",
+        "forbidden_fields are absent",
+        "format_rule is followed"
+      ]
+    },
+    "report_contract": [
+      "verdict",
+      "blocking_issues",
+      "major_issues",
+      "minor_issues",
+      "evidence",
+      "next_action"
+    ],
+    "acceptance": {
+      "pass_if": [
+        "prompt purpose is named",
+        "findings cite prompt evidence",
+        "rewrite is not performed unless requested"
+      ],
+      "fail_if": [
+        "vague critique",
+        "unsupported issue",
+        "unrequested rewrite"
+      ],
+      "proof_required": [
+        "fixture result",
+        "field check"
+      ],
+      "review_stop_rule": "stop after pass/fail criteria are explicit"
+    },
+    "fixtures": {
+      "positive_fixture_shape": {
+        "input": [
+          "prompt_text",
+          "validation_goal"
+        ],
+        "expect": [
+          "verdict",
+          "blocking_issues",
+          "major_issues",
+          "minor_issues",
+          "evidence",
+          "next_action"
+        ]
+      },
+      "negative_fixture_shape": {
+        "missing_input": [
+          "prompt_text"
+        ],
+        "expect": "FAIL"
+      },
+      "required_assertions": [
+        "ok matches expected",
+        "required output fields exist"
+      ],
+      "fixture_stop_rule": "start with one positive and one negative fixture"
+    },
+    "memory": {
+      "memory_policy": "candidate_only",
+      "allowed_surface": "candidate surface",
+      "forbidden_surface": [
+        "canon memory",
+        "global rulebook",
+        "preference memory"
+      ],
+      "promotion_required": true
+    },
+    "trace": {
+      "trace_policy": "structured",
+      "trace_fields": [
+        "run_id",
+        "function_id",
+        "input_keys",
+        "output_keys",
+        "validation_result"
+      ],
+      "redaction_required": false
+    },
+    "gate": {
+      "gate": "ALLOW",
+      "reason": "permission_state=allowed, risk=low",
+      "required_confirmation": false,
+      "safe_next_action": "proceed"
+    },
+    "handoff": {
+      "handoff_fields": [
+        "current_stage",
+        "next_stage",
+        "artifact_summary",
+        "open_items",
+        "next_entrypoint"
+      ],
+      "required_artifacts": [
+        "skill.prompt_validation.v0.1 skeleton created from basic functions"
+      ],
+      "open_items": [
+        "real prompt validation quality still needs prompt fixtures"
+      ],
+      "next_entrypoint": "real_prompt_validation_trial"
+    }
+  },
+  "function_outputs": {
+    "sample.scope_lock": {
+      "bounded_scope": "lock the execution scope for request: Build skill.prompt_validation.v0.1: validate one prompt against its declared purpose and output contract",
+      "out_of_scope": [
+        "perform the final task",
+        "write memory",
+        "call cognitive functions",
+        "call engines"
+      ],
+      "missing_slots": [],
+      "stop_condition": "stop after returning scope control fields"
+    },
+    "sample.input_contract_bind": {
+      "required_inputs": [
+        "prompt_text",
+        "validation_goal"
+      ],
+      "optional_inputs": [
+        "target_model",
+        "must_avoid",
+        "expected_output_shape"
+      ],
+      "rejected_inputs": [],
+      "missing_inputs": []
+    },
+    "sample.dependency_check": {
+      "satisfied": [
+        "prompt_text",
+        "validation_goal"
+      ],
+      "missing": [],
+      "blocked": false,
+      "next_requirement": "none"
+    },
+    "sample.cost_budget_lock": {
+      "read_limit": "first route only unless expansion trigger fires",
+      "token_budget": "small",
+      "time_budget": "small",
+      "expansion_trigger": "missing required evidence or blocked validation"
+    },
+    "sample.step_sequence_lock": {
+      "ordered_steps": [
+        "lock validation scope",
+        "read prompt text",
+        "identify declared purpose",
+        "check instruction conflict",
+        "check output contract",
+        "produce bounded validation report",
+        "emit handoff packet"
+      ],
+      "optional_steps": [],
+      "forbidden_reorder": [
+        "lock validation scope",
+        "read prompt text",
+        "identify declared purpose",
+        "check instruction conflict",
+        "check output contract",
+        "produce bounded validation report",
+        "emit handoff packet"
+      ],
+      "stop_rule": "stop after locking the step order; do not execute the steps"
+    },
+    "sample.output_schema_bind": {
+      "required_fields": [
+        "verdict",
+        "blocking_issues",
+        "major_issues",
+        "minor_issues",
+        "evidence",
+        "next_action"
+      ],
+      "forbidden_fields": [
+        "hidden_appendix",
+        "unrequested_options"
+      ],
+      "format_rule": "return a compact prompt_validation_report with only required fields",
+      "pass_if": [
+        "required_fields exist",
+        "forbidden_fields are absent",
+        "format_rule is followed"
+      ]
+    },
+    "sample.acceptance_criteria_bind": {
+      "pass_if": [
+        "prompt purpose is named",
+        "findings cite prompt evidence",
+        "rewrite is not performed unless requested"
+      ],
+      "fail_if": [
+        "vague critique",
+        "unsupported issue",
+        "unrequested rewrite"
+      ],
+      "proof_required": [
+        "fixture result",
+        "field check"
+      ],
+      "review_stop_rule": "stop after pass/fail criteria are explicit"
+    },
+    "sample.fixture_contract_bind": {
+      "positive_fixture_shape": {
+        "input": [
+          "prompt_text",
+          "validation_goal"
+        ],
+        "expect": [
+          "verdict",
+          "blocking_issues",
+          "major_issues",
+          "minor_issues",
+          "evidence",
+          "next_action"
+        ]
+      },
+      "negative_fixture_shape": {
+        "missing_input": [
+          "prompt_text"
+        ],
+        "expect": "FAIL"
+      },
+      "required_assertions": [
+        "ok matches expected",
+        "required output fields exist"
+      ],
+      "fixture_stop_rule": "start with one positive and one negative fixture"
+    },
+    "sample.memory_policy_check": {
+      "memory_policy": "candidate_only",
+      "allowed_surface": "candidate surface",
+      "forbidden_surface": [
+        "canon memory",
+        "global rulebook",
+        "preference memory"
+      ],
+      "promotion_required": true
+    },
+    "sample.trace_policy_check": {
+      "trace_policy": "structured",
+      "trace_fields": [
+        "run_id",
+        "function_id",
+        "input_keys",
+        "output_keys",
+        "validation_result"
+      ],
+      "redaction_required": false
+    },
+    "sample.gate_label": {
+      "gate": "ALLOW",
+      "reason": "permission_state=allowed, risk=low",
+      "required_confirmation": false,
+      "safe_next_action": "proceed"
+    },
+    "sample.handoff_packet_bind": {
+      "handoff_fields": [
+        "current_stage",
+        "next_stage",
+        "artifact_summary",
+        "open_items",
+        "next_entrypoint"
+      ],
+      "required_artifacts": [
+        "skill.prompt_validation.v0.1 skeleton created from basic functions"
+      ],
+      "open_items": [
+        "real prompt validation quality still needs prompt fixtures"
+      ],
+      "next_entrypoint": "real_prompt_validation_trial"
+    }
+  },
+  "traces": {
+    "sample.scope_lock": {
+      "run_id": "sample.scope_lock",
+      "seed": "ailo_os_harness_seed.stable_basic_functions",
+      "selected_function": "basic_fn.scope_lock.v0.1",
+      "input_keys": [
+        "function_id",
+        "slots"
+      ],
+      "output_keys": [
+        "bounded_scope",
+        "out_of_scope",
+        "missing_slots",
+        "stop_condition"
+      ],
+      "memory_policy": "none",
+      "trace_policy": "min",
+      "validation_result": "PASS",
+      "failure_reason": null
+    },
+    "sample.input_contract_bind": {
+      "run_id": "sample.input_contract_bind",
+      "seed": "ailo_os_harness_seed.skill_skeleton_functions",
+      "selected_function": "basic_fn.input_contract_bind.v0.2",
+      "input_keys": [
+        "function_id",
+        "slots"
+      ],
+      "output_keys": [
+        "required_inputs",
+        "optional_inputs",
+        "rejected_inputs",
+        "missing_inputs"
+      ],
+      "memory_policy": "none",
+      "trace_policy": "min",
+      "validation_result": "PASS",
+      "failure_reason": null
+    },
+    "sample.dependency_check": {
+      "run_id": "sample.dependency_check",
+      "seed": "ailo_os_harness_seed.skill_skeleton_functions",
+      "selected_function": "basic_fn.dependency_check.v0.2",
+      "input_keys": [
+        "function_id",
+        "slots"
+      ],
+      "output_keys": [
+        "satisfied",
+        "missing",
+        "blocked",
+        "next_requirement"
+      ],
+      "memory_policy": "none",
+      "trace_policy": "min",
+      "validation_result": "PASS",
+      "failure_reason": null
+    },
+    "sample.cost_budget_lock": {
+      "run_id": "sample.cost_budget_lock",
+      "seed": "ailo_os_harness_seed.skill_skeleton_functions",
+      "selected_function": "basic_fn.cost_budget_lock.v0.2",
+      "input_keys": [
+        "function_id",
+        "slots"
+      ],
+      "output_keys": [
+        "read_limit",
+        "token_budget",
+        "time_budget",
+        "expansion_trigger"
+      ],
+      "memory_policy": "none",
+      "trace_policy": "min",
+      "validation_result": "PASS",
+      "failure_reason": null
+    },
+    "sample.step_sequence_lock": {
+      "run_id": "sample.step_sequence_lock",
+      "seed": "ailo_os_harness_seed.skill_skeleton_functions",
+      "selected_function": "basic_fn.step_sequence_lock.v0.2",
+      "input_keys": [
+        "function_id",
+        "slots"
+      ],
+      "output_keys": [
+        "ordered_steps",
+        "optional_steps",
+        "forbidden_reorder",
+        "stop_rule"
+      ],
+      "memory_policy": "none",
+      "trace_policy": "min",
+      "validation_result": "PASS",
+      "failure_reason": null
+    },
+    "sample.output_schema_bind": {
+      "run_id": "sample.output_schema_bind",
+      "seed": "ailo_os_harness_seed.stable_basic_functions",
+      "selected_function": "basic_fn.output_schema_bind.v0.1",
+      "input_keys": [
+        "function_id",
+        "slots"
+      ],
+      "output_keys": [
+        "required_fields",
+        "forbidden_fields",
+        "format_rule",
+        "pass_if"
+      ],
+      "memory_policy": "none",
+      "trace_policy": "min",
+      "validation_result": "PASS",
+      "failure_reason": null
+    },
+    "sample.acceptance_criteria_bind": {
+      "run_id": "sample.acceptance_criteria_bind",
+      "seed": "ailo_os_harness_seed.skill_skeleton_functions",
+      "selected_function": "basic_fn.acceptance_criteria_bind.v0.2",
+      "input_keys": [
+        "function_id",
+        "slots"
+      ],
+      "output_keys": [
+        "pass_if",
+        "fail_if",
+        "proof_required",
+        "review_stop_rule"
+      ],
+      "memory_policy": "none",
+      "trace_policy": "min",
+      "validation_result": "PASS",
+      "failure_reason": null
+    },
+    "sample.fixture_contract_bind": {
+      "run_id": "sample.fixture_contract_bind",
+      "seed": "ailo_os_harness_seed.skill_skeleton_functions",
+      "selected_function": "basic_fn.fixture_contract_bind.v0.2",
+      "input_keys": [
+        "function_id",
+        "slots"
+      ],
+      "output_keys": [
+        "positive_fixture_shape",
+        "negative_fixture_shape",
+        "required_assertions",
+        "fixture_stop_rule"
+      ],
+      "memory_policy": "none",
+      "trace_policy": "min",
+      "validation_result": "PASS",
+      "failure_reason": null
+    },
+    "sample.memory_policy_check": {
+      "run_id": "sample.memory_policy_check",
+      "seed": "ailo_os_harness_seed.stable_basic_functions",
+      "selected_function": "basic_fn.memory_policy_check.v0.1",
+      "input_keys": [
+        "function_id",
+        "slots"
+      ],
+      "output_keys": [
+        "memory_policy",
+        "allowed_surface",
+        "forbidden_surface",
+        "promotion_required"
+      ],
+      "memory_policy": "none",
+      "trace_policy": "structured",
+      "validation_result": "PASS",
+      "failure_reason": null
+    },
+    "sample.trace_policy_check": {
+      "run_id": "sample.trace_policy_check",
+      "seed": "ailo_os_harness_seed.stable_basic_functions",
+      "selected_function": "basic_fn.trace_policy_check.v0.1",
+      "input_keys": [
+        "function_id",
+        "slots"
+      ],
+      "output_keys": [
+        "trace_policy",
+        "trace_fields",
+        "redaction_required"
+      ],
+      "memory_policy": "none",
+      "trace_policy": "min",
+      "validation_result": "PASS",
+      "failure_reason": null
+    },
+    "sample.gate_label": {
+      "run_id": "sample.gate_label",
+      "seed": "ailo_os_harness_seed.stable_basic_functions",
+      "selected_function": "basic_fn.gate_label.v0.1",
+      "input_keys": [
+        "function_id",
+        "slots"
+      ],
+      "output_keys": [
+        "gate",
+        "reason",
+        "required_confirmation",
+        "safe_next_action"
+      ],
+      "memory_policy": "none",
+      "trace_policy": "structured",
+      "validation_result": "PASS",
+      "failure_reason": null
+    },
+    "sample.handoff_packet_bind": {
+      "run_id": "sample.handoff_packet_bind",
+      "seed": "ailo_os_harness_seed.skill_skeleton_functions",
+      "selected_function": "basic_fn.handoff_packet_bind.v0.2",
+      "input_keys": [
+        "function_id",
+        "slots"
+      ],
+      "output_keys": [
+        "handoff_fields",
+        "required_artifacts",
+        "open_items",
+        "next_entrypoint"
+      ],
+      "memory_policy": "none",
+      "trace_policy": "structured",
+      "validation_result": "PASS",
+      "failure_reason": null
+    }
+  }
+}

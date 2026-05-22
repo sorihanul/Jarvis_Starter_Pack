@@ -1,0 +1,41 @@
+﻿{
+  "mode": "run-one",
+  "input_file": "NON_RUST_MINI_HARNESS_v0_1/SAMPLE_SCOPE_LOCK_INPUT_v0_1.json",
+  "overall": "PASS",
+  "result": {
+    "ok": true,
+    "function_id": "basic_fn.scope_lock.v0.1",
+    "output": {
+      "bounded_scope": "lock the execution scope for request: 다음 구현 순서를 좁혀줘.",
+      "out_of_scope": [
+        "perform the final task",
+        "write memory",
+        "call cognitive functions",
+        "call engines"
+      ],
+      "missing_slots": [],
+      "stop_condition": "stop after returning scope control fields"
+    },
+    "final_task_executed": false,
+    "memory_written": false
+  },
+  "trace": {
+    "run_id": "mini-sample-001",
+    "seed": "ailo_os_harness_seed.stable_basic_functions",
+    "selected_function": "basic_fn.scope_lock.v0.1",
+    "input_keys": [
+      "function_id",
+      "slots"
+    ],
+    "output_keys": [
+      "bounded_scope",
+      "out_of_scope",
+      "missing_slots",
+      "stop_condition"
+    ],
+    "memory_policy": "none",
+    "trace_policy": "min",
+    "validation_result": "PASS",
+    "failure_reason": null
+  }
+}
