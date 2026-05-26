@@ -64,7 +64,7 @@ Place here when the operation changes how a model reads, judges, or transforms m
 
 Primary target:
 ```text
-individual F brain local function set
+individual brain-local cognitive function set
 ```
 
 Reason:

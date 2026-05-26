@@ -48,6 +48,8 @@
 
 - `../../01_Source_Pack/01_Modules/AILO_Function_Layer/START_HERE.md`
 - `../../01_Source_Pack/01_Modules/AILO_Function_Layer/MAP.md`
+- `../../01_Source_Pack/01_Modules/AILO_Function_Layer/AILO_N_FRAME_USE_RULES_v0_1.md`
+- `../../01_Source_Pack/01_Modules/AILO_Function_Layer/AILO_N_PRACTICAL_USE_CARD_v0_1.md`
 - `../../01_Source_Pack/01_Modules/AILO_Function_Layer/01_AILO_Functions/AILO_FUNCTION_MINIMUM_SET_v0_1.md`
 - `../../01_Source_Pack/01_Modules/AILO_Function_Layer/05_AILO_OS/HARNESS_SEED_STABLE_BASIC_FUNCTIONS_v0_1/README.md`
 - `../../01_Source_Pack/01_Modules/AILO_Function_Layer/05_AILO_OS/HARNESS_SEED_SKILL_SKELETON_FUNCTIONS_v0_2/README.md`
@@ -55,6 +57,9 @@
 
 이 레이어는 기본 부팅 때 전체를 읽지 않는다.
 새 스킬 제작, 브레인 제작, 작업 범위 잠금, 읽기 경로 잠금, 출력 계약, 기억 부작용, 추적, 권한, 중단 조건, 비용 예산, 재시도 조건, 함수팩 설계가 필요할 때만 연다.
+
+반복 대상, 브레인/팩/정책/출처 관계, 후보/정본 상태를 명사 프레임으로 고정해야 하면 `AILO_N_FRAME_USE_RULES_v0_1.md`로 프레임 생성 여부를 먼저 걸러낸 뒤 `AILO_N_PRACTICAL_USE_CARD_v0_1.md`를 읽는다.
+전체 AILO-N 원문은 `../../01_Source_Pack/00_Core/AILO_N_NOMINAL_FRAME_LAYER_v0_9N.md`에 있으며, canonical slot, relation contract, formal mapping, validation-code detail이 필요할 때만 연다.
 
 판단 기준은 다음과 같다.
 
@@ -76,7 +81,7 @@ Function Pack Group
 ## 선택 모듈 참고
 
 - 지식 접근, 검색, IVK 계열 참고가 필요하면 `../../01_Source_Pack/04_Knowledge/`를 후보로 본다.
-- 외부 자료 분석, 신뢰 정보 수집, 온톨로지 구조화, 검증, 메모리 접근 경로, 메모리/프로필, 외부자료 방어, 스킬 신뢰 검사, 행동 권한, 경험의 스킬화, 맥락 압축, 렌즈 전환, 외부 채널 정규화가 필요하면 `../../01_Source_Pack/06_Option_Packs/`를 후보로 본다.
+- 외부 자료 분석, 신뢰 정보 수집, 온톨로지 구조화, AILO-N 미니 온톨로지 제작, 검증, 메모리 접근 경로, 메모리/프로필, 외부자료 방어, 스킬 신뢰 검사, 행동 권한, 경험의 스킬화, 맥락 압축, 렌즈 전환, 외부 채널 정규화가 필요하면 `../../01_Source_Pack/06_Option_Packs/`를 후보로 본다.
 - 옵션팩이 필요해 보이면 먼저 `../../01_Source_Pack/06_Option_Packs/OPTION_PACK_ROUTER.md`를 읽고 1~3개 팩만 고른다.
 - 옵션팩은 기본 부팅 때 모두 읽지 않고, 현재 요청과 직접 맞는 팩만 읽는다.
 

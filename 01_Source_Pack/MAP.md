@@ -17,6 +17,7 @@ Jarvis_Workspace/
 │
 ├── 00_Core/ (두뇌/자아 핵심)
 │   ├── AILO Full‑Stack v0.9E++ ... (AILO 영문 공식 스펙)
+│   ├── AILO_N_NOMINAL_FRAME_LAYER_v0_9N.md (AILO-N 명사 프레임 레이어 원문)
 │   ├── 한글 AILO-H Full-Stack ... (AILO-H 한국어 공식 스펙/최초 정체성)
 │   └── JARVIS_FOLDER_RECIPE_v1.0.md (폴더 설계 원칙, 본 파일의 기원이 되는 레시피)
 │
@@ -53,6 +54,7 @@ Jarvis_Workspace/
 │   ├── Capability_Import_Pack/ (외부 자료 분석과 능력 추출)
 │   ├── Evidence_Intake_Pack/ (신뢰 가능한 정보 수집과 근거 분리)
 │   ├── Ontology_Pack/ (객체/속성/관계/규칙 구조화)
+│   ├── AILO_N_Mini_Ontology_Pack/ (AILO-N Frame 기반 미니 온톨로지 제작)
 │   ├── Verification_and_Proof_Pack/ (목적 기반 검증과 재검증)
 │   ├── Memory_Access_and_Route_Pack/ (읽기 후보와 중단 규칙)
 │   ├── Preference_Memory_Pack/ (사용자 프로필, 기억 등급, 기억 예산)
@@ -78,10 +80,13 @@ Jarvis_Workspace/
 - `MAP.md`: 컴포넌트 간 이동 및 역할 이해 목적 지도
 - `02_Protocols/PIPELINE_CONTRACT_v1.3.md`: 대화/실행 분리 및 오케스트레이터 운영 규칙
 - `00_Core/한글 AILO-H Full-Stack v0.91 — Unified Core Specification.md`: 최상위 불변 자비스(가라사니 시스템) 규칙 (`MAIN_IDENTITY`를 겸함)
+- `00_Core/AILO_N_NOMINAL_FRAME_LAYER_v0_9N.md`: AILO-N 명사 프레임 레이어 원문. 기본 부팅에서 읽지 않고, 반복 대상/프레임 검증/관계 계약이 필요할 때만 연다.
 - `POLICY.md`: AI가 지켜야 하는 작업 수행 태도 및 출력 형식
 - `01_Modules/Host_Agent_Starter/README.md`: 호스트 작업 환경의 에이전트 기능을 선택적으로 붙이는 방법
 - `01_Modules/AILO_Function_Layer/START_HERE.md`: v3 AILO 함수화 레이어의 진입면
 - `01_Modules/AILO_Function_Layer/MAP.md`: 함수, 함수팩, 인지함수 경계, 엔진 경계, 비-Rust 하네스, skill manufacturing proof 위치 지도
+- `01_Modules/AILO_Function_Layer/AILO_N_FRAME_USE_RULES_v0_1.md`: 반복 대상에만 Frame을 쓰고, `conf` 권한 금지, 근거 없는 `asserted` 금지, 실행 분리, 프레임 병합/폐기 기준을 잡는 짧은 규칙
+- `01_Modules/AILO_Function_Layer/AILO_N_PRACTICAL_USE_CARD_v0_1.md`: AILO-N 원문을 열기 전 먼저 읽는 짧은 실사용 카드
 - `01_Modules/Memory_Access_Tree_Lite_Starter/README.md`: 저장된 기억에서 필요한 파일 후보만 고르는 기억 접근 지도
 - `01_Modules/Obsidian_Runtime_Surface_Lite_Starter/README.md`: Obsidian을 지식층 보기면으로 붙이는 옵션 모듈
 - `04_Knowledge/IVK2_Improved/README.md`: 개선형 지식 접근/검색 실험체
@@ -89,6 +94,7 @@ Jarvis_Workspace/
 - `06_Option_Packs/OPTION_PACK_ROUTER.md`: 요청별로 어떤 옵션팩을 읽을지 고르는 선택면
 - `06_Option_Packs/Capability_Import_Pack/README.md`: 외부 자료를 자비스 능력으로 바꾸는 분석 절차
 - `06_Option_Packs/Ontology_Pack/README.md`: 정보를 객체, 속성, 관계, 사건, 규칙, 근거로 나누는 규칙
+- `06_Option_Packs/AILO_N_Mini_Ontology_Pack/README.md`: AILO-N Frame으로 작고 운용 가능한 미니 온톨로지를 만드는 규칙
 - `06_Option_Packs/Verification_and_Proof_Pack/README.md`: 목적, 성공 기준, 결함, 재검증을 분리하는 규칙
 - `06_Option_Packs/Memory_Access_and_Route_Pack/README.md`: 전체 로딩 대신 필요한 파일 후보와 읽기 순서를 정하는 규칙
 - `06_Option_Packs/Preference_Memory_Pack/README.md`: 사용자 프로필과 기억 등급을 과적재 없이 다루는 규칙

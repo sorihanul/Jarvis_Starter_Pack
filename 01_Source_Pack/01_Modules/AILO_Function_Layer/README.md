@@ -32,6 +32,17 @@ AILO OS
 Read `BASIC_AND_COGNITIVE_FUNCTION_CONCEPT_v0_1.md` before expanding a function into a cognitive function.
 Read `FUNCTION_PACK_BOUNDARY_v0_1.md` before turning related functions into a skill, engine, or brain component.
 Read `FUNCTION_PACK_BUILD_CARD_v0_1.md` when you need to build one purpose-specific function pack quickly.
+Read `AILO_N_FRAME_USE_RULES_v0_1.md` before creating or promoting persistent frames.
+Read `AILO_N_PRACTICAL_USE_CARD_v0_1.md` when repeated targets need noun-slot frames before verbs or function packs act on them.
+
+The full AILO-N source is stored in:
+
+```text
+01_Source_Pack/00_Core/AILO_N_NOMINAL_FRAME_LAYER_v0_9N.md
+```
+
+Do not read the full AILO-N source by default.
+Open it only for canonical slot disputes, relation contracts, formal mapping, validation-code details, or knowledge-pack shape.
 
 ## Research allocation
 
@@ -53,6 +64,8 @@ AILO engines
 - `03_AILO_Engines`: compiled engines and engine criteria
 - `04_Research_Notes`: discussion notes, import notes, and unresolved questions
 - `05_AILO_OS`: boundary between document/spec and actual operating layer
+- `AILO_N_FRAME_USE_RULES_v0_1.md`: guardrails for when to create, promote, merge, or discard noun frames
+- `AILO_N_PRACTICAL_USE_CARD_v0_1.md`: short runtime card for AILO-N noun-frame usage
 
 ## Boundary
 This is a research and concept separation hub.

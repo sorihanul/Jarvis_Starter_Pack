@@ -30,6 +30,9 @@
 자료를 객체, 속성, 관계로 구조화해야 한다
 -> Ontology_Pack
 
+AILO-N Frame으로 작고 실행 가능한 미니 온톨로지를 만들어야 한다
+-> AILO_N_Mini_Ontology_Pack
+
 결과가 목적대로 동작하는지 봐야 한다
 -> Verification_and_Proof_Pack
 
@@ -89,6 +92,9 @@
 
 전문 온톨로지 지식팩 제작
 -> Ontology_Pack + Evidence_Intake_Pack + Verification_and_Proof_Pack + Memory_Access_and_Route_Pack
+
+AI가 실제로 읽고, 막고, 검증하고, 인계할 수 있는 작은 AILO-N Frame 온톨로지 제작
+-> Ontology_Pack + AILO_N_Mini_Ontology_Pack + Verification_and_Proof_Pack
 
 브레인/프롬프트/코드 검증
 -> Verification_and_Proof_Pack

@@ -27,6 +27,8 @@
 - 배포형 에이전트 형식별 적합도를 보고 싶다면 `TASKS/DISTRIBUTABLE_AGENT_FIT_GUIDE_v0.1.md`
 - 배포형 에이전트와 스킬을 번들 단위로 읽고 싶다면 `TASKS/DISTRIBUTABLE_AGENT_SKILL_BUNDLES_v0.1.md`
 - 새 배포형 에이전트나 스킬 카드를 직접 만들고 싶다면 `TASKS/DISTRIBUTABLE_AGENT_RECIPE_v0.1.md`, `TASKS/DISTRIBUTABLE_AILO_E_AGENT_RECIPE_v0.1.md`, `TASKS/DISTRIBUTABLE_SKILL_RECIPE_v0.1.md`
+- 반복 대상, 브레인/팩/정책/출처 관계, 후보/정본 상태를 명사 프레임으로 잡고 싶다면 먼저 `01_Modules/AILO_Function_Layer/AILO_N_FRAME_USE_RULES_v0_1.md`와 `01_Modules/AILO_Function_Layer/AILO_N_PRACTICAL_USE_CARD_v0_1.md`를 읽고, 필요할 때만 `00_Core/AILO_N_NOMINAL_FRAME_LAYER_v0_9N.md` 원문을 연다.
+- AILO-N Frame으로 AI가 실제로 읽고, 판단하고, 막고, 검증하고, 인계할 수 있는 작은 온톨로지를 만들고 싶다면 `06_Option_Packs/AILO_N_Mini_Ontology_Pack/README.md`를 읽는다.
 
 `01_Modules/Madang_Pan_Lite_Starter/`는:
 - 요청 분류

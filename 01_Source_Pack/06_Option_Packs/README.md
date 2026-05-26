@@ -39,6 +39,7 @@
 
 구조를 만드는 팩:
   Ontology_Pack
+  AILO_N_Mini_Ontology_Pack
   Memory_Access_and_Route_Pack
   Context_Compression_Pack
   Experience_To_Skill_Pack
@@ -61,6 +62,7 @@
 - `Preference_Memory_Pack/`: 사용자 프로필, 기억 등급, 기억 예산을 다루는 절차
 - `Source_Command_Filter_Pack/`: 외부 자료와 웹 자료를 읽을 때 지시 오염을 막는 절차
 - `Ontology_Pack/`: 정보를 객체, 속성, 관계, 사건, 규칙, 근거로 쪼개는 절차
+- `AILO_N_Mini_Ontology_Pack/`: AILO-N Frame으로 AI가 실제로 읽고, 판단하고, 막고, 검증하고, 인계할 수 있는 작은 운용형 온톨로지를 만드는 절차
 - `Verification_and_Proof_Pack/`: 목적, 성공 기준, 결함, 재검증을 분리하는 절차
 - `Memory_Access_and_Route_Pack/`: 필요한 파일 후보와 읽기 순서를 고르고, 대화에서 나온 재사용 지식을 Canon Memory 후보로 분리하는 절차
 - `Skill_Trust_Gate_Pack/`: 외부 스킬과 플러그인의 권한, 출처, 위험을 검사하는 절차
@@ -89,6 +91,7 @@
 요청이 사용자 기억/취향/프로필이라면 Preference_Memory_Pack
 요청이 외부 문서/웹/스크랩 처리라면 Source_Command_Filter_Pack
 요청이 정보 구조화라면 Ontology_Pack
+요청이 AILO-N Frame 기반 미니 온톨로지 제작이라면 AILO_N_Mini_Ontology_Pack
 요청이 검증이라면 Verification_and_Proof_Pack
 요청이 읽기 순서/기억 접근이라면 Memory_Access_and_Route_Pack
 요청이 대화 내용을 정본 지식으로 남기려는 것이라면 Context_Compression_Pack + Memory_Access_and_Route_Pack

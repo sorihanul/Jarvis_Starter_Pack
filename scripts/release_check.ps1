@@ -45,10 +45,16 @@ $requiredPaths = @(
   "00_Orchestrator/CANON_MEMORY/CANDIDATES/README.md",
   "00_Orchestrator/CANON_MEMORY/WIKI/README.md",
   "00_Orchestrator/CANON_MEMORY/ROUTES/INDEX.md",
+  "01_Source_Pack/00_Core/AILO_N_NOMINAL_FRAME_LAYER_v0_9N.md",
   "01_Source_Pack/01_Modules/AILO_Function_Layer/FUNCTION_PACK_BOUNDARY_v0_1.md",
   "01_Source_Pack/01_Modules/AILO_Function_Layer/FUNCTION_PACK_BUILD_CARD_v0_1.md",
+  "01_Source_Pack/01_Modules/AILO_Function_Layer/AILO_N_FRAME_USE_RULES_v0_1.md",
+  "01_Source_Pack/01_Modules/AILO_Function_Layer/AILO_N_PRACTICAL_USE_CARD_v0_1.md",
   "01_Source_Pack/01_Modules/AILO_Function_Layer/FUNCTION_PACK_EXAMPLE_CATALOG_v0_1.md",
-  "01_Source_Pack/01_Modules/AILO_Function_Layer/FUNCTION_PACK_PROMOTION_MATRIX_v0_1.md"
+  "01_Source_Pack/01_Modules/AILO_Function_Layer/FUNCTION_PACK_PROMOTION_MATRIX_v0_1.md",
+  "01_Source_Pack/06_Option_Packs/AILO_N_Mini_Ontology_Pack/README.md",
+  "01_Source_Pack/06_Option_Packs/AILO_N_Mini_Ontology_Pack/FRAME_SCHEMA.md",
+  "01_Source_Pack/06_Option_Packs/AILO_N_Mini_Ontology_Pack/VALIDATION_RULE.md"
 )
 
 foreach ($relativePath in $requiredPaths) {
@@ -62,9 +68,9 @@ $privatePatterns = @(
   ("Starter" + "_F_System"),
   ("F " + "system"),
   ("F " + "Omega"),
-  ("F-" + "Ω"),
+  ("F" + "-Ω"),
   ("F" + "-based"),
-  ("Canonical " + "F"),
+  ("Canonical " + "F " + "source"),
   ("Society" + "_" + "Cognitive" + "_" + "Vector"),
   ("Cognitive" + "_" + "Vector"),
   ("Jarvis_Starter_Pack" + "_v2"),

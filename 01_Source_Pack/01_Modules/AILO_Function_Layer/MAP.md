@@ -9,6 +9,8 @@
   V3_PLACEMENT_NOTE.md
   FUNCTION_PACK_BOUNDARY_v0_1.md
   FUNCTION_PACK_BUILD_CARD_v0_1.md
+  AILO_N_FRAME_USE_RULES_v0_1.md
+  AILO_N_PRACTICAL_USE_CARD_v0_1.md
   FUNCTION_PACK_EXAMPLE_CATALOG_v0_1.md
   FUNCTION_PACK_PROMOTION_MATRIX_v0_1.md
   DEVELOPMENT_ROADMAP_v0_1.md
@@ -105,6 +107,11 @@ brain component = identity/boundary/memory/output contract layer
 Use `FUNCTION_PACK_BOUNDARY_v0_1.md` before deciding whether related functions should remain a function pack or become an engine, skill, or brain component.
 
 Use `FUNCTION_PACK_BUILD_CARD_v0_1.md` when a model must create one function pack quickly without opening the whole function layer.
+
+Use `AILO_N_FRAME_USE_RULES_v0_1.md` before creating or promoting persistent frames. It keeps frames limited to repeated targets, blocks authority from `conf`, forbids unsupported `asserted`, keeps execution outside frames, and requires merge/discard when frames multiply.
+
+Use `AILO_N_PRACTICAL_USE_CARD_v0_1.md` when a repeated target needs a noun-slot frame before AILO verbs or function packs act on it.
+The full AILO-N source lives at `01_Source_Pack/00_Core/AILO_N_NOMINAL_FRAME_LAYER_v0_9N.md` and is not read by default.
 
 Use `FUNCTION_PACK_EXAMPLE_CATALOG_v0_1.md` when a model needs concrete starter packs such as Goal and Scope Pack, Read Route Pack, Output Contract Pack, Evidence and Uncertainty Pack, Permission and Stop Pack, or Skill Skeleton Pack.
 
