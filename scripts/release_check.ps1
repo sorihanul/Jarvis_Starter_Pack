@@ -50,10 +50,12 @@ $requiredPaths = @(
   "01_Source_Pack/01_Modules/AILO_Function_Layer/FUNCTION_PACK_BUILD_CARD_v0_1.md",
   "01_Source_Pack/01_Modules/AILO_Function_Layer/AILO_N_FRAME_USE_RULES_v0_1.md",
   "01_Source_Pack/01_Modules/AILO_Function_Layer/AILO_N_PRACTICAL_USE_CARD_v0_1.md",
+  "01_Source_Pack/01_Modules/AILO_Function_Layer/AILO_RELATION_TOPOLOGY_PACK_v0_1.md",
   "01_Source_Pack/01_Modules/AILO_Function_Layer/FUNCTION_PACK_EXAMPLE_CATALOG_v0_1.md",
   "01_Source_Pack/01_Modules/AILO_Function_Layer/FUNCTION_PACK_PROMOTION_MATRIX_v0_1.md",
   "01_Source_Pack/06_Option_Packs/AILO_N_Mini_Ontology_Pack/README.md",
   "01_Source_Pack/06_Option_Packs/AILO_N_Mini_Ontology_Pack/FRAME_SCHEMA.md",
+  "01_Source_Pack/06_Option_Packs/AILO_N_Mini_Ontology_Pack/TOPOLOGY_HINT_RULE.md",
   "01_Source_Pack/06_Option_Packs/AILO_N_Mini_Ontology_Pack/VALIDATION_RULE.md"
 )
 

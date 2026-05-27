@@ -19,6 +19,12 @@ Before creating persistent frames, also read:
 01_Source_Pack/01_Modules/AILO_Function_Layer/AILO_N_FRAME_USE_RULES_v0_1.md
 ```
 
+For mini ontology relation-network hints only, optionally read:
+
+```text
+01_Source_Pack/01_Modules/AILO_Function_Layer/AILO_RELATION_TOPOLOGY_PACK_v0_1.md
+```
+
 ## one-line definition
 
 ```text
@@ -119,6 +125,7 @@ Frame.Name{
 ```
 
 This is the default v3 practical frame shape.
+Do not add `topo` to this default shape.
 
 ```text
 validates
@@ -134,6 +141,11 @@ conf
 
 state + assertionBasis
 -> authority boundary
+
+topo
+-> optional relation-network hint for mini ontologies only
+-> not a default practical slot
+-> cannot replace relation slots, evidence, state, authority, or execution
 ```
 
 Compressed boot shape:

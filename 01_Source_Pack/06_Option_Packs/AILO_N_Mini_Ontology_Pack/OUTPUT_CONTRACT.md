@@ -10,6 +10,7 @@ accepted_frames:
 candidate_frames:
 rejected_or_merged_frames:
 relation_index:
+topology_hints:
 query_table:
 validation_report:
 remaining_unknowns:

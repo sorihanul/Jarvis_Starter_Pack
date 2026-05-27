@@ -50,6 +50,7 @@
 - `../../01_Source_Pack/01_Modules/AILO_Function_Layer/MAP.md`
 - `../../01_Source_Pack/01_Modules/AILO_Function_Layer/AILO_N_FRAME_USE_RULES_v0_1.md`
 - `../../01_Source_Pack/01_Modules/AILO_Function_Layer/AILO_N_PRACTICAL_USE_CARD_v0_1.md`
+- `../../01_Source_Pack/01_Modules/AILO_Function_Layer/AILO_RELATION_TOPOLOGY_PACK_v0_1.md`
 - `../../01_Source_Pack/01_Modules/AILO_Function_Layer/01_AILO_Functions/AILO_FUNCTION_MINIMUM_SET_v0_1.md`
 - `../../01_Source_Pack/01_Modules/AILO_Function_Layer/05_AILO_OS/HARNESS_SEED_STABLE_BASIC_FUNCTIONS_v0_1/README.md`
 - `../../01_Source_Pack/01_Modules/AILO_Function_Layer/05_AILO_OS/HARNESS_SEED_SKILL_SKELETON_FUNCTIONS_v0_2/README.md`
@@ -60,6 +61,7 @@
 
 반복 대상, 브레인/팩/정책/출처 관계, 후보/정본 상태를 명사 프레임으로 고정해야 하면 `AILO_N_FRAME_USE_RULES_v0_1.md`로 프레임 생성 여부를 먼저 걸러낸 뒤 `AILO_N_PRACTICAL_USE_CARD_v0_1.md`를 읽는다.
 전체 AILO-N 원문은 `../../01_Source_Pack/00_Core/AILO_N_NOMINAL_FRAME_LAYER_v0_9N.md`에 있으며, canonical slot, relation contract, formal mapping, validation-code detail이 필요할 때만 연다.
+미니 온톨로지에서 관계망 압축, 검증, 라우팅, 인계 힌트가 필요할 때만 `AILO_RELATION_TOPOLOGY_PACK_v0_1.md`를 읽는다. `topo`는 실제 relation, evidence, state, authority, execution을 대체하지 않는다.
 
 판단 기준은 다음과 같다.
 

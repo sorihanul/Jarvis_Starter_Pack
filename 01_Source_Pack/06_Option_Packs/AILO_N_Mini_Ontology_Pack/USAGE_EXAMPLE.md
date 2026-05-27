@@ -30,6 +30,7 @@ Brain.Target{
   state:"candidate",
   conf:0.72,
   assertionBasis:[],
+  topo:{rel:"sink", to:[Artifact.BrainSurface, Report.Handoff], strength:"medium"},
   trace:["extracted_from_brain_build_discussion"]
 };
 
@@ -46,6 +47,7 @@ FunctionPack.Target{
   state:"asserted",
   conf:0.8,
   assertionBasis:["source_visible","contract_visible"],
+  topo:{rel:"hub", to:[Contract.InputOutputStopRule], strength:"medium"},
   trace:["from_function_pack_boundary"]
 };
 
@@ -62,6 +64,7 @@ Claim.CandidateRule{
   state:"candidate",
   conf:0.6,
   assertionBasis:[],
+  topo:{rel:"gate", to:[Decision.CandidateOrAsserted], strength:"hard"},
   trace:["candidate_until_source_bound"]
 };
 ```

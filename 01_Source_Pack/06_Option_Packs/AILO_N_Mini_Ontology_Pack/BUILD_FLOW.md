@@ -9,10 +9,11 @@
 4. frame_worth_check
 5. minimal_frame_write
 6. relation_bind
-7. state_and_basis_assign
-8. merge_or_discard
-9. query_table_write
-10. validation_report
+7. optional_topology_hint
+8. state_and_basis_assign
+9. merge_or_discard
+10. query_table_write
+11. validation_report
 ```
 
 ## 1. scope_lock
@@ -87,7 +88,23 @@ blocks
 validates
 ```
 
-## 7. state_and_basis_assign
+## 7. optional_topology_hint
+
+Add `topo` only when relation-network structure improves compression, validation, routing, or handoff.
+
+Prefer:
+
+```text
+anchor
+gate
+cut
+hub
+sink
+```
+
+Do not use `topo` to replace relation slots.
+
+## 8. state_and_basis_assign
 
 Use:
 
@@ -108,18 +125,18 @@ rejected:
   failed validation
 ```
 
-## 8. merge_or_discard
+## 9. merge_or_discard
 
 Merge frames with the same target and role.
 
 Discard frames that have no reuse, route, evidence, validation role, or behavior change.
 
-## 9. query_table_write
+## 10. query_table_write
 
 Create questions the AI can safely answer from the frame set.
 
 Also create questions it must not answer.
 
-## 10. validation_report
+## 11. validation_report
 
 Run `VALIDATION_RULE.md`.

@@ -34,6 +34,7 @@ Read `FUNCTION_PACK_BOUNDARY_v0_1.md` before turning related functions into a sk
 Read `FUNCTION_PACK_BUILD_CARD_v0_1.md` when you need to build one purpose-specific function pack quickly.
 Read `AILO_N_FRAME_USE_RULES_v0_1.md` before creating or promoting persistent frames.
 Read `AILO_N_PRACTICAL_USE_CARD_v0_1.md` when repeated targets need noun-slot frames before verbs or function packs act on them.
+Read `AILO_RELATION_TOPOLOGY_PACK_v0_1.md` only when an AILO-N mini ontology needs relation-network hints for compression, validation, routing, or handoff.
 
 The full AILO-N source is stored in:
 
@@ -66,6 +67,7 @@ AILO engines
 - `05_AILO_OS`: boundary between document/spec and actual operating layer
 - `AILO_N_FRAME_USE_RULES_v0_1.md`: guardrails for when to create, promote, merge, or discard noun frames
 - `AILO_N_PRACTICAL_USE_CARD_v0_1.md`: short runtime card for AILO-N noun-frame usage
+- `AILO_RELATION_TOPOLOGY_PACK_v0_1.md`: optional `topo` hint pack for relation-network structure inside AILO-N mini ontologies
 
 ## Boundary
 This is a research and concept separation hub.

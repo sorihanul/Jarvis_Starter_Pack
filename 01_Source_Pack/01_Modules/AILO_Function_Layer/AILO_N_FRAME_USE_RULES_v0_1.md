@@ -62,6 +62,8 @@ Frame.Name{
 
 Do not expand the slot set just because the source contains more slots.
 
+Optional `topo` relation-network hints belong to mini ontology use, not default frame use.
+
 ## rule details
 
 ### 1. Use Frame only for repeated targets
@@ -232,6 +234,12 @@ The meaning is determined by slots, relations, state, source, evidence, and asse
 A persistent frame creates obligations: state transition, source tracking, conflict handling, merge, discard, and trace.
 
 If the obligation is not worth it, do not create the frame.
+
+### topology hint overuse
+
+`topo` can help relation-network compression and validation, but it can also become a decorative label.
+
+Use it only in mini ontologies when ordinary relation slots are not enough.
 
 ## useful when
 

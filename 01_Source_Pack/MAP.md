@@ -87,6 +87,7 @@ Jarvis_Workspace/
 - `01_Modules/AILO_Function_Layer/MAP.md`: 함수, 함수팩, 인지함수 경계, 엔진 경계, 비-Rust 하네스, skill manufacturing proof 위치 지도
 - `01_Modules/AILO_Function_Layer/AILO_N_FRAME_USE_RULES_v0_1.md`: 반복 대상에만 Frame을 쓰고, `conf` 권한 금지, 근거 없는 `asserted` 금지, 실행 분리, 프레임 병합/폐기 기준을 잡는 짧은 규칙
 - `01_Modules/AILO_Function_Layer/AILO_N_PRACTICAL_USE_CARD_v0_1.md`: AILO-N 원문을 열기 전 먼저 읽는 짧은 실사용 카드
+- `01_Modules/AILO_Function_Layer/AILO_RELATION_TOPOLOGY_PACK_v0_1.md`: 미니 온톨로지에서만 선택적으로 쓰는 `topo` 관계망 힌트 팩
 - `01_Modules/Memory_Access_Tree_Lite_Starter/README.md`: 저장된 기억에서 필요한 파일 후보만 고르는 기억 접근 지도
 - `01_Modules/Obsidian_Runtime_Surface_Lite_Starter/README.md`: Obsidian을 지식층 보기면으로 붙이는 옵션 모듈
 - `04_Knowledge/IVK2_Improved/README.md`: 개선형 지식 접근/검색 실험체

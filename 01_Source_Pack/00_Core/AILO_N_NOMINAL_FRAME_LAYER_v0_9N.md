@@ -88,6 +88,7 @@ Noun.Frame {
   scope,
   risk,
   rule,
+  topo,
   validWhen,
   invalidWhen,
   source,
@@ -322,6 +323,7 @@ Engine.Translator{
 | `risk`        | risk profile          |
 | `rule`        | associated rule       |
 | `priority`    | priority level or ordering hint |
+| `topo`        | optional relation-topology hint |
 | `validWhen`   | validity condition    |
 | `invalidWhen` | invalidity condition  |
 
@@ -337,6 +339,73 @@ Memory.LongTerm{
   state:"candidate"
 };
 ```
+
+### 4.5.1 Optional Relation-Topology Hint
+
+`topo` is an optional relation-topology hint.
+
+It marks the structural function of a frame inside a surrounding relation network.
+
+It does not define identity.
+It does not replace relation slots.
+It does not provide evidence.
+It does not promote a frame to `asserted`.
+It does not execute work.
+
+Use it only when relation structure helps compression, validation planning, routing, memory priority, handoff, project mapping, creative continuity, or research structure analysis.
+
+Minimal form:
+
+```ailo
+topo:{rel:"anchor"}
+```
+
+Recommended form:
+
+```ailo
+topo:{
+  rel:"hub|chain|bridge|gate|loop|cut|anchor|sink",
+  to:[FrameRef],
+  strength:"weak|medium|strong|hard"
+}
+```
+
+Common relation-topology values:
+
+| Value | Meaning |
+| ----- | ------- |
+| `hub` | gathers or organizes related frames |
+| `chain` | belongs to an ordered path |
+| `bridge` | connects domains, stages, or representation layers |
+| `gate` | controls transition, validation, permission, or promotion |
+| `loop` | marks repeated review, revision, or feedback structure |
+| `cut` | blocks, breaks, conflicts with, or invalidates a path |
+| `anchor` | grounds interpretation through source, evidence, or stable reference |
+| `sink` | collects outputs, reports, artifacts, summaries, or memory records |
+
+Example:
+
+```ailo
+Policy.EvidenceRequired{
+  isa:Policy,
+  blocks:[Action.AssertWithoutEvidence],
+  allows:[Action.PromoteWithEvidence],
+  state:"asserted",
+  source:[Source.PolicyNote],
+  evidence:[Rule.EvidenceRequired],
+  assertedBy:Validator.PolicyCheck,
+  assertionBasis:["source_visible","promotion_gate_defined"],
+  reviewedAt:"2026-05-27",
+  topo:{
+    rel:"gate",
+    to:[State.Candidate, State.Asserted],
+    strength:"hard"
+  }
+};
+```
+
+The full optional topology rules are not part of the default AILO-N read path.
+Open `AILO_RELATION_TOPOLOGY_PACK_v0_1.md` only when a mini ontology needs relation-network hints for compression, validation, routing, handoff, memory priority, project mapping, creative continuity, or research structure analysis.
 
 ### 4.6 Evidence and State Slots
 
@@ -1143,6 +1212,7 @@ compress{
 * Added runtime frame registration step
 * Added noun-frame validation codes
 * Added context packet generation workflow
+* Added optional `topo` relation-topology hint slot with thin boundary rules
 
 ---
 

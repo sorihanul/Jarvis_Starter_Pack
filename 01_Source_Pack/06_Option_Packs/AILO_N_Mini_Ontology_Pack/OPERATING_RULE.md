@@ -61,6 +61,19 @@ reason
 source or uncertainty
 ```
 
+## topology rule
+
+`topo` is optional.
+
+Use it only when relation-network structure helps compression, validation, routing, memory continuity, project mapping, or handoff.
+
+```text
+topo does not replace relation slots.
+topo does not create authority.
+topo does not promote candidate to asserted.
+topo does not execute work.
+```
+
 ## density rule
 
 Prefer fewer stronger frames.

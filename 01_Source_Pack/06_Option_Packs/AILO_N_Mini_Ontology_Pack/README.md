@@ -50,12 +50,13 @@ AILO-N Mini Ontology Pack
 1. `ACTIVATION_RULE.md`
 2. `INPUT_SLOTS.md`
 3. `FRAME_SCHEMA.md`
-4. `BUILD_FLOW.md`
-5. `OPERATING_RULE.md`
-6. `OUTPUT_CONTRACT.md`
-7. `VALIDATION_RULE.md`
-8. `STOP_RULE.md`
-9. `USAGE_EXAMPLE.md`
+4. `TOPOLOGY_HINT_RULE.md`
+5. `BUILD_FLOW.md`
+6. `OPERATING_RULE.md`
+7. `OUTPUT_CONTRACT.md`
+8. `VALIDATION_RULE.md`
+9. `STOP_RULE.md`
+10. `USAGE_EXAMPLE.md`
 
 Also read when needed:
 
@@ -63,6 +64,7 @@ Also read when needed:
 ../Ontology_Pack/README.md
 ../../01_Modules/AILO_Function_Layer/AILO_N_FRAME_USE_RULES_v0_1.md
 ../../01_Modules/AILO_Function_Layer/AILO_N_PRACTICAL_USE_CARD_v0_1.md
+../../01_Modules/AILO_Function_Layer/AILO_RELATION_TOPOLOGY_PACK_v0_1.md
 ```
 
 ## output
@@ -75,6 +77,7 @@ frame_candidates
 accepted_frames
 rejected_or_merged_frames
 relation_index
+topology_hints
 query_table
 validation_report
 ```
@@ -86,6 +89,8 @@ This is not a full ontology engine.
 It does not require RDF, OWL, graph databases, automated reasoners, or complete class hierarchies.
 
 It produces a small frame set that changes how the AI reads, judges, blocks, validates, and hands off work.
+
+`topo` hints are optional and should be used only when relation-network structure helps compression, validation, routing, or handoff.
 
 ## one-line rule
 

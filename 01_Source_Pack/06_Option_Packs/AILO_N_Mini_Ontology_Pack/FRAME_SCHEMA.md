@@ -22,6 +22,31 @@ Frame.Name{
 };
 ```
 
+Do not add `topo` to the default practical shape.
+Use `topo` only as an optional mini-ontology hint under `TOPOLOGY_HINT_RULE.md`.
+
+## optional topology shape
+
+```ailo
+Frame.Name{
+  isa,
+  role,
+  governedBy,
+  blocks,
+  validates,
+  source,
+  evidence,
+  state,
+  assertionBasis,
+  topo:{
+    rel:"anchor|gate|cut|hub|sink|bridge|chain|loop",
+    to:[FrameRef],
+    strength:"weak|medium|strong|hard"
+  },
+  trace
+};
+```
+
 ## minimum shape
 
 Use this when the frame is only a candidate:
@@ -76,6 +101,9 @@ assertionBasis:
 
 trace:
   where the frame came from or how it was transformed
+
+topo:
+  optional relation-network hint for compression, validation, routing, or handoff
 ```
 
 ## relation index shape
@@ -89,6 +117,7 @@ reason:
 source:
 evidence:
 state:
+topo:
 ```
 
 ## query table shape
