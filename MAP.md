@@ -75,12 +75,24 @@ Jarvis_Starter_Pack/
 공개 패키지의 원천소스는 `01_Source_Pack`이다.
 생성된 브레인은 자기 폴더 안의 `START_HERE.md`, `BOOT.md`, `MAP.md`, `LOCAL_RULEBOOK.md`, `MEMORY_MAP.md`, `SESSION_CARD.md`, `FUNCTION_PACKS.md`, `TASKS/`, `LOGS/`, `CAPSULES/`로 기본 목적과 재진입 경로를 설명해야 한다.
 
+## 선택형 레퍼런스 서브 브레인
+
+`02_Brains/`에는 공개 예시로 포함된 선택형 문서형 서브 브레인이 있다.
+이 브레인들은 사용자가 직접 부팅하기 전까지 실행되지 않는 dormant documents다.
+기본 Jarvis v3 부팅에는 포함되지 않고, 필수 구성도 아니다.
+사용자는 필요한 브레인만 예시, 템플릿, 또는 직접 운용 브레인으로 사용할 수 있다.
+
+- `02_Brains/Info_Research_Brain/`: 범용 정보조사형 브레인
+- `02_Brains/Jarvis_Verification_Brain/`: 범용 검증 브레인
+- `02_Brains/Ontology_Builder_Design_Brain/`: 도메인 온톨로지 브레인 생산용 설계 브레인
+
 ## 핵심 파일
 
 - `START_HERE.md`: 새 진입 안내
 - `BOOT.md`: `부팅해` 명령을 메인 브레인 부팅으로 연결하는 루트 부팅 파일
 - `ACCEPTANCE_TESTS.md`: 배포 패키지가 제대로 동작하는지 보는 최소 검증표
 - `RELEASE_CHECKLIST.md`: GitHub 브랜치에 올리기 전 확인할 배포 위생 체크리스트
+- `02_Brains/README.md`: 선택형 레퍼런스 서브 브레인 안내
 - `00_Orchestrator/Jarvis_Main_Brain/BOOT.md`: 메인 브레인 부팅 지시
 - `00_Orchestrator/LOCAL_RULEBOOK.md`: 문서형 하네스의 로컬 사용 규칙
 - `00_Orchestrator/MEMORY_MAP.md`: 오케스트레이터 기억 표면 구분
