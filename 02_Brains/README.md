@@ -14,7 +14,18 @@ These brains are documents until a user explicitly boots one. They are not part 
 
 ## use
 
-Open the brain folder and start from `START_HERE.md`, or boot with the brain's launch phrase when one is defined.
+Open the brain folder and read its `README.md` first.
+Then continue to `START_HERE.md`, or boot with the brain's launch phrase when one is defined.
+
+## entry route
+
+```text
+02_Brains/
+-> README.md
+-> target_brain/README.md
+-> target_brain/START_HERE.md
+-> target_brain/BOOT.md
+```
 
 ## rule
 
