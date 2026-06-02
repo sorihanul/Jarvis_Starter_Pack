@@ -86,6 +86,15 @@ Jarvis_Starter_Pack/
 - `02_Brains/Jarvis_Verification_Brain/`: 범용 검증 브레인
 - `02_Brains/Ontology_Builder_Design_Brain/`: 도메인 온톨로지 브레인 생산용 설계 브레인
 
+## 실험 서브 브레인
+
+아래 브레인은 공개용 v3에 포함할 수 있는 experimental static-ready 서브 브레인이다.
+기본 부팅 필수 구성은 아니며, 실제 코딩 프로젝트 검증 전까지 `runtime_validated:false`, `reference_ready:false` 상태로 취급한다.
+정식 reference-ready 승격에는 실제 코딩 프로젝트에서 목표 잠금, 제대로 된 동작, 위험 게이트, 검증 게이트, memory export, publish boundary가 효과를 보였는지 확인해야 한다.
+
+- `02_Brains/Coding_Meta_Brain/`: 사안별 코딩 작업장 템플릿을 운영하는 코딩 Chief 브레인 실험안
+- `02_Brains/Coding_TOML_Agent_Brain/`: 단독 스레드 안에서 필요한 TOML 역할 계약을 즉석 구성해 쓰는 경량 코딩 하네스 실험안
+
 ## 핵심 파일
 
 - `START_HERE.md`: 새 진입 안내

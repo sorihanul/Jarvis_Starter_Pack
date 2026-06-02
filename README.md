@@ -72,6 +72,34 @@ jarvis:
   - 코어, 모듈, 프로토콜, 메모리, 스크립트, 에이전트, 스킬, 작업 문서가 들어 있다
   - 직접 작업장으로 쓰기보다 오케스트레이터가 참고하는 원천소스로 둔다
 
+## 선택형 서브 브레인
+
+- `02_Brains/`
+  - 공개 예시로 포함된 선택형 문서형 서브 브레인이다.
+  - 기본 부팅 필수 구성은 아니다.
+  - 사용자가 직접 부팅하기 전까지 실행되지 않는 dormant documents다.
+  - 각 브레인의 `START_HERE.md`와 `BOOT.md`를 읽고 필요한 경우에만 사용한다.
+
+현재 포함된 코딩 브레인은 실험형 문서 하네스다.
+검증 완료된 코딩 자동화 런타임이 아니며, 실제 프로젝트 검증 전까지 `runtime_validated:false`, `reference_ready:false`로 취급한다.
+
+```text
+Coding_Meta_Brain:
+  multi-thread coding case harness
+  experimental static-ready
+  runtime_validated:false
+  reference_ready:false
+
+Coding_TOML_Agent_Brain:
+  single-thread TOML role-agent coding harness
+  experimental static-ready
+  runtime_validated:false
+  reference_ready:false
+```
+
+이 코딩 브레인들은 AI 코딩 작업에서 목표 잠금, 외부조사, 제대로 된 동작 확인, 설계/구현/검증 분리, 위험 게이트, 유지보수성, 복구, 결정 추적, memory export를 돕기 위한 문서형 하네스다.
+실제 코딩 프로젝트에서 검증되기 전에는 `reference-ready`나 `stable`로 주장하지 않는다.
+
 ## 빠른 시작
 
 처음이면 [INSTALL_AND_USAGE_GUIDE.md](INSTALL_AND_USAGE_GUIDE.md) 또는 [QUICK_START_3_MIN.md](QUICK_START_3_MIN.md)를 먼저 봐도 된다.

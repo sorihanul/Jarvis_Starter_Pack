@@ -1,0 +1,66 @@
+name = "design-checkpoint"
+role = "Lock the coding task before implementation."
+thread_model = "single_thread"
+status = "candidate"
+stage_role = "design"
+
+use_when = [
+  "The task goal is broad or ambiguous.",
+  "The owner-visible success state is not yet concrete.",
+  "Implementation would be risky before scope and checks are named."
+]
+
+do_not_use_when = [
+  "The task is already scoped and acceptance checks are clear.",
+  "The request is a trivial one-line edit."
+]
+
+inputs = [
+  "owner_goal_raw",
+  "target_project",
+  "known_constraints",
+  "must_not_break",
+  "available_test_or_check"
+]
+
+outputs = [
+  "locked_final_goal",
+  "task_scope",
+  "forbidden_changes",
+  "acceptance_conditions",
+  "required_checks",
+  "handoff_to_implementation"
+]
+
+allowed_actions = [
+  "read project route files",
+  "ask clarifying questions when required",
+  "write a design checkpoint report"
+]
+
+forbidden_actions = [
+  "edit implementation files",
+  "expand scope without owner approval",
+  "claim verification"
+]
+
+stop_conditions = [
+  "locked_final_goal is available",
+  "acceptance_conditions are available",
+  "required_checks are named",
+  "scope is blocked and the blocker is reported"
+]
+
+[handoff]
+required_context = [
+  "locked_final_goal",
+  "task_scope",
+  "acceptance_conditions",
+  "required_checks"
+]
+expected_report = [
+  "design_stage",
+  "open_questions",
+  "handoff_or_blocker"
+]
+
