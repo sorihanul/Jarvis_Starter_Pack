@@ -46,3 +46,7 @@ Jarvis Verification Brain 부팅해.
 - 문제는 `blocking`, `major`, `minor`, `note`로 나눈다.
 - 수정했다면 같은 기준으로 재검증한다.
 - 구조 검증과 실제 런타임 검증을 섞지 않는다.
+
+## context rehydration trigger
+
+완료, 검증, 공개 가능, 경계 판단, 또는 `runtime_validated` 같은 강한 상태를 말하기 전에는 필요할 때만 `CONTEXT_REHYDRATION_BINDING.md`를 읽는다.

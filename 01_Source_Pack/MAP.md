@@ -85,6 +85,8 @@ Jarvis_Workspace/
 - `01_Modules/Host_Agent_Starter/README.md`: 호스트 작업 환경의 에이전트 기능을 선택적으로 붙이는 방법
 - `01_Modules/AILO_Function_Layer/START_HERE.md`: v3 AILO 함수화 레이어의 진입면
 - `01_Modules/AILO_Function_Layer/MAP.md`: 함수, 함수팩, 인지함수 경계, 엔진 경계, 비-Rust 하네스, skill manufacturing proof 위치 지도
+- `01_Modules/AILO_Function_Layer/AI_TASK_FRAMING_LITE_PUBLIC_v0_1.md`: 공개 가능한 중립형 AI 작업 정렬 카드
+- `01_Modules/AILO_Function_Layer/AI_WORK_ROUTE_LITE_PUBLIC_v0_1.md`: 공개 가능한 중립형 AI 작업 경로/검증/완료수준 카드
 - `01_Modules/AILO_Function_Layer/AILO_N_FRAME_USE_RULES_v0_1.md`: 반복 대상에만 Frame을 쓰고, `conf` 권한 금지, 근거 없는 `asserted` 금지, 실행 분리, 프레임 병합/폐기 기준을 잡는 짧은 규칙
 - `01_Modules/AILO_Function_Layer/AILO_N_PRACTICAL_USE_CARD_v0_1.md`: AILO-N 원문을 열기 전 먼저 읽는 짧은 실사용 카드
 - `01_Modules/AILO_Function_Layer/AILO_RELATION_TOPOLOGY_PACK_v0_1.md`: 미니 온톨로지에서만 선택적으로 쓰는 `topo` 관계망 힌트 팩

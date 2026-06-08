@@ -78,3 +78,5 @@ Use `Coding_Meta_Brain` for multi-thread coding case workspaces.
 ```text
 코딩 TOML 에이전트 브레인 부팅해.
 ```
+
+- 완료/검증/공개 가능/경계 판단 전에는 필요할 때만 `CONTEXT_REHYDRATION_BINDING.md`를 읽는다.

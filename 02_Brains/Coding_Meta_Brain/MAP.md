@@ -88,3 +88,7 @@ SUB_BRAINS_LIBRARY/Release_Gate_Brain/
 
 `WORKFLOW_SEPARATION.md` is the core rule for this brain.
 Design, implementation, and verification may happen in one case workspace, but they must not collapse into one unverified narrative.
+
+## context rehydration
+
+`CONTEXT_REHYDRATION_BINDING.md` links this brain to the root v3 no-false-completion and claim-ceiling rule. It is read on trigger, not as mandatory startup bulk.

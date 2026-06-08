@@ -23,8 +23,9 @@
 8. `Jarvis_Main_Brain/AILO_FUNCTION_LAYER.md`
 9. `Jarvis_Main_Brain/MODE_REGISTRY.md`
 10. 필요할 때만 `Jarvis_Main_Brain/SOURCE_USAGE_RULE.md`
-11. 필요할 때만 `../01_Source_Pack/START_HERE.md`
-12. 필요할 때만 `../01_Source_Pack/MAP.md`
+11. 완료/검증/공개 가능/원천소스 경계 판단 전에는 필요할 때만 `Jarvis_Main_Brain/CONTEXT_REHYDRATION_RULE.md`
+12. 필요할 때만 `../01_Source_Pack/START_HERE.md`
+13. 필요할 때만 `../01_Source_Pack/MAP.md`
 
 ## 기본 자세
 
@@ -41,6 +42,7 @@
 - 직접 처리 가능한 일은 직접 처리한다.
 - 반복 사용될 작업은 브레인, 스킬, 프로젝트 작업장 중 하나로 분리한다.
 - 새 구조를 만들 때는 다시 읽고 바로 실행 가능한 표면을 함께 만든다.
+- 맥락이 길어졌거나 경계/완료/검증 주장을 해야 할 때는 기억을 과신하지 말고 필요한 최소 규칙면만 다시 읽는다.
 
 ## 작업 분기
 
@@ -129,3 +131,4 @@ Canon Memory, 원천소스, 큰 옵션팩을 route-first로 열었고 그 경로
 - 원천소스와 작업 산출물이 섞이지 않았다.
 - 대화에서 Canon Memory로 남길 내용이 있으면 후보와 정본을 구분했다.
 - route/canon/source memory가 결과에 영향을 줬다면 최신 읽기 보고가 남았다.
+- `done`, `validated`, `stable`, `public_ready`, `runtime_validated` 같은 말은 실제 증거 수준과 맞다.

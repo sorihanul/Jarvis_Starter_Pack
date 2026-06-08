@@ -84,3 +84,7 @@ Info_Research_Brain/
 - 도메인 전문 지식은 조사 중 필요한 만큼만 붙인다.
 - 반복되는 전문 조사 영역은 나중에 별도 도메인 브레인이나 지식팩으로 분리할 수 있다.
 - `TASKS/CURRENT_TASK.md`, `LOGS`, `CAPSULES`, `NOTES`는 운용 기록이므로 원소스와 강제 동기화하지 않는다.
+
+## context rehydration
+
+`CONTEXT_REHYDRATION_BINDING.md` links this brain to the root v3 no-false-completion and claim-ceiling rule. It is read on trigger, not as mandatory startup bulk.

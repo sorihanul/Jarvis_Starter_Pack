@@ -50,3 +50,7 @@ Info Research Brain 부팅해.
 - 브레인 본체와 운용 기록은 `RUNTIME_BOUNDARY.md` 기준으로 분리한다.
 - 큰 자료 묶음은 `MAP`, `INDEX`, `README`, `START_HERE`를 먼저 본다.
 - 결과는 짧게 쓰되 근거와 불확실성은 숨기지 않는다.
+
+## context rehydration trigger
+
+완료, 검증, 공개 가능, 경계 판단, 또는 `runtime_validated` 같은 강한 상태를 말하기 전에는 필요할 때만 `CONTEXT_REHYDRATION_BINDING.md`를 읽는다.

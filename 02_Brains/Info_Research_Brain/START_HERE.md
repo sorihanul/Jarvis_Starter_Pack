@@ -78,3 +78,5 @@ Output and Memory Pack
 - 다음에 읽을 경로가 남았다.
 - 반복 재사용할 내용만 기억 후보가 됐다.
 - 운용 기록과 브레인 본체가 섞이지 않았다.
+
+- 완료/검증/공개 가능/경계 판단 전에는 필요할 때만 `CONTEXT_REHYDRATION_BINDING.md`를 읽는다.

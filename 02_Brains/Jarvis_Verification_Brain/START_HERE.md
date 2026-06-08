@@ -59,3 +59,5 @@ next_action:
 - blocking/major/minor/note가 구분됐다.
 - 수정했다면 재검증을 했다.
 - 검증하지 못한 것은 `not_verified`로 남겼다.
+
+- 완료/검증/공개 가능/경계 판단 전에는 필요할 때만 `CONTEXT_REHYDRATION_BINDING.md`를 읽는다.

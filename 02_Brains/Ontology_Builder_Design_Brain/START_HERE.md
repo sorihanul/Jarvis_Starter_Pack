@@ -53,3 +53,5 @@ If a domain ontology already exists, hand off to that domain ontology brain inst
 ```text
 온톨로지 빌더 설계 브레인 부팅해.
 ```
+
+- 완료/검증/공개 가능/경계 판단 전에는 필요할 때만 `CONTEXT_REHYDRATION_BINDING.md`를 읽는다.

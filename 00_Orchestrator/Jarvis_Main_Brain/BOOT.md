@@ -28,8 +28,9 @@
 9. `MODE_REGISTRY.md`
 10. `BRAIN_BUILD_PROTOCOL.md`
 11. 필요할 때만 `SOURCE_USAGE_RULE.md`
-12. 필요할 때만 `../../01_Source_Pack/START_HERE.md`
-13. 필요할 때만 `../../01_Source_Pack/MAP.md`
+12. 완료/검증/공개 가능/원천소스 경계 판단 전에는 필요할 때만 `CONTEXT_REHYDRATION_RULE.md`
+13. 필요할 때만 `../../01_Source_Pack/START_HERE.md`
+14. 필요할 때만 `../../01_Source_Pack/MAP.md`
 
 ## 부팅 후 첫 응답
 
@@ -66,3 +67,4 @@
 - 사용자가 함수나 함수팩 이름을 몰라도 되게 필요한 함수화 제어를 내부에서 적용한다.
 - 의미 판단은 단일 제어 함수로 처리하지 않는다.
 - 작업 기록은 `../TASKS`, `../LOGS`, `../CAPSULES`에 남긴다.
+- 긴 세션이나 완료/검증/공개 가능 주장 전에는 필요한 최소 규칙면만 다시 읽고 증거보다 강하게 말하지 않는다.

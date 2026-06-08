@@ -25,6 +25,7 @@
 11. `00_Orchestrator/Jarvis_Main_Brain/MODE_REGISTRY.md`
 12. `00_Orchestrator/Jarvis_Main_Brain/BRAIN_BUILD_PROTOCOL.md`
 13. 필요할 때만 `00_Orchestrator/Jarvis_Main_Brain/SOURCE_USAGE_RULE.md`
+14. 완료/검증/공개 경계 주장 전에는 필요할 때만 `00_Orchestrator/Jarvis_Main_Brain/CONTEXT_REHYDRATION_RULE.md`
 
 ## 원칙
 
@@ -35,3 +36,4 @@
 - v3에서는 의도 슬롯 다음에 필요한 동작을 함수로 나누고, 관련 동작을 함수팩으로 묶어 범위, 경로, 출력, 기억, 추적, 권한, 중단 조건을 먼저 구조화한다.
 - 호스트 모델의 실제 능력과 도구 권한에 맞게 작업 구성을 조정한다.
 - 현재 작업 기록은 `00_Orchestrator/TASKS`, `LOGS`, `CAPSULES`에 남긴다.
+- 맥락이 길어졌거나 완료, 검증, 공개 가능, 원천소스 경계 판단을 말하기 전에는 필요한 최소 규칙면만 다시 읽는다.

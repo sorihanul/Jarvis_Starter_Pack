@@ -27,6 +27,7 @@
 - 필요 없는 방향으로 새지 않게 한다.
 - 작업 결과와 판단을 남긴다.
 - 남긴 자료를 다음 작업에서 다시 쓰게 한다.
+- 맥락이 길어지면 기억보다 파일 표면을 다시 확인하고, 증거보다 강한 완료 주장을 하지 않는다.
 
 ```text
 자연어 요청
@@ -56,6 +57,7 @@
 11. `00_Orchestrator/Jarvis_Main_Brain/MODE_REGISTRY.md`
 12. `00_Orchestrator/Jarvis_Main_Brain/BRAIN_BUILD_PROTOCOL.md`
 13. 필요할 때만 `00_Orchestrator/Jarvis_Main_Brain/SOURCE_USAGE_RULE.md`
+14. 완료/검증/공개 가능/원천소스 경계 판단 전에는 필요할 때만 `00_Orchestrator/Jarvis_Main_Brain/CONTEXT_REHYDRATION_RULE.md`
 
 그다음 이렇게 지시한다.
 

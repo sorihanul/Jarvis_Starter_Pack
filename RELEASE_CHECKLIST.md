@@ -118,6 +118,28 @@ source/work boundary
 brain build
 canon memory
 release hygiene
+context rehydration and no-false-completion lock
+```
+
+## 6-1. Claim Ceiling
+
+Before saying a release is ready, pass if the reported claim matches evidence:
+
+```text
+static files checked -> static_checked
+templates created but not run -> candidate_created
+real project not run -> not runtime_validated
+public/private boundary checked -> boundary_checked
+release check script passed -> hygiene_passed for current tree only
+```
+
+Fail if:
+
+```text
+static_checked is reported as runtime_validated
+candidate_created is reported as reference_ready
+local private test material is reported as public_ready
+tests not run are reported as passed
 ```
 
 ## 7. Pre-push Commands
@@ -149,4 +171,5 @@ source boundary is mixed
 private local path remains
 generated cache remains
 acceptance tests do not cover function pack classification
+claim ceiling is stronger than evidence
 ```

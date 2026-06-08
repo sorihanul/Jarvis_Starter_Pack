@@ -65,6 +65,10 @@ Use this folder to decide whether something is an AILO function, an AILO cogniti
 - checking whether a proposed frame should be created, merged, discarded, or kept temporary
 - adding relation-network hints for mini ontology compression, validation, routing, or handoff
 
+## Public-safe task cards
+Use `AI_TASK_FRAMING_LITE_PUBLIC_v0_1.md` when a neutral task-clarification card is needed.
+Use `AI_WORK_ROUTE_LITE_PUBLIC_v0_1.md` when a neutral workflow/check/completion-level card is needed.
+These cards are optional and are not default boot surfaces.
 ## Do not use when
 - you only need promoted public source rules
 - you only need raw bank material

@@ -74,3 +74,7 @@ Jarvis_Verification_Brain/
 - 제작, 리팩터링, 대량 수정은 기본 역할이 아니다.
 - 필요한 수정은 검증 보고의 `fixes_applied` 또는 `fixes_needed`로 분리한다.
 - 구조 검증은 실제 동작 증명과 다르다.
+
+## context rehydration
+
+`CONTEXT_REHYDRATION_BINDING.md` links this brain to the root v3 no-false-completion and claim-ceiling rule. It is read on trigger, not as mandatory startup bulk.

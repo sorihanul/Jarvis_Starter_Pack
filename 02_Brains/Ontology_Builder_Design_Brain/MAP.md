@@ -60,3 +60,7 @@ Ontology_Builder_Design_Brain/
 This brain creates ontology brain skeletons.
 
 It may produce a draft domain ontology if needed for testing, but long-term ontology maintenance belongs to the produced domain ontology brain.
+
+## context rehydration
+
+`CONTEXT_REHYDRATION_BINDING.md` links this brain to the root v3 no-false-completion and claim-ceiling rule. It is read on trigger, not as mandatory startup bulk.

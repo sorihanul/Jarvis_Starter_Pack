@@ -58,3 +58,7 @@ active_agents: none
 project_surface: 01_PROJECT/
 next_needed: bounded coding task or target project
 ```
+
+## context rehydration trigger
+
+완료, 검증, 공개 가능, 경계 판단, 또는 `runtime_validated` 같은 강한 상태를 말하기 전에는 필요할 때만 `CONTEXT_REHYDRATION_BINDING.md`를 읽는다.

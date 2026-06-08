@@ -30,6 +30,7 @@ Jarvis_Starter_Pack/
       AILO_FUNCTION_LAYER.md
       MODE_REGISTRY.md
       SOURCE_USAGE_RULE.md
+      CONTEXT_REHYDRATION_RULE.md
       BRAIN_BUILD_PROTOCOL.md
       HANDOFF_PROMPTS.md
       ACCEPTANCE_TESTS.md
@@ -112,6 +113,7 @@ Jarvis_Starter_Pack/
 - `00_Orchestrator/Jarvis_Main_Brain/AILO_FUNCTION_LAYER.md`: 의도 슬롯 다음에 함수와 함수팩으로 작업 구조를 만드는 v3 제어층
 - `00_Orchestrator/Jarvis_Main_Brain/MODE_REGISTRY.md`: 올라운드 모드 목록
 - `00_Orchestrator/Jarvis_Main_Brain/SOURCE_USAGE_RULE.md`: 원천소스 사용 규칙
+- `00_Orchestrator/Jarvis_Main_Brain/CONTEXT_REHYDRATION_RULE.md`: 긴 세션, 경계 판단, 완료/검증/공개 가능 주장 전 필요한 최소 규칙면을 다시 읽는 재수화 규칙
 - `00_Orchestrator/TASKS/CURRENT_TASK.md`: 현재 오케스트레이터 작업 상태
 - `00_Orchestrator/LOGS/SESSION_OPS_LOG.md`: 현재 사용 세션 기록
 - `00_Orchestrator/CAPSULES/CURRENT_CAPSULE.md`: 다음 세션 인수인계 요약
@@ -139,7 +141,8 @@ Jarvis_Starter_Pack/
 12. `00_Orchestrator/Jarvis_Main_Brain/MODE_REGISTRY.md`
 13. `00_Orchestrator/Jarvis_Main_Brain/BRAIN_BUILD_PROTOCOL.md`
 14. 필요할 때만 `00_Orchestrator/Jarvis_Main_Brain/SOURCE_USAGE_RULE.md`
-15. 필요할 때만 `01_Source_Pack/START_HERE.md`
+15. 완료/검증/공개 가능/원천소스 경계 판단 전에는 필요할 때만 `00_Orchestrator/Jarvis_Main_Brain/CONTEXT_REHYDRATION_RULE.md`
+16. 필요할 때만 `01_Source_Pack/START_HERE.md`
 
 ## 경계
 

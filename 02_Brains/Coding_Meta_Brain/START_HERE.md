@@ -74,3 +74,5 @@ public_reference_release:true
 ```text
 코딩 메타 브레인 부팅해.
 ```
+
+- 완료/검증/공개 가능/경계 판단 전에는 필요할 때만 `CONTEXT_REHYDRATION_BINDING.md`를 읽는다.

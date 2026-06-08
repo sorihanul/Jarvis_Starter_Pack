@@ -79,3 +79,7 @@ AGENTS/ARCHIVE/
 
 `WORKFLOW_SEPARATION.md` is the core rule for this brain.
 Design, implementation, and verification stay in one thread, but they must be represented as separate role contracts or explicit stages.
+
+## context rehydration
+
+`CONTEXT_REHYDRATION_BINDING.md` links this brain to the root v3 no-false-completion and claim-ceiling rule. It is read on trigger, not as mandatory startup bulk.
