@@ -8,6 +8,7 @@ request
 -> External Research Pack
 -> Final Goal Lock Pack
 -> Working Behavior Contract Pack
+-> Behavior Verification Loop Pack
 -> Critical Risk Scan Pack
 -> AI Patch Trust Pack
 -> Project Surface Pack
@@ -37,6 +38,7 @@ project_before_publish:true
 external_research_when_needed:true
 final_goal_before_design:true
 proper_working_behavior_first:true
+behavior_loop_before_done:true
 critical_risk_before_implementation:true
 ai_patch_untrusted_until_verified:true
 scope_before_edit:true
@@ -126,6 +128,23 @@ stop_condition:
   proper working behavior cannot be verified
 ```
 
+### Behavior Verification Loop Pack
+
+```text
+functions:
+  purpose_satisfaction_check
+  target_behavior_check
+  problem_presence_check
+  cause_location_bind
+  minimal_fix_scope_bind
+  reverification_result_bind
+  regression_check_bind
+  maintainability_result_bind
+output:
+  behavior_verification_loop_result
+stop_condition:
+  purpose, behavior, problem cause, reverification, or maintainability cannot be checked
+```
 ### Critical Risk Scan Pack
 
 ```text

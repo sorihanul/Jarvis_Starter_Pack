@@ -22,6 +22,7 @@ request
 -> Agent Sequence Pack
 -> Code Work Pack
 -> Implementation Checkpoint Pack
+-> Conservative Operation Loop Pack
 -> Verification Gate Pack
 -> Decision Trace Pack
 -> Runbook Pack
@@ -45,6 +46,7 @@ design_implementation_verification_separated:true
 maintainability_for_non_developer_owner:true
 scope_before_patch:true
 verification_before_done:true
+conservative_loop_before_done:true
 ```
 
 ## packs
@@ -303,6 +305,24 @@ output:
   implementation_checkpoint
 stop_condition:
   implementation cannot be compared against the design checkpoint
+```
+
+### Conservative Operation Loop Pack
+
+```text
+functions:
+  purpose_fit_check
+  run_or_render_check
+  abnormality_detect
+  cause_location_bind
+  minimal_fix_need_decide
+  rerun_after_fix_check
+  repeat_or_stop_decide
+  loop_record_write
+output:
+  conservative_operation_loop_result
+stop_condition:
+  required behavior cannot be checked, repeated failure has no new diagnosis path, or fix would exceed locked scope
 ```
 
 ### Verification Gate Pack

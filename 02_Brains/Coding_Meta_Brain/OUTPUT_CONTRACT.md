@@ -18,6 +18,7 @@ first_version_scope:
 open_questions:
 locked_final_goal:
 working_behavior_contract:
+behavior_verification_loop:
 non_goals:
 owner_acceptance:
 ```
@@ -84,6 +85,20 @@ failure_interpretation:
 remaining_blocker:
 ```
 
+### behavior verification loop result
+
+```text
+purpose_satisfied:
+behavior_verified:
+problems_found:
+cause_location:
+fix_scope:
+reverification_result:
+regression_check:
+maintainability_result:
+remaining_risk:
+done_decision:
+```
 ### closeout report
 
 ```text

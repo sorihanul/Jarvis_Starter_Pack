@@ -57,6 +57,7 @@ This brain manages:
 final goal lock
 external research
 working behavior contract
+behavior verification loop
 critical risk scan
 sub-brain selection
 thread handoff
@@ -69,6 +70,7 @@ closeout report
 ## boundaries
 
 - Do not code before the final goal and working behavior are locked.
+- Do not call work done until the original purpose, target behavior, regression check, and maintainability check are covered.
 - Do not collapse design, implementation, and verification into one claim.
 - Do not publish operational files as project output.
 - Do not promote memory exports as canon without review.
@@ -81,8 +83,8 @@ closeout report
 - `BRAIN.md`: identity and non-definition.
 - `FINAL_GOAL_LOCK.md`: owner-goal locking rules.
 - `WORKFLOW_SEPARATION.md`: design, implementation, verification split.
+- `BEHAVIOR_VERIFICATION_LOOP.md`: purpose, behavior, problem, fix, reverification, and maintainability loop.
 - `FUNCTION_PACKS.md`: coding operation packs.
 - `THREADS/`: sub-brain thread routing and handoff contracts.
 - `SUB_BRAINS_LIBRARY/`: optional role-brain templates.
 - `REPORTS/`: verification, final report, decision trace, and runbook surfaces.
-

@@ -91,6 +91,42 @@ done_forbidden:
   same message claims design, edit, and verification without separate stage outputs
 ```
 
+## conservative operation loop decision
+
+```text
+loop_required:
+  code was edited
+  program behavior is promised
+  UI, report, data pipeline, command, or user flow exists
+  prior run showed an abnormality
+
+loop_pass:
+  original purpose was checked against the result
+  program or relevant output was run, rendered, or blocker recorded
+  abnormalities were checked
+  cause was located before fixing
+  fix was minimal and maintainable
+  relevant check was rerun after fixing
+  result was recorded
+
+loop_repeat:
+  abnormality remains
+  new cause or new fix path is available
+  scope still allows progress
+
+loop_stop_with_blocker:
+  required behavior cannot be inspected
+  same failure repeats without new evidence
+  required permission, data, or environment is unavailable
+  fix would exceed locked scope
+
+done_forbidden:
+  loop ran but purpose fit was not checked
+  code changed but no rerun happened
+  test passed but main user flow was not checked when required
+  automation or agent structure became the deliverable instead of the program behavior
+```
+
 ## solo vs multi-thread decision
 
 ```text
@@ -142,12 +178,14 @@ closeout
 ```text
 done_allowed:
   scope satisfied
+  conservative operation loop passed or blocker recorded
   required verification passed or blocker recorded
   active agents archived or discarded
   final report written
 
 done_forbidden:
   verification unknown
+  conservative loop result unknown
   active agent state unknown
   scope drift unresolved
   final goal not checked against working behavior

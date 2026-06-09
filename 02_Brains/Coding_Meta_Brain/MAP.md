@@ -21,6 +21,7 @@ WORKFLOW_SEPARATION.md
 FINAL_GOAL_LOCK.md
 EXTERNAL_RESEARCH_RULE.md
 WORKING_BEHAVIOR_CONTRACT.md
+BEHAVIOR_VERIFICATION_LOOP.md
 CRITICAL_RISK_SCAN.md
 AI_PATCH_TRUST_RULE.md
 DEPENDENCY_GATE.md
@@ -88,6 +89,10 @@ SUB_BRAINS_LIBRARY/Release_Gate_Brain/
 
 `WORKFLOW_SEPARATION.md` is the core rule for this brain.
 Design, implementation, and verification may happen in one case workspace, but they must not collapse into one unverified narrative.
+
+## behavior verification
+
+`BEHAVIOR_VERIFICATION_LOOP.md` records the conservative purpose, behavior, problem, minimal fix, reverification, and maintainability loop. It is an operating rule, not a runtime validation claim.
 
 ## context rehydration
 

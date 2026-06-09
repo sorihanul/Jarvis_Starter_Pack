@@ -26,6 +26,7 @@ workflow_separation_declared:true
 final_goal_lock_declared:true
 external_research_rule_declared:true
 working_behavior_contract_declared:true
+behavior_verification_loop_declared:true
 critical_risk_scan_declared:true
 dependency_security_data_gates_declared:true
 maintainability_and_rollback_declared:true
@@ -49,6 +50,8 @@ target_user_and_success_flow_required:true
 first_version_scope_required:true
 serious_risk_scanned_before_implementation:true
 working_behavior_evidence_required:true
+behavior_loop_must_close_before_done:true
+maintainability_checked_after_fix:true
 major_decisions_traceable:true
 runbook_required_for_deliverable:true
 ```

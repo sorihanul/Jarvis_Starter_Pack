@@ -18,6 +18,7 @@ MEMORY_MAP.md
 SESSION_CARD.md
 BRAIN.md
 WORKFLOW_SEPARATION.md
+CONSERVATIVE_OPERATION_LOOP.md
 FINAL_GOAL_LOCK.md
 EXTERNAL_RESEARCH_RULE.md
 WORKING_BEHAVIOR_CONTRACT.md
@@ -79,6 +80,8 @@ AGENTS/ARCHIVE/
 
 `WORKFLOW_SEPARATION.md` is the core rule for this brain.
 Design, implementation, and verification stay in one thread, but they must be represented as separate role contracts or explicit stages.
+
+`CONSERVATIVE_OPERATION_LOOP.md` defines the public-safe repair loop: purpose fit, run or render, detect abnormality, locate cause, minimal fix, rerun, and record.
 
 ## context rehydration
 

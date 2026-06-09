@@ -24,6 +24,7 @@ has_memory_export_surface:true
 single_thread_status_declared:true
 experimental_status_declared:true
 workflow_separation_declared:true
+conservative_operation_loop_declared:true
 final_goal_lock_declared:true
 external_research_rule_declared:true
 working_behavior_contract_declared:true
@@ -53,6 +54,11 @@ serious_risk_scanned_before_implementation:true
 working_behavior_evidence_required:true
 major_decisions_traceable:true
 runbook_required_for_deliverable:true
+purpose_fit_checked_before_done:true
+run_or_render_checked_before_done_when_feasible:true
+abnormality_cause_recorded_before_fix:true
+rerun_after_fix_required:true
+maintainability_not_sacrificed_for_loop_or_agent_structure:true
 ```
 
 ## stable promotion tests
@@ -64,5 +70,6 @@ real_solo_coding_tasks_tested:true
 agent_creation_was_useful:true
 agent_ceremony_did_not_slow_small_tasks:true
 verification_gate_was_used:true
+conservative_operation_loop_was_used:true
 memory_export_was_reviewed:true
 ```

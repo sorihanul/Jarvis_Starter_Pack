@@ -25,3 +25,9 @@ evidence_required:
 If the behavior contract is unclear, do not enter implementation.
 
 If implementation works technically but fails the behavior contract, the task is not done.
+
+Use `BEHAVIOR_VERIFICATION_LOOP.md` to close the conservative behavior loop:
+
+```text
+purpose -> working behavior -> problem check -> cause location -> minimal fix -> reverification -> maintainability
+```

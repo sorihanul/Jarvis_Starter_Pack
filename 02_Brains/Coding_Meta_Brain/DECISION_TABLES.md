@@ -116,6 +116,10 @@ if failures are unclear after first verification:
 ```text
 done_allowed:
   scope satisfied
+  original purpose satisfied
+  target behavior verified
+  regressions checked or explicitly bounded
+  maintainability checked
   required verification passed or blocker is explicit
   publish boundary known
   final report written
@@ -124,6 +128,8 @@ done_forbidden:
   tests failing without explanation
   build failing without explanation
   verification skipped without reason
+  behavior loop not closed
+  problem cause guessed without verification
   final goal not checked against working behavior
   critical risk unresolved
   decision trace missing for major choice

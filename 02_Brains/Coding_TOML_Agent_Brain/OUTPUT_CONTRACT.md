@@ -66,6 +66,14 @@ implementation_stage:
   changed_files:
   active_agents_used:
   scope_drift_check:
+conservative_operation_loop_stage:
+  purpose_fit_check:
+  run_or_render_check:
+  abnormality_detected:
+  cause_location:
+  fix_applied:
+  rerun_after_fix:
+  loop_decision:
 verification_stage:
   checks_run:
   pass_fail:
@@ -90,6 +98,7 @@ changed_project_files:
 operational_files_changed:
 final_goal_check:
 working_behavior_evidence:
+conservative_operation_loop_result:
 decision_trace_location:
 runbook_location:
 active_agents_archived_or_discarded:
@@ -104,6 +113,8 @@ next_action:
 
 ```text
 claim_done_without_verification:true
+claim_done_without_purpose_fit_check:true
+claim_fixed_without_rerun:true
 create_agents_without_clear_role:true
 publish_operational_files_as_project:true
 promote_memory_export_as_canon:true
