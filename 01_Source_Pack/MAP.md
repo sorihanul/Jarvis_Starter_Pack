@@ -87,6 +87,7 @@ Jarvis_Workspace/
 - `01_Modules/AILO_Function_Layer/MAP.md`: 함수, 함수팩, 인지함수 경계, 엔진 경계, 비-Rust 하네스, skill manufacturing proof 위치 지도
 - `01_Modules/AILO_Function_Layer/AI_TASK_FRAMING_LITE_PUBLIC_v0_1.md`: 공개 가능한 중립형 AI 작업 정렬 카드
 - `01_Modules/AILO_Function_Layer/AI_WORK_ROUTE_LITE_PUBLIC_v0_1.md`: 공개 가능한 중립형 AI 작업 경로/검증/완료수준 카드
+- `01_Modules/AILO_Function_Layer/AI_WORK_QUALITY_CONTRACT_LITE_PUBLIC_v0_1.md`: 공개 가능한 중립형 AI 작업 품질 계약 카드. 목표, 범위, 확인 항목, 복잡도 제한, 인계, 중단 기준, 주장 수준을 작게 고정한다.
 - `01_Modules/AILO_Function_Layer/AILO_N_FRAME_USE_RULES_v0_1.md`: 반복 대상에만 Frame을 쓰고, `conf` 권한 금지, 근거 없는 `asserted` 금지, 실행 분리, 프레임 병합/폐기 기준을 잡는 짧은 규칙
 - `01_Modules/AILO_Function_Layer/AILO_N_PRACTICAL_USE_CARD_v0_1.md`: AILO-N 원문을 열기 전 먼저 읽는 짧은 실사용 카드
 - `01_Modules/AILO_Function_Layer/AILO_RELATION_TOPOLOGY_PACK_v0_1.md`: 미니 온톨로지에서만 선택적으로 쓰는 `topo` 관계망 힌트 팩

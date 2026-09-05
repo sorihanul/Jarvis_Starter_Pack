@@ -91,6 +91,8 @@ previous package branch name
 
 Fail if the package cannot be understood outside the original machine.
 
+Text files must not contain unexpected control characters such as NUL. Tabs and normal line endings are allowed.
+
 ## 5. Generated File Hygiene
 
 Pass if no generated cache or local DB files are included:
@@ -160,6 +162,12 @@ Or run the bundled release check from the v3 root:
 .\scripts\release_check.ps1
 ```
 
+After changing the release checker, run its temporary-copy regression tests:
+
+```powershell
+.\scripts\test_release_check.ps1
+```
+
 ## Close Rule
 
 Do not push if:
@@ -169,6 +177,7 @@ boot path is unclear
 v3 functionization definition is missing
 source boundary is mixed
 private local path remains
+unexpected control character remains
 generated cache remains
 acceptance tests do not cover function pack classification
 claim ceiling is stronger than evidence

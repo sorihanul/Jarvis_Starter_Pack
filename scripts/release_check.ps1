@@ -96,12 +96,18 @@ foreach ($file in $textFiles) {
 }
 
 $absoluteLocalPathRegex = [regex]'(?<![A-Za-z])[A-Za-z]:[\\/][^\s\)\]\}"''<>]+'
+$unexpectedControlRegex = [regex]'[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]'
 foreach ($file in $textFiles) {
-  $lines = Get-Content -LiteralPath $file.FullName -ErrorAction SilentlyContinue
+  $lines = @(Get-Content -LiteralPath $file.FullName -ErrorAction Stop)
   for ($i = 0; $i -lt $lines.Count; $i++) {
     if ($absoluteLocalPathRegex.IsMatch($lines[$i])) {
       $relative = Resolve-Path -LiteralPath $file.FullName -Relative
       Add-Failure "absolute local path found: $relative line $($i + 1)"
+    }
+    foreach ($match in $unexpectedControlRegex.Matches($lines[$i])) {
+      $relative = Resolve-Path -LiteralPath $file.FullName -Relative
+      $codePoint = "U+{0:X4}" -f [int][char]$match.Value
+      Add-Failure "unexpected control character $codePoint in $relative line $($i + 1)"
     }
   }
 }

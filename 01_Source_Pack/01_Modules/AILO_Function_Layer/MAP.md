@@ -9,6 +9,7 @@
   V3_PLACEMENT_NOTE.md
   AI_TASK_FRAMING_LITE_PUBLIC_v0_1.md
   AI_WORK_ROUTE_LITE_PUBLIC_v0_1.md
+  AI_WORK_QUALITY_CONTRACT_LITE_PUBLIC_v0_1.md
   FUNCTION_PACK_BOUNDARY_v0_1.md
   FUNCTION_PACK_BUILD_CARD_v0_1.md
   AILO_N_FRAME_USE_RULES_v0_1.md
@@ -89,6 +90,8 @@ Use `V3_PLACEMENT_NOTE.md` before deciding how much of this layer to open.
 Use `AI_TASK_FRAMING_LITE_PUBLIC_v0_1.md` when a broad request should be clarified into purpose, target, context, limits, and output.
 
 Use `AI_WORK_ROUTE_LITE_PUBLIC_v0_1.md` when a complex task needs visible steps, checks, stop conditions, output, and completion level.
+
+Use `AI_WORK_QUALITY_CONTRACT_LITE_PUBLIC_v0_1.md` when an important task needs a neutral public goal/scope/check/complexity/handoff/stop/claim-level contract before calling the result done.
 
 ## Development paths
 ```text
